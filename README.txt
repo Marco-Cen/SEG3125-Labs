@@ -1,1 +1,3 @@
-I used Professor Caroline Barrière's code (HTML & CSS) from May 2020 as a starter code and then modified it, by using information from w3schools.com: https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module1-Survey
+Sources:
+- I used Professor Caroline Barrière's code (HTML & CSS) from May 2020 as a starter code and then modified it to my own liking using the following sources below: https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module1-Survey
+- w3schools.com
