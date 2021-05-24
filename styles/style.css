@@ -149,8 +149,6 @@ span {
   }
 
 
-
-
 /* Question Titles */
 h2{
   text-align: center;
@@ -178,8 +176,10 @@ img {
   width: 50%;
 }
 
-.center{
+.comments{
   text-align: center;
+  color: white;
+  margin-top: 11%;
 }
 
 
@@ -193,13 +193,14 @@ img {
   cursor: pointer;
   text-align: center;
 margin: auto;
-  margin-top:5%;
 }
 
-/* Defining styling for a specific element with an id */
+/* Defining styling for a specific element with an id
 #signature {
   text-align: right;
-  color: black;
+  color: white;
   font-style: italic;
   font-size: 75%;
-}
+  right: 0%;
+  position: absolute;
+} */
