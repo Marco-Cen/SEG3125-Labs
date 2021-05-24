@@ -3,60 +3,46 @@
    font choice: https://fonts.googleapis.com/css?family=Raleway&display=swap
 */
 
-/* html {
-  background-color: white;
-  font-family: 'Raleway', sans-serif;
-}
-body {
-  background-color: wheat;
-  width: 600px;
-  border: 2px solid black;
-  padding: 0px 20px 20px 20px;
-  
-} */
 
 body, html {
     font-family: 'Raleway', sans-serif; 
-    /* background-color: wheat; */
 
     height: 100%; /* Full height */
     width: 100%; /* Full Size */
 
     margin: 0; /* Space outside of something */
     padding: 0; /* Space inside something */
-    /* overflow-x: hidden;  */
 }
 
 
-/* (Referenced w3school parallax scroll) Allow for scrolling in web site with background content stationary. At top to ensure first layer of website */
-		 /* Need '..' to find correct folder */
-    /* .parallax {
-			background-image: url('../assets/bkg1.jpeg');
-			height: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		} */
+/* (Referenced w3school parallax scroll) Allow for scrolling in web site with background content stationary. At top to ensure first layer of website */   
+/* .parallax {
+    background-image: url('../assets/bkg1.jpeg');  Need '..' to find correct folder
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
-		.parallax2 {
-			background-image: url("../assets/bkg2.png");
-			height: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
+.parallax2 {
+    background-image: url("../assets/bkg2.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-		.parallax3 {
-			background-image: url("../assets/bkg3.jpeg");
-			height: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			/* filter: blur(2px); */
-		}
+.parallax3 {
+    background-image: url("../assets/bkg3.jpeg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(2px); */
+}
 
 
 
@@ -95,25 +81,6 @@ top: 50%;
 position: relative;
 top: 65vh;
     } 
-
-
-
-
-
-
-
-
-
-.disableBlur{
-    filter: blur(0);
-}
-
-.center{
-    text-align: center;
-    filter: blur(0);
-
-}
-
 
 
 /* Reference to https://codepen.io/meisterttl/pen/OarYqX */
@@ -184,31 +151,39 @@ span {
 
 
 
-
-
+/* Question Titles */
+h2{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  }
 
 img {
   display: block;
   margin: 0 auto;
   box-align: center;
+  border-style: solid;
+  border-color:black;
 }
 
-
-table {
-	border: 1px solid black;
-	background-color: #f1f1c1;
-}
-
-/* Defining styling for a specific element type - each question */
+/* Question Title */
 .question {
   background-color: black;
   color: white;
-  margin: 20px;
+  margin: auto;
   padding: 20px;
+  border-radius: 25px;
+  margin-top:5%;
+  margin-bottom:5%;
+  width: 50%;
 }
 
-/* Defining styling for a specific element type - large block buttons */
-.block {
+.center{
+  text-align: center;
+}
+
+
+.submit {
   display: block;
   width: 100%;
   border: none;
@@ -217,12 +192,14 @@ table {
   font-size: 16px;
   cursor: pointer;
   text-align: center;
+margin: auto;
+  margin-top:5%;
 }
 
 /* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
-  color: red;
+  color: black;
   font-style: italic;
   font-size: 75%;
 }
