@@ -1,14 +1,15 @@
-
 /* Style sheet
    color picker www.w3schools.com/colors/colors_picker.asp
+   font choice: https://fonts.googleapis.com/css?family=Raleway&display=swap
 */
 
 html {
   background-color: white;
+  font-family: 'Raleway', sans-serif;
 }
  
 body {
-  background-color: powderblue;
+  background-color: wheat;
   width: 600px;
   border: 2px solid black;
   padding: 0px 20px 20px 20px;
@@ -20,7 +21,7 @@ h1 {
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
-	color: #ff00ff;  /* Fuchsia */
+	color: slategray; 
 	text-shadow: 3px 3px 1px black;
 }
 
