@@ -3,17 +3,65 @@
    font choice: https://fonts.googleapis.com/css?family=Raleway&display=swap
 */
 
-html {
+/* html {
   background-color: white;
   font-family: 'Raleway', sans-serif;
 }
- 
 body {
   background-color: wheat;
   width: 600px;
   border: 2px solid black;
   padding: 0px 20px 20px 20px;
   
+} */
+
+body, html {
+    font-family: 'Raleway', sans-serif; 
+    background-color: wheat;
+
+    height: 100%; /* Full height */
+    width: 100%; /* Full Size */
+
+    margin: auto; /* Space outside of something */
+    padding: auto; /* Space inside something */
+    overflow-x: hidden; 
+    /* Removed prob with 'social media contact' that added white space to right of parallax scroll */
+}
+
+
+/* (Referenced w3school) Allow for scrolling in web site with background content stationary. At top to ensure first layer of website */
+/* .parallax {
+    background-image: url('assets/bkg1.jpeg');
+    height: 100%; 
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* .parallax2 {
+    background-image: url("assets/bkg2.png"); 
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+/* .parallax3 {
+    background-image: url("assets/bkg3.png"); 
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+.center{
+    text-align: center;
 }
 
 h1 {
@@ -25,15 +73,85 @@ h1 {
 	text-shadow: 3px 3px 1px black;
 }
 
+
+
+/* Reference to https://codepen.io/meisterttl/pen/OarYqX */
+.rotate{
+    text-transform: uppercase;
+    display: block;
+}
+span {
+    margin-left: 6px;
+    position: fixed;
+    -webkit-animation: 12s steps(1, end) infinite text-rotate;
+            animation: 12s steps(1, end) infinite text-rotate;
+    font-weight: 700;
+    opacity: 0;
+
+  }
+  span:nth-child(2) {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  span:nth-child(3) {
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  span:nth-child(4) {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+  }
+  span:nth-child(5) {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+  }
+  span:nth-child(6) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  
+  @-webkit-keyframes text-rotate {
+    0% {
+      opacity: 1;
+    }
+    15.5% {
+      opacity: 1;
+    }
+    16.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes text-rotate {
+    0% {
+      opacity: 1;
+    }
+    15.5% {
+      opacity: 1;
+    }
+    16.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+
 img {
   display: block;
   margin: 0 auto;
-  align: center;
+  box-align: center;
 }
 
-p {
-  color: red;
-}
 
 table {
 	border: 1px solid black;
