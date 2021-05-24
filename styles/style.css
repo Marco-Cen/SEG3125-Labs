@@ -194,7 +194,7 @@ img {
 margin: auto;
 }
 
-/* Defining styling for a specific element with an id
+/* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
   color: white;
@@ -202,4 +202,4 @@ margin: auto;
   font-size: 75%;
   right: 0%;
   position: absolute;
-} */
+}
