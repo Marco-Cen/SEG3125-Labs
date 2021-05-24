@@ -37,68 +37,33 @@ bottom of the page, etc. Explore styling for fonts, colors, alignments, etc.
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <div class="viewport-wrapper"><div class="viewport"></div></div> -->
 	<!-- (Requirement 9) Reference external CSS file -->
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
 	<!-- (Requirement 1) Tab Title -->
-	<title> SEG3125_UI: Custom Questionnaire</title>
-
-
-	<!-- Should be in its own css file but unsure why doesnt work if not in other file -->
-	<style>
-		body,html{
-		overflow-x: hidden; 
-		}
-
-		.parallax {
-			background-image: url('assets/bkg1.jpeg');
-			height: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-
-		.parallax2 {
-			background-image: url("assets/bkg2.png");
-			height: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-
-		.parallax3 {
-			background-image: url("assets/bkg3.jpeg");
-			height: 100%;
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-	</style>
-
+	<title> SEG3125: UI Questionnaire </title>
 </head>
 
 
 <body>
 	<!-- Parallax scrolling (1st Pic) -->
-	<div class="parallax">
-		<div class="center">
-			<h1> User Interface Satisfaction Survey </h1>
-			<h4> Your input matters. I want to hear from you personally. Dont be shy. </h4>
-			<div class="rotate">Leave Your
-				<span>Thoughts</span> 
-				<span>Comments</span> 
-				<span>Feedback</span> 
-				<span>Input</span> 
-				<span>Say</span> 
-				<span>Opinion</span>
-			</p>
-		</div>
+	<!-- <div class="parallax" > -->
+	<div class="bkg1"> </div>
+	<div class="landPageText">
+		<h1> User Interface Survey </h1>
+		<h3> Your Input Makes the Difference </h3>
+		<h4 class="rotate">Leave Your
+			<span>Thoughts</span>
+			<span>Comments</span>
+			<span>Feedback</span>
+			<span>Input</span>
+			<span>Mark</span>
+			<span>Opinion</span>
+		</h4>
 	</div>
+	<!-- </div> -->
 
 
 	<div class="parallax2">
@@ -107,13 +72,13 @@ bottom of the page, etc. Explore styling for fonts, colors, alignments, etc.
 
 			<!-- (Requirement 2) Choose a website to evaluate -->
 			<h2> What are your thoughts on the UI of <a href="https://www.airbnb.ca/"> AirBnB's</a> website? </h2>
-
-			<!-- (Requirement 3) You should make your image clickable -->
-			<a href="https://www.airbnb.ca/">
-				<img src="assets/AirbnbUI.png" alt="https://www.airbnb.ca/" width="50%" height="50%">
-				<img src="assets/AirbnbUIMobile.png" alt="https://www.airbnb.ca/" width="25%" height="50%">
-			</a>
+				<!-- (Requirement 3) You should make your image clickable -->
+	<a href="https://www.airbnb.ca/">
+		<img src="assets/AirbnbUI.png" alt="https://www.airbnb.ca/" width="50%" height="50%">
+		<img src="assets/AirbnbUIMobile.png" alt="https://www.airbnb.ca/" width="25%" height="50%">
+	</a>
 	</div>
+
 
 	<div class="parallax3">
 		<!-- (Requirement 8) Div Tags for questions -->

@@ -17,60 +17,101 @@ body {
 
 body, html {
     font-family: 'Raleway', sans-serif; 
-    background-color: wheat;
+    /* background-color: wheat; */
 
     height: 100%; /* Full height */
     width: 100%; /* Full Size */
 
-    margin: auto; /* Space outside of something */
-    padding: auto; /* Space inside something */
-    overflow-x: hidden; 
-    /* Removed prob with 'social media contact' that added white space to right of parallax scroll */
+    margin: 0; /* Space outside of something */
+    padding: 0; /* Space inside something */
+    /* overflow-x: hidden;  */
 }
 
 
-/* (Referenced w3school) Allow for scrolling in web site with background content stationary. At top to ensure first layer of website */
-/* .parallax {
-    background-image: url('assets/bkg1.jpeg');
-    height: 100%; 
+/* (Referenced w3school parallax scroll) Allow for scrolling in web site with background content stationary. At top to ensure first layer of website */
+		 /* Need '..' to find correct folder */
+    /* .parallax {
+			background-image: url('../assets/bkg1.jpeg');
+			height: 100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		} */
 
-    background-attachment: fixed;
+		.parallax2 {
+			background-image: url("../assets/bkg2.png");
+			height: 100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.parallax3 {
+			background-image: url("../assets/bkg3.jpeg");
+			height: 100%;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			/* filter: blur(2px); */
+		}
+
+
+
+.bkg1{
+    background-image: url('../assets/bkg1.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-} */
+    /* background-size: cover; */
 
-/* .parallax2 {
-    background-image: url("assets/bkg2.png"); 
     height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
-/* .parallax3 {
-    background-image: url("assets/bkg3.png"); 
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
-.center{
-    text-align: center;
+    filter: blur(1.5px);
 }
 
 h1 {
-	font-size: 60px;
-	text-align: center;
+    font-size: 5vh;
 	margin: 0;
 	padding: 20px 0;
 	color: slategray; 
 	text-shadow: 3px 3px 1px black;
+}
+
+.landPageText{
+    position: absolute;
+    top: 9%;
+    left: 21vw;
+}
+
+.landPageText h3{
+font-style: italic;
+position: absolute;
+left: 20%;
+top: 50%;
+} 
+
+.landPageText h4{
+position: relative;
+top: 65vh;
+    } 
+
+
+
+
+
+
+
+
+
+.disableBlur{
+    filter: blur(0);
+}
+
+.center{
+    text-align: center;
+    filter: blur(0);
+
 }
 
 
@@ -82,7 +123,7 @@ h1 {
 }
 span {
     margin-left: 6px;
-    position: fixed;
+    /* position: fixed; */
     -webkit-animation: 12s steps(1, end) infinite text-rotate;
             animation: 12s steps(1, end) infinite text-rotate;
     font-weight: 700;
