@@ -57,9 +57,9 @@ body, html {
 }
 
 h1 {
-    font-size: 5vh;
-	margin: 0;
-	padding: 20px 0;
+  font-size: 5vh;
+	margin-top: -40px;
+	padding: 0;
 	color: slategray; 
 	text-shadow: 3px 3px 1px black;
 }
@@ -73,13 +73,13 @@ h1 {
 .landPageText h3{
 font-style: italic;
 position: absolute;
-left: 20%;
-top: 50%;
+left: 5%;
+top:0%;
 } 
 
 .landPageText h4{
 position: relative;
-top: 65vh;
+top: 75vh;
     } 
 
 
