@@ -9,6 +9,11 @@ h1{
  text-align: center;
 }
 
+footer{
+  text-align: right;
+  font-size: 1vh;
+}
+
 
 /* -- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> -- */
 

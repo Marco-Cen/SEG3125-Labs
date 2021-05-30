@@ -36,6 +36,11 @@ function populateListProductChoices(slct1, slct2) {
 		
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value);
+	
+	//To sort list of products (Referenced: http://www.javascriptkit.com/javatutors/arraysort2.shtml)
+	optionArray.sort(function (a, b){
+		return a.price - b.price
+	}); 
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -43,22 +48,28 @@ function populateListProductChoices(slct1, slct2) {
 		
 	for (i = 0; i < optionArray.length; i++) {
 			
-		var productName = optionArray[i];
-		// create the checkbox and add in HTML DOM
-		var checkbox = document.createElement("input");
+		var productName = optionArray[i].name;
+		var productPrice = optionArray[i].price; 
+
+		// create the checkbox and add in HTML DOM  [Makes Boxes]
+		var checkbox = document.createElement("input"); //Creates HTML: <input> </input>
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
 		s2.appendChild(checkbox);
 		
-		// create a label for the checkbox, and also add in HTML DOM
+		// create a label for the checkbox, and also add in HTML DOM  [Title for each Box]
 		var label = document.createElement('label')
 		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.htmlFor = productPrice;
+		label.appendChild(document.createTextNode(productName)); //Creates HTML: text
+		label.appendChild(document.createElement("br")); //Creates: </br>
+		label.appendChild(document.createTextNode("$" + productPrice + " CAD"));
 		s2.appendChild(label);
 		
-		// create a breakline node and add in HTML DOM
-		s2.appendChild(document.createElement("br"));    
+		// create a breakline node and add in HTML DOM  [Line Break to separate boxes]
+		s2.appendChild(document.createElement("br"));     
+		s2.appendChild(document.createElement("br"));     
 	}
 }
 	

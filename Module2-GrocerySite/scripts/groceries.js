@@ -2,7 +2,7 @@
 // Array of products, each product is an object with different fieldset
 // A set of ingredients should be added to products		 
 
-//-- At least 10 total products in list --
+//-- At least 10 total products in list [Array of Objects] --
 var products = [
 	//Lactose Free
 	{
@@ -102,25 +102,25 @@ var products = [
 // prices should be included in this list, as well as a sort based on price
 
 function restrictListProducts(prods, restriction) {
-	let product_names = [];
+	let filteredProducts = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Organic") && (prods[i].organic == true)){
-			product_names.push(prod[i].name);
+			filteredProducts.push(prod[i]);
 		}
 		else if ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)){
-			product_names.push(prods[i].name);
+			filteredProducts.push(prods[i]);
 		}
 		else if ((restriction == "NutFree") && (prods[i].nutFree == true)){
-			product_names.push(prods[i].name);
+			filteredProducts.push(prods[i]);
 		}
 		else if ((restriction == "LactoseNutFree") && (prods[i].lactoseFree == true && prods[i].nutFree == true)){
-			product_names.push(prods[i].name);
+			filteredProducts.push(prods[i]);
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+			filteredProducts.push(prods[i]);
 		}
 	}
-	return product_names;
+	return filteredProducts;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
