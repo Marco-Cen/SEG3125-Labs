@@ -56,7 +56,7 @@ footer{
   position: fixed;
   bottom: 0;
   width: 98%;
-  z-index: 0;
+  z-index: 0; /* Put behind so user can click button */
 }
 
 
