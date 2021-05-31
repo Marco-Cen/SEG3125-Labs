@@ -1,17 +1,62 @@
 
 /* Entire Application */
-body,html{
+html{
   font-family: 'Raleway', sans-serif; 
+  height: 100%;
+  background-color: #dbdbff;
+  background-image: linear-gradient(180deg, #E5E5FF 16%, #9dff9d 51%, #ffffff 100%);
 }
 
-/* Title */
+.container{
+  border: 3px solid grey;
+  /* border-bottom: none; */
+
+}
+
+.company{
+  text-align: center;
+}
+
+.companyQuote{
+font-size: 1em;
+margin: 0px;
+padding: 0px;
+}
+
 h1{
- text-align: center;
+ font-size: 3em;
+ background: -webkit-linear-gradient(rgb(95, 224, 95), rgb(8, 80, 30));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ margin: 0px;
+ margin-top: 1.5vh;
 }
 
+.startShopping{
+  margin-left: 2vw;
+  font-size: 1.5vw;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+.description{
+font-size: 1em;
+}
+
+/* Signature */
 footer{
   text-align: right;
   font-size: 1vh;
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  z-index: 0;
 }
 
 
@@ -19,20 +64,28 @@ footer{
 
 /* Style the tab */
 .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+  margin-top: 20px;
+  margin-left: -3px;
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 200px;
   }
   
   /* Style the buttons that are used to open the tab content */
   .tab button {
+    display: block;
     background-color: inherit;
-    float: left;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
     border: none;
     outline: none;
+    text-align: left;
     cursor: pointer;
-    padding: 14px 16px;
     transition: 0.3s;
+    font-size: 17px;
   }
   
   /* Change background color of buttons on hover */
@@ -47,8 +100,12 @@ footer{
   
   /* Style the tab content */
   .tabcontent {
+    margin-top: 20px;
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    height: 300px;
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }

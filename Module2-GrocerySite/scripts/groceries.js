@@ -105,7 +105,7 @@ function restrictListProducts(prods, restriction) {
 	let filteredProducts = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Organic") && (prods[i].organic == true)){
-			filteredProducts.push(prod[i]);
+			filteredProducts.push(prods[i]);
 		}
 		else if ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)){
 			filteredProducts.push(prods[i]);
@@ -114,6 +114,9 @@ function restrictListProducts(prods, restriction) {
 			filteredProducts.push(prods[i]);
 		}
 		else if ((restriction == "LactoseNutFree") && (prods[i].lactoseFree == true && prods[i].nutFree == true)){
+			filteredProducts.push(prods[i]);
+		}
+		else if ((restriction == "NotOrganic") && (prods[i].organic == false)){
 			filteredProducts.push(prods[i]);
 		}
 		else if (restriction == "None"){
