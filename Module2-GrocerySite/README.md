@@ -5,7 +5,6 @@ Within this repository includes labatory work from the course:
 The viewing of the rendered site can be found via: 
 https://marco-cen.github.io/SEG3125-Labs/Module2-GrocerySite/
 
-
 Sources Used to Help Create:
 - I used Professor Caroline Barrière's starter code (HTML, CSS, and Javascript) from 2020 and then modified it to my own liking using the following sources below: https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery
 - http://www.javascriptkit.com/javatutors/arraysort2.shtml  (Array of Objects ascending sort by property)
