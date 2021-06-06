@@ -7,3 +7,4 @@ https://marco-cen.github.io/SEG3125-Labs/<folder directory name>
 Quick Links to each Website Created:
 - Lab 1: https://marco-cen.github.io/SEG3125-Labs/Module1-SurveySite/
 - Lab 2: https://marco-cen.github.io/SEG3125-Labs/Module2-GrocerySite/
+- Lab 3: https://marco-cen.github.io/SEG3125-Labs/Module3-AltGrocerySite/
