@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp -->
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="titleContainer">
+
+    <!-- Name of Grocery Store -->
+    <div class="company">
+      <h1> ShopEasy </h1>
+      <p class="companyQuote"> <i> Groceries for Your Essential Needs </i></p>
+    </div>
+
+    <h2 class="startShopping"> ↓ Start Shopping ↓ </h2>
+    <br>
+
+  </div>
+
+
+  <div class="contentContainer">
+    <!-- Navigation between three zones: Personal Data, Products, Cart -->
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class="tab">
+      <button class="tablinks" onclick="openInfo(event, 'Client')">CLIENT</button>
+      <button class="tablinks" onclick="openInfo(event, 'Products')">PRODUCTS</button>
+      <button class="tablinks" onclick="openInfo(event, 'Cart')">CART</button>
+    </div>
+
+
+    <!-- Tab content (CLIENT TAB) -->
+    <div id="Client" class="tabcontent">
+
+      <!-- BreadCrumbs -->
+      <ul class="breadcrumb">
+        <li> <u> CLIENT </u> </li>
+        <li><a onclick="openInfo(event, 'Products')">PRODUCTS</a></li>
+        <li><a onclick="openInfo(event, 'Cart')">CART</a></li>
+      </ul>
+
+      <h2> (1) Personalized Shopping </h3>
+        <p class="description"> Select Filter for Product Selection: </p>
+
+        <!-- Single Select RADIO Bttn Menu ('name=" " ' attribute ensure only SINGLE radio button selected) -->
+        <div>
+          <input type="radio" id="noRestrict" value="None" name="dietSelect"
+            onclick="populateListProductChoices(this.id, 'displayProduct')">
+          <label for="noRestrict"> No Restrictions </label>
+        </div>
+
+        <div>
+          <input type="radio" id="organicFood" value="Organic" name="dietSelect"
+            onclick="populateListProductChoices(this.id, 'displayProduct')">
+          <label for="organicFood"> Organic Products </label>
+        </div>
+
+        <div>
+          <input type="radio" id="notOrganicFood" value="NotOrganic" name="dietSelect"
+            onclick="populateListProductChoices(this.id, 'displayProduct')">
+          <label for="notOrganicFood"> Non-Organic Products </label>
+        </div>
+
+        <div>
+          <input type="radio" id="lacNutFree" value="LactoseNutFree" name="dietSelect"
+            onclick="populateListProductChoices(this.id, 'displayProduct')">
+          <label for="lacNutFree"> Lactose AND Nut Free </label>
+        </div>
+
+        <div>
+          <input type="radio" id="lacFree" value="LactoseFree" name="dietSelect"
+            onclick="populateListProductChoices(this.id, 'displayProduct')">
+          <label for="lacFree"> Lactose Free </label>
+        </div>
+
+        <div>
+          <input type="radio" id="nutFree" value="NutFree" name="dietSelect"
+            onclick="populateListProductChoices(this.id, 'displayProduct')">
+          <label for="nutFree"> Nut Free </label>
+        </div>
+
+        <!-- Dropdown Menu (Replaced by Radio Bttn menu)  -->
+        <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+            <option value=""></option>
+            <option value="Organic">Organic Products</option>
+            <option value="LactoseFree">Lactose Free</option>
+            <option value="NutFree">Nut Free</option>
+            <option value="LactoseNutFree">Lactose AND Nut Free</option>
+            <option value="NotOrganic">Non-Organic Products</option>
+            <option value="None">No Restrictions</option>
+          </select> -->
+
+          <br>
+
+          <button onclick="openInfo(event, 'Products')" class="next">Next &raquo;</button>
+
+    </div>
+
+
+<!-- (PRODUCTS TAB) -->
+    <div id="Products" class="tabcontent">
+
+            <!-- BreadCrumbs -->
+            <ul class="breadcrumb">
+              <li><a onclick="openInfo(event, 'Client')"> CLIENT </a></li>
+              <li><u> PRODUCTS </u></li>
+              <li><a onclick="openInfo(event, 'Cart')">CART</a></li>
+            </ul>
+
+      <h2> (2) Filtered Product Selection </h2>
+      <p class="description">Select Items to add to cart:</p>
+      <div id="displayProduct"></div>
+      <button onclick="openInfo(event, 'Client')" class="previousBttn"> &laquo; Previous </button>
+      <button id="addCart" type="button" class="block" onclick="selectedItems()">
+        Add Selected to CART &raquo;
+      </button>
+
+    </div>
+
+
+<!-- (CART TAB) -->
+    <div id="Cart" class="tabcontent">
+
+                  <!-- BreadCrumbs -->
+                  <ul class="breadcrumb">
+                    <li><a onclick="openInfo(event, 'Client')"> CLIENT </a></li>
+                    <li><a onclick="openInfo(event, 'Products')">PRODUCTS</a></li>
+                    <li> <u> CART </u> </li>
+                  </ul>
+
+      <h2> (3) Checkout</h3>
+        <p class="description">Items in your Shopping Cart:</p>
+
+        <div id="displayCart"></div>
+
+        <br>
+        <button onclick="openInfo(event, 'Products')" class="previousBttn"> &laquo; Previous </button>
+
+    </div>
+
+
+
+
+    <!-- Images of Products (https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_rr) -->
+    <style>
+      .mySlides {
+        float: center;
+        filter: blur(0.2px);
+  }
+    </style>
+
+    <div class="slideshow" onclick="openInfo(event, 'Client')">
+      <img class="mySlides" src="./assets/apple.png" style="width:90%" >
+      <img class="mySlides" src="./assets/yogurt.png" style="width:100%" >
+      <img class="mySlides" src="./assets/milk.png" style="width:110%" >
+      <img class="mySlides" src="./assets/almondgranolabar.png" style="width: 100%" >
+      <img class="mySlides" src="./assets/ketchup.png" style="width:50%" >
+      <img class="mySlides" src="./assets/eggs.png" style="width:100%" >
+      <img class="mySlides" src="./assets/slicedBrioche.png" style="width:140%; float:right;" >
+      <img class="mySlides" src="./assets/croissant.png" style="width:100%" >
+      <img class="mySlides" src="./assets/peanutbutter.png" style="width:60%" >
+      <img class="mySlides" src="./assets/unsaltedmixednuts.png" style="width:100%" >
+      <img class="mySlides" src="./assets/smokedsalmon.png" style="width:100%" >  
+    </div>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+    </script>
+
+
+
+
+  </div>
+
+
+  <!-- Signature at bottom of page: footer -->
+  <footer>
+    Mock website designed by MC
+  </footer>
+
+
+  <script src="scripts/groceries.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

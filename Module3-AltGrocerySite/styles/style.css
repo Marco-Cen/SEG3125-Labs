@@ -1,0 +1,175 @@
+
+/* Entire Application */
+html{
+  font-family: 'Raleway', sans-serif; 
+  height: 100%;
+  background-color: #dbdbff;
+  background-image: linear-gradient(180deg, #E5E5FF 16%, #9dff9d 51%, #ffffff 100%);
+}
+
+.titleContainer{
+  border: 3px solid grey;
+  /* border-bottom: none; */
+}
+
+.company{
+  text-align: center;
+}
+
+.companyQuote{
+font-size: 1em;
+margin: 0px;
+padding: 0px;
+}
+
+h1{
+ font-size: 3em;
+ background: -webkit-linear-gradient(rgb(95, 224, 95), rgb(8, 80, 30));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ margin: 0px;
+ margin-top: 1.5vh;
+}
+
+.startShopping{
+  font-size: 1.5vw;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.contentContainer{
+border: 3px solid gainsboro;
+display: flex; /* To allow to cover all contents within div */
+height: 82vh;
+/* overflow: hidden; */ 
+/* word-wrap: break-word; */
+}
+
+.description{
+font-size: 1em;
+}
+
+
+.slideshow{
+  /* border: 3px solid black; */
+  max-width:200px;
+  max-height: 200px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+
+/* Signature */
+footer{
+  text-align: right;
+  font-size: 1.5vh;
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+  z-index: 0; /* Put behind so user can click button */
+}
+
+/* -- This style sheet is taken from  https://www.w3schools.com/howto/howto_css_breadcrumbs.asp -- */
+
+/* Style the list */
+ul.breadcrumb {
+  margin: 0%;
+  padding: 5px 15px;
+  list-style: none;
+  background-color: #eee;
+  margin-bottom: 1%;
+
+  position: relative;
+  width: 84.4vw; /* to span across entire header */
+  left: -1%;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 13px;
+}
+
+/* Add a > symbol before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: ">";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+  cursor: pointer; 
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+
+
+/* -- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> -- */
+/* Style the tab */
+.tab {
+  margin-left: -3px;
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  height: 200px;
+  width: 20%;
+  min-width: 120px;
+  max-width: 250px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #dbdbff;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #7ef698;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    height: 300px;
+    display: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+    /* To MOVE Tab content into header (QuickFix) */
+    position: relative;
+    top: -2.5%;
+
+  }
