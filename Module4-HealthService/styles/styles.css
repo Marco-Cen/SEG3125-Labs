@@ -9,14 +9,14 @@ body, html{
     overflow-x: hidden;
 }
 
-/* Referenced from: https://css-tricks.com/design-considerations-text-images/ */
+/* (Home Page) Referenced from: https://css-tricks.com/design-considerations-text-images/ */
 header {
     background: 
       linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       ),
-      url("../assets/image3.jpeg");
+      url("../assets/bkgHome.jpeg");
     background-size: cover;
     height: 100vh;
 
@@ -47,6 +47,7 @@ header {
 /*  */
 
 
+/* Company Title */
 .MedicalthText{
     font-size: 3em;
     background: -webkit-linear-gradient(wheat,navy);
@@ -58,9 +59,7 @@ header {
 
 
 
-
-
-/* Referenced from: https://codepen.io/woojin-choi/pen/QzEvQY */
+/* (Meet the team) Referenced from: https://codepen.io/woojin-choi/pen/QzEvQY */
 .container content, .container aside {
     position: relative;
 }
@@ -116,3 +115,14 @@ figure:hover .overlay {
     display: block;
     height: 100%;
 }
+
+
+
+/* Signature */
+footer{
+    right: 0%;
+    font-size: 1.5vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 0; /* Put behind so user can click button */
+  }
