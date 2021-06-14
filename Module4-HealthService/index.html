@@ -184,8 +184,18 @@
                         <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
                     </div>
 
-<br> 
+                    <br>
 
+                    <p>Select Desired Services:</p>
+                    <input type="checkbox" name="feature" value="musculo"> &nbsp; Musculoskeletal Physiotherapy<br>
+                    <input type="checkbox" name="feature" value="rehabPain"> &nbsp; Rehabilitation and Pain
+                    Management<br>
+                    <input type="checkbox" name="feature" value="sports"> &nbsp; Sports Physiotherapy<br>
+                    <input type="checkbox" name="feature" value="pelvic"> &nbsp; Pelvic Floor Rehabilitation<br>
+                    <input type="checkbox" name="feature" value="neuro"> &nbsp; Neurological Physiotherapy<br>
+                    <input type="checkbox" name="feature" value="cardio"> &nbsp; Cardiorespiratory/pulmonary/vascular
+                    Physiotherapy<br>
+                    <!-- 
                     <label class="form-label select-label">Select Services</label>
                     <select class="select" multiple>
                         <option value="1">Musculoskeletal Physiotherapy</option>
@@ -194,13 +204,13 @@
                         <option value="4">Pelvic Floor Rehabilitation</option>
                         <option value="5">Neurological Physiotherapy</option>
                         <option value="6">Cardiorespiratory/pulmonary/vascular Physiotherapy</option>
-                    </select>
+                    </select> -->
 
-                    <br> 
+                    <br>
 
                     <div class="form-group">
-                    <label for="appointmentDate">Set Appointment Date:</label>
-                    <input type="datetime-local" id="appointmentDate" name="appointmentDate">
+                        <label for="appointmentDate">Set Appointment Date:</label>
+                        <input type="datetime-local" id="appointmentDate" name="appointmentDate">
                     </div>
 
                     <br>
@@ -211,7 +221,7 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-warning">Submit</button>
+                    <button type="submit" class="btn btn-warning" onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');">Submit</button>
 
                 </form>
 
@@ -318,28 +328,29 @@ Many websites will use what is called CSS grid layouts, where you will have a he
 -->
 
             <br> <br>
-                <!--
+            <!--
     Most websites now feature what is called a NavBar.
     The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
     https://getbootstrap.com/docs/5.0/components/navbar/
     -->
-                <div class="navbar bg-light text-black p-3 my-3 ">
+            <div class="navbar bg-light text-black p-3 my-3 ">
 
-                    <div class="col">
-                        <h1 class="MedicalthText"> <img src="assets/Medicalth2.png" width="130" height="130"> Medicalth
-                        </h1>
+                <div class="col">
+                    <h1 class="MedicalthText"> <img src="assets/Medicalth2.png" width="130" height="130"> Medicalth
+                    </h1>
 
-                        <i class="d-flex justify-content-center" style="position: relative; top:-40px;"> For ALL your Physiotherapy needs </i>
-
-                    </div>
-
-                    <div class="col">
-                        Located at: <a
-                            href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
-                            75 Laurier Ave. E, Ottawa, ON K1N 6N5, Canada </a>
-                    </div>
+                    <i class="d-flex justify-content-center" style="position: relative; top:-40px;"> For ALL your
+                        Physiotherapy needs </i>
 
                 </div>
+
+                <div class="col">
+                    Located at: <a
+                        href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
+                        75 Laurier Ave. E, Ottawa, ON K1N 6N5, Canada </a>
+                </div>
+
+            </div>
 
 
             <footer>
