@@ -31,6 +31,7 @@ Sources Used to Help Create:
 - https://getbootstrap.com/docs/5.0/components/card/ (Service Tile Cards)
 - https://getbootstrap.com/docs/4.0/components/forms/ (User Form request appointment)
 - (Multiselect dropdown)
+- https://www.w3schools.com/tags/att_input_type_datetime-local.asp (Selection of date and time)
 - https://getbootstrap.com/docs/5.0/components/alerts/ (Alerts)
 
 Font:
