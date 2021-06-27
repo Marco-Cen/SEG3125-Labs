@@ -1,0 +1,128 @@
+body, html{
+    font-family: 'Questrial', sans-serif; /* Font */
+
+    height: 100%; /* Full Height */
+    width: 100%; /* Full size */
+
+    margin: 0px; /* Space outside of something */
+    padding: 0px;  /* Space inside something */
+    overflow-x: hidden;
+}
+
+/* (Home Page) Referenced from: https://css-tricks.com/design-considerations-text-images/ */
+header {
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../assets/bkgHome.jpeg");
+    background-size: cover;
+    height: 100vh;
+
+    /* filter: blur(1.5px); */    
+  }
+  .titleText {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* text colour */
+    text-align: center;
+
+    border: 1px solid black;
+    background-color: #ffffff;
+    opacity: 0.8;
+  }
+  h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+  .aboutUsText {
+    max-width: 500px;
+    margin: 20px auto;
+  }
+/*  */
+
+
+/* Company Title */
+.MedicalthText{
+    font-size: 3em;
+    background: -webkit-linear-gradient(wheat,navy);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+
+
+/* (Meet the team) Referenced from: https://codepen.io/woojin-choi/pen/QzEvQY */
+.container content, .container aside {
+    position: relative;
+}
+
+figure {
+    width: 100%;
+    position: relative;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}	
+figure h2 {
+    position: absolute;
+    top: calc(100% - 50px);
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}	
+figure .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+}
+figure .overlay .description {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+figure:hover h2 {
+    display: none;
+}	
+figure:hover .overlay {
+    display: block;
+    height: 100%;
+}
+
+
+
+/* Signature */
+footer{
+    right: 0%;
+    font-size: 1.5vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 0; /* Put behind so user can click button */
+  }
