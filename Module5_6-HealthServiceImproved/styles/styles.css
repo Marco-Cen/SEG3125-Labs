@@ -1,5 +1,5 @@
 /* Colour Palette:
-  Logo: Wheat, Navy
+  Logo: Wheat (#f5deb3), Navy (#000080)
   Related to Theme: Black, White, #A79FFF (Underline text) #6858FF (light purple), #3D2DB7 (purple) 
 */
 
@@ -117,16 +117,10 @@ header {
 
 }
 
-
-/* SubHeadings */
-  /* h2 {
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 2rem;
-    white-space: nowrap;
-  } */
-
-
+/* Entry Labels */
+label{
+  color: #3D2DB7;
+}
 
 
 
@@ -138,6 +132,7 @@ header {
 
   height: 100%;
   background-color: #A79FFF;
+  /* max-height: 1500px;  Not working? Expands everytime click previous */
 }
 
 #appointmentForm fieldset {
@@ -176,7 +171,7 @@ header {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border: 1px solid #ee0979;
+  border: 1px solid navy; /* On click colour */
   outline-width: 0;
   transition: All 0.5s ease-in;
   -webkit-transition: All 0.5s ease-in;
@@ -184,7 +179,8 @@ header {
   -o-transition: All 0.5s ease-in;
 }
 
-/*buttons*/
+/*-- buttons --*/
+/* NEXT Button */
 #appointmentForm .action-button {
   width: 100px;
   background: wheat;
@@ -201,11 +197,12 @@ header {
   box-shadow: 0 0 0 2px white, 0 0 0 3px navy;
 }
 
+/* PREVIOUS Button */
 #appointmentForm .action-button-previous {
   width: 100px;
   background: #C5C5F1;
   font-weight: bold;
-  color: white;
+  color: navy; 
   border: 0 none;
   border-radius: 25px;
   cursor: pointer;
@@ -245,7 +242,7 @@ header {
 
 #progressbar li {
   list-style-type: none;
-  color: navy;
+  color: black;
   text-transform: uppercase;
   font-size: 10px;
   width: 33.33%;
@@ -257,7 +254,7 @@ header {
 #progressbar li:before {
   content: counter(step);
   counter-increment: step;
-  width: 24px;
+  width: 50px;
   height: 24px;
   line-height: 26px;
   display: block;
@@ -268,16 +265,16 @@ header {
   margin: 0 auto 10px auto;
 }
 
-/*progressbar connectors (NOT WORKING?) */
+/*progressbar connectors  */
 #progressbar li:after {
   content: '';
-  width: 100%;
+  width: 100%; /* Progress bar connector */
   height: 2px;
   background: white;
   position: absolute;
   left: -50%;
   top: 9px;
-  z-index: -1; /*put it behind the numbers*/
+  z-index: -1; /*put it behind the numbers (NOT WORKING) [if take out works] */
 
   transition: 0.5s
 }
@@ -292,6 +289,7 @@ header {
 #progressbar li.active:before, #progressbar li.active:after {
   background: wheat;
   color: navy;
+  border:  1px solid black;
 }
 
 
@@ -325,7 +323,7 @@ figure h2 {
     left: 0;
     width: 100%;
     height: 50px;
-    color: #fff;
+    color: wheat;
     background: rgba(0, 0, 0, 0.6);
     margin: 0;
     text-align: center;

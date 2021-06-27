@@ -103,8 +103,9 @@ $(".previous").click(function(){
 		}, 
 		duration: 800, 
 		complete: function(){
-			current_fs.parent() // current_fs.hide();  //To fix elements from shift up when press prev button
+			current_fs.hide(); 
 			animating = false;
+			previous_fs.css ({'position': 'relative'}); // To fix prev button to work properly (Properly scales transfomed box & bkg to fit)
 		}, 
 		//this comes from the custom easing plugin
 		easing: 'easeInOutBack'
