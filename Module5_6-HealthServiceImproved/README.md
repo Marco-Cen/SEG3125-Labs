@@ -1,21 +1,61 @@
-Within this repository includes labatory work from the course: 
-- SEG 3125: Lab 5 AND 6 -- Module 5 and 6
+Within this repository includes labatory work from the course: SEG 3125: Lab 5 AND 6 -- Module 5 and 6
 
-Site:
-= Health Service Business: Physiotherapy OR can modify type of health service (Eg: chiropractic clinic, optometrist, dentist, etc.)
+The viewing of the rendered sites:
+* (Lab 5-6, Module 5/6 Site): <br>
+https://marco-cen.github.io/SEG3125-Labs/Module5_6-HealthServiceImproved/
 
+Site: <br> Health Service Business: Physiotherapy OR can modify type of health service (Eg: chiropractic clinic, optometrist, dentist, etc.)
 
-Objective:
+<br>
+
+# Objective:
 - Keep in mind:
     - Include design principles presented in book: Design of Everyday Things by Dr. Norman.
     - Cognitive load requested by site (Human Cognition)
     - use of icons 
 - Learn JavaScript framework, jQuery to create responsive site
 
+<br> <br>
 
-The viewing of the rendered sites:
-* (Lab 5-6, Module 5/6 Site): <br>
-https://marco-cen.github.io/SEG3125-Labs/Module5_6-HealthServiceImproved/
+## Functional Requirements:
+1) Choose serivce and a date and allow user to choose expert/professional of their choice
+2) Guarantee Service Reservation: user must provide CC info (Add payment section to site)
+
+## Human Cognition Requirements:
+1) Attention (User knows where they are)
+    - Menu options that bring user to right place on page (Not new pages)
+2) Memory (Avoid menus too long: if 10 types of services, organize into sub-groups)
+3) Perception (Review Law of Gestalt)
+    - Law of Similarity: similar elements to see as a group (Colours, icons, etc.)
+    - Law of Figure and Ground: Clear visible icons on various bkg colours?
+    - Law of Focal Point: Users attention focused (Ex: Navbar menu to know where users are)
+
+## Visual Communication Tools (Icons)
+    - Must add icons on page for: (Visible on various bkgs)
+        - Services 
+        - Experts/Professionals
+        - Payment
+        - 2 other elements of your choice
+
+## Design Principles (From book: Design of Everyday Things by Dr. Norman)
+    - Previous Lab: Visibility & Consistency
+    - Now, Feedback and Constraints
+
+        - Visibility and Affordance: (See can do and understand)
+            - Help user understand info to enter (Use tooltips: eg hover over description box)
+            - Highlight of entries (Eg: on hover over, change colour of entry or emphasize entry in another way)
+
+        - Constraints: (only acceptable choices and enter allowed info)
+            - validation of inputs (Ex: Telephone or CC #)
+            - Hide unavailable dates on date select (Dependant on professional selected!)
+
+        - User Feedback:
+            - Input errors (Give error msgs)
+            - Any other feedback necessary to help user understand what happeneded
+
+        - Consistency:
+            - Choice of jQuery UI theme related to site overall (Uniform jQuery themes)
+            - Choice of icons related to theme (Icons styling is same)
 
 
 
@@ -24,8 +64,8 @@ https://marco-cen.github.io/SEG3125-Labs/Module5_6-HealthServiceImproved/
 Sources Used to Help Create:
 (From Lab 5/6)
 - https://github.com/RyanMatte/Lab5_Starter (Referenced TA's jQuery implementations as a foundation)
-
-
+- https://codepen.io/Pratish-Dasavate/pen/MWJqGva (Menu Nav Bar)
+- https://github.com/skcals/bootstrap-transparent-navbar (Menu Nav Bar)
 
 
 
