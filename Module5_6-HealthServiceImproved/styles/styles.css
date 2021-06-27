@@ -25,16 +25,17 @@ header {
     /* filter: blur(1.5px); */    
   }
 
-/* Menu Nav Bar (Transparanet) */
+/* Menu Nav Bar */
 .navbar{
   position: fixed;
   transition: 0.5s;
-  height: 10vh; 
-  /* background: rgba(0, 0, 0, 0.5) !important; */
+  height: 5.9vh; 
 }
   .navOptions{
   		color: #fff;
   		padding: 10px 20px;
+      
+      /* transition: 0.5s;  */ /* Doesnt work?! */
   }
 
   	.navOptions li{
@@ -46,7 +47,7 @@ header {
     .navOptions li:after{
       content: '';
       display: block;
-        border-bottom: 2px solid #38fd07;
+        border-bottom: 2px solid #A79FFF; /* Underline Text on hover */
         transform: scaleX(0);
         transition: .2s ease-in-out;
     }
@@ -56,11 +57,14 @@ header {
     .navbar-collapse{
       /* bkg colour moved to main.js */
     }
-    .navbar-brand{
+
+    /* .navbar-brand{  
   		color: #fff;
   		font-size: 45px;
   		cursor: pointer;
-  	}
+  	} */
+
+
 
     /* -- Side bar nav bar tracker */
     /* body::-webkit-scrollbar-track
@@ -110,7 +114,7 @@ header {
 /* Company Title */
 .MedicalthText{
     font-size: 3em;
-    background: -webkit-linear-gradient(wheat,navy);
+    background: -webkit-linear-gradient(wheat,navy); /* navy looks like #7E69DD, #6720FF, #6E70B0 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;

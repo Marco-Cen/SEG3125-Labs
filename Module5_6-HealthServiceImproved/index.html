@@ -31,56 +31,55 @@
 
 
 <body>
-        <!-- 'container' if you want -->
+        <!-- Put all in 'container' if want containerized look  -->
+
 
         <!-- Bkg Image included in 'header' (References in Styles.css) -->
         <header>
 
             <!-- Collapsible Navbar that jumps to parts of page (Hamburger menu icon when screen res smaller) -->
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light p-md-3">
-                <div class="container col">
-
-                    <a class="navbar-brand">  </a>
-
-                    <!-- Hamburger menu icon options -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavbar" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-
-                        <span class="navbar-toggler-icon"></span>
-
-                    </button>
-
-                </div>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+                <!-- Hamburger menu icon options -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+                <!-- Title text beside hamburger menu inside menu nav bar -->
+                <!-- <a class="navbar-brand">  Hello </a> -->
 
 
                 <!-- Menu options -->
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="collapse navbar-collapse   m-2 justify-content-center" id="collapsibleNavbar">
 
                     <!-- <div class="mx-auto"></div> -->
 
                     <ul class="navOptions navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#aboutus"> <img src="images/.png" alt="logo">About Us</a>
+                            <a class="nav-link text-white" href="#findus"> <img src="assets/FindUs.png" alt="FindUslogo">Find Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#ourteam"> <img src="images/.png" alt="logo">Our Team</a>
+                            <a class="nav-link text-white" href="#ourteam"> <img src="assets/OurTeam.png" alt="OurTeamlogo"> Our Team</a>
                         </li>
 
+                        <!-- <li class="nav-item">
+                            <a class="nav-link MedicalthText" href="#homepage">Medicalth</a>
+                            <img class="justify-content-center" src="assets/MedicalthTransparent.png" width="50" height="50">
+                        </li> -->
+
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#services">Services</a>
+                            <a class="nav-link text-white" href="#services"> <img src="assets/service.png" alt="serviceslogo"> Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#appointment">Request an Appointment</a>
+                            <a class="nav-link text-white" href="#appointment"> <img src="assets/appointment3.png" alt="appointmentlogo"> Request an Appointment</a>
                         </li>
 
                     </ul>
                 </div>
             </nav>
-
-
-
 
 
             <div class="titleText">
@@ -92,8 +91,8 @@
         </header>
 
 
-        <!-- About Us Section -->
-        <div class="aboutUsText">
+        <!-- ABOUT US -->
+        <div class="aboutUsText" id="findus">
             <h2> Who are we? </h2>
             <p> Based in <a
                     href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
@@ -128,10 +127,8 @@
         </div>
 
 
-
-        <div class="container">
-
-            <!-- Services Available -->
+        <!-- SERVICES AVAILABLE -->
+        <div class="container" id="services">
             <h1>Our Services</h1>
             <div class="row">
                 <div class="col">
@@ -227,9 +224,11 @@
                 </div>
             </div>
 
+            
+            <!-- APPOINTMENT -->
             <br><br>
-            <div class="container">
-                <h1>Request An Appointment </h1>
+            <div class="container" id="appointment">
+                <h1 style="border: black; color: #3D2DB7;">Request An Appointment </h1>
 
                 <form>
                     <div class="form-group">
@@ -286,7 +285,7 @@
 
                     <button type="submit" class="btn btn-warning"
                         onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');"
-                        style="background-color: navy; border: black; color: white;">Submit</button>
+                        style="background-color: #6858FF; border: black; color: white;">Submit</button>
 
                 </form>
 
@@ -303,11 +302,9 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
 
 
-            <!--  -->
-
+        <!-- OUR TEAM  [Fictional Experts] -->
             <br> <br> <br>
-            <!-- Fictional Experts on our Team (References in Styles.css) -->
-            <div class="container">
+            <div class="container" id="ourteam">
                 <h1>Our Team</h1>
                 <div class="row">
 
@@ -383,17 +380,16 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
 
 
-
+            <!-- FOOTER COMPANY TAG -->  
             <br> <br>
             <div class="bg-light text-black p-3 my-3 ">
 
                 <div class="col">
-                    <h1 class="MedicalthText"> <img src="assets/Medicalth2.png" width="130" height="130"> Medicalth
+                    <h1 class="MedicalthText"> <img src="assets/MedicalthTransparent.png" width="130" height="130"> Medicalth
                     </h1>
 
                     <i class="d-flex justify-content-center" style="position: relative; top:-40px;"> For ALL your
                         Physiotherapy needs </i>
-
                 </div>
 
                 <div class="col">
@@ -411,11 +407,10 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
             
 
-<!-- (LINKING REFERENCES) -->
+<!-- LINKING REFERENCES -->
 <!-- Link Own Scripts File (JS) -->
 <script src="scripts/main.js"></script>
 <script src="scripts/services.js"></script>
-
 
 <!-- Optional JavaScript; choose one of the two! -->
 <!-- Option 1: Bootstrap Bundle with Popper -->

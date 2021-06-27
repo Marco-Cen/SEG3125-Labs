@@ -66,6 +66,7 @@ Sources Used to Help Create:
 - https://github.com/RyanMatte/Lab5_Starter (Referenced TA's jQuery implementations as a foundation)
 - https://codepen.io/Pratish-Dasavate/pen/MWJqGva (Menu Nav Bar)
 - https://github.com/skcals/bootstrap-transparent-navbar (Menu Nav Bar)
+- https://icons8.com/icons (Icons)
 
 
 

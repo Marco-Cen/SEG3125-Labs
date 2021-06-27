@@ -8,24 +8,28 @@
 	var navMenuOptions = document.querySelector('.navOptions');
 
 	window.addEventListener('scroll', function () {
-	  if (window.pageYOffset > 250) {
-		// entireNavBarTag.classList.add('bg-dark', 'shadow'); //Show colour block on scroll on entire nav bar
-		navMenuOptions.style.background = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )'; //Show transparent colour 
-		
-		// navMenuOptions.classList.add('bg-dark', 'shadow'); 
-		entireNavBarTag.style.background = 'rgba(0,0,0,0.5)'; 
-
-	} else {
-		entireNavBarTag.classList.remove('bg-dark', 'shadow');
-		navMenuOptions.style.background = '';
-
-		// navMenuOptions.classList.remove('bg-dark', 'shadow'); 
+	
+	//-- Base Case --
+	if (window.pageYOffset < 250) {
+		// entireNavBarTag.classList.remove('bg-dark', 'shadow');
 		entireNavBarTag.style.background = ''; 
 
+		navMenuOptions.style.background = '';
+		// navMenuOptions.classList.remove('bg-dark', 'shadow'); 
+	}
+
+	if (window.pageYOffset > 250) {
+		//-- Show bkg colour on ENTIRE NAV BAR on scroll --
+		entireNavBarTag.style.background = 'rgba(0,0,0,0.5)'; 
+		// entireNavBarTag.classList.add('bg-dark', 'shadow');
+		
+		//-- Show bkg colour on menu OPTIONS --
+		navMenuOptions.style.background = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )'; //Show transparent colour 
+		// navMenuOptions.classList.add('bg-dark', 'shadow'); 
+	} 
 
 	 
-	
-	}
+
 	});
 	
 
