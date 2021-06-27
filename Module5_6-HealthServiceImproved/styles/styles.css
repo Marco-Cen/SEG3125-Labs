@@ -1,7 +1,8 @@
 /* Colour Palette:
   Logo: Wheat (#f5deb3), Navy (#000080)
-  Related to Theme: Black, White, #A79FFF (Underline text) #6858FF (light purple), #3D2DB7 (purple) 
-*/
+  Related to Theme: Black, White, #A79FFF (Underline text) #6858FF (light purple -- bkg colour), #3D2DB7 (purple -- icon/subheading colour) 
+  Icons: 24px (nav bar), 48px (subheading)
+  */
 
 body, html{
     font-family: 'Questrial', sans-serif; /* Font */

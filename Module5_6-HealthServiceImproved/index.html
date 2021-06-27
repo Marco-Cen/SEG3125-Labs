@@ -60,12 +60,12 @@
                 <ul class="navOptions navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/FindUs.png" alt="aboutLogo">
+                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/aboutus.png" alt="finduslogo">
                             About Us </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#appointment"> <img src="assets/appointment3.png"
+                        <a class="nav-link text-white" href="#appointment"> <img src="assets/appointmentSmall.png"
                                 alt="appointmentlogo"> Book Appointment </a>
                     </li>
 
@@ -104,10 +104,15 @@
         <content class="col">
             <figure>
                 <video autoplay muted loop class="bkg-video">
-                    <source src="../Module5_6-HealthServiceImproved/assets/.mp4" type="video/mp4">
+                    <source src="../Module5_6-HealthServiceImproved/assets/medicalthVideobkg.mp4" type="video/mp4">
                 </video>
 
-                <h2 style="top: 3%;"> ABOUT US </h2>
+                <!-- ABOUT US text BEFORE overlay -->
+                <h2 style="top: 3%;">   
+                     <img src="assets/aboutus.png" alt="aboutusLogo" style="width: 48px;"> </img> 
+                    <span style="position: relative; top:-80%;"> ABOUT US </span>
+                </h2>
+                
                 <!-- Style determines position of banner before hover overlay (TOP)-->
                 <div class="overlay" style="top:0;">
                     <!-- Style determines direction of overlay on hover (UpDown Direction)-->
@@ -131,7 +136,9 @@
     <div id="appointment"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
     <br><br><br>
     <div class="container">
-        <h1 style="border: black; color: #3D2DB7;">Book an Appointment Online </h1>
+        <h1 style="border: black; color: #3D2DB7;">  
+            <img src="assets/appointmentMedium.png" alt="appointmentlogo"> Book an Appointment Online </img> 
+        </h1>
 
         <div class="row justify-content-center">
             <div class="col-md-7 col-md-offset-3">
@@ -326,7 +333,9 @@ https://getbootstrap.com/docs/5.0/components/alerts/
     <div id="services"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
     <br><br><br>
     <div class="container">
-        <h1 style="color: #3D2DB7"> Our Services</h1>
+        <h1 style="color: #3D2DB7"> 
+            <img src="assets/servicesMedium.png" alt="servicesLogo"> Our Services </img> 
+        </h1>
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 20rem;">
@@ -432,7 +441,9 @@ https://getbootstrap.com/docs/5.0/components/alerts/
     <div id="ourteam"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
     <br><br><br>
     <div class="container">
-        <h1 style="color: #3D2DB7">Our Team</h1>
+        <h1 style="color: #3D2DB7">
+            <img src="assets/OurTeamMedium.png" alt="ourteamLogo"> Our Team </img> 
+        </h1>
         <div class="row">
 
             <content class="col">
