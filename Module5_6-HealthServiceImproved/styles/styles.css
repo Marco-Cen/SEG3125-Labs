@@ -27,16 +27,20 @@ header {
 .navbar{
   position: fixed;
   transition: 0.5s;
+  height: 10vh;
 }
   .navOptions{
   		color: #fff;
   		padding: 10px 20px;
+      /* background: rgba(0,0,0,0.5); */
+
   }
 
   	.navOptions li{
   		padding: 10px;
   		cursor: pointer;
   		font-size: 16px;
+      justify-content: left;
   	}
     .navOptions li:after{
       content: '';
@@ -50,7 +54,7 @@ header {
   	}
     .navbar-collapse{
       /* background: #501e27; */
-      background: rgba(0,0,0,0.5);
+      /* background: rgba(0,0,0,0.5); */
     }
     .navbar-brand{
   		color: #fff;

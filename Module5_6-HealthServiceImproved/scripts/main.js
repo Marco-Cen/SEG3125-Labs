@@ -3,13 +3,18 @@
 
 
 //-- Menu Nav Bar scrolling --
-	var nav = document.querySelector('nav');
+	var entireNavBar = document.querySelector('nav');
+	var navMenuOptions = document.querySelector('.navOptions');
 
 	window.addEventListener('scroll', function () {
-	  if (window.pageYOffset > 100) {
-		nav.classList.add('bg-dark', 'shadow');
+	  if (window.pageYOffset > 680) {
+		entireNavBar.classList.add('bg-dark', 'shadow'); //Show colour block on scroll on entire nav bar
+		navMenuOptions.style.background = 'rgba(0,0,0,0.5)'; //Show transparent colour 
+
 	  } else {
-		nav.classList.remove('bg-dark', 'shadow');
+		entireNavBar.classList.remove('bg-dark', 'shadow');
+		navMenuOptions.style.background = '';
+
 	  }
 	});
 	
