@@ -32,10 +32,8 @@
 </head>
 
 
-
 <body>
     <!-- Put ALL in 'container' if want containerized look  -->
-
 
     <!-- Bkg Image included in 'header' (References in Styles.css) -->
     <header>
@@ -51,7 +49,6 @@
             <!-- Title text beside hamburger menu inside menu nav bar -->
             <!-- <a class="navbar-brand">  Hello </a> -->
 
-
             <!-- Menu options -->
             <div class="collapse navbar-collapse   m-3 justify-content-center" id="collapsibleNavbar">
 
@@ -66,8 +63,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/appointment3.png"
-                                alt="appointmentlogo"> About Us </a>
+                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/FindUs.png" alt="aboutLogo">
+                            About Us </a>
                     </li>
 
                     <li class="nav-item">
@@ -86,15 +83,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#findus"> <img src="assets/FindUs.png"
-                                alt="FindUslogo">Contact Us</a>
+                        <a class="nav-link text-white" href="#findus"> <img src="assets/.png" alt="FindUslogo">Contact
+                            Us</a>
                     </li>
-
 
                 </ul>
             </div>
         </nav>
-
 
         <div class="titleText">
             <h1 class="MedicalthText"> Medicalth </h1>
@@ -105,19 +100,17 @@
     </header>
 
 
-
     <!-- ABOUT US -->
-    <br>
-    <br>
-    <br>
-    <div class="container" id="aboutus">
+    <div id="aboutus"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
+    <br><br><br>
+    <div class="container">
         <content class="col">
             <figure>
                 <video autoplay muted loop class="bkg-video">
                     <source src="../Module5_6-HealthServiceImproved/assets/medicalthVideobkg.mp4" type="video/mp4">
                 </video>
 
-                <h2 style="top: calc(13% - 75px);"> ABOUT US </h2>
+                <h2 style="top: 3%;"> ABOUT US </h2>
                 <!-- Style determines position of banner before hover overlay (TOP)-->
                 <div class="overlay" style="top:0;">
                     <!-- Style determines direction of overlay on hover (UpDown Direction)-->
@@ -137,10 +130,10 @@
     </div>
 
 
-
     <!-- APPOINTMENT -->
-    <br><br>
-    <div class="container" id="appointment">
+    <div id="appointment"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
+    <br><br><br>
+    <div class="container">
         <h1 style="border: black; color: #3D2DB7;">Book an Appointment Online </h1>
 
         <form>
@@ -155,13 +148,18 @@
             </div>
 
             <div class="form-group">
-                <label for="emailAddress">Email address</label>
+                <label for="emailAddress">Email address: </label>
                 <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Telephone: </label>
+                <input type="phone" class="form-control" id="phoneNumber" placeholder="123-456-7890">
             </div>
 
             <br>
 
-            <p>Select Desired Services:</p>
+            <p>Select Desired Service:</p>
             <input type="checkbox" name="feature" value="musculo"> &nbsp; Musculoskeletal Physiotherapy<br>
             <input type="checkbox" name="feature" value="rehabPain"> &nbsp; Rehabilitation and Pain
             Management<br>
@@ -184,6 +182,19 @@
             <br>
 
             <div class="form-group">
+                <label for="chooseExpert">Select Desired Physiotherapist: </label>
+                <select id="expertSelect" class="form-control">
+                    <option selected> No Preference </option>
+                    <option> Jackson Lee </option>
+                    <option> Alyssa Wang </option>
+                    <option> James Wilson </option>
+                </select>
+            </div>
+
+
+            <br>
+
+            <div class="form-group">
                 <label for="appointmentDate">Set Appointment Date:</label>
                 <input type="date" id="appointmentDate" name="appointmentDate">
                 <br>
@@ -198,6 +209,13 @@
                 <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
             </div>
 
+            <br>
+
+            <div class="form-group">
+                To Secure and Guarentee This Appointment Time Slot:
+                <label for="creditCard">Credit Card: </label>
+                <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
+            </div>
 
             <button type="submit" class="btn btn-warning"
                 onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');"
@@ -221,8 +239,9 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
 
     <!-- SERVICES AVAILABLE -->
-    <br><br>
-    <div class="container" id="services">
+    <div id="services"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
+    <br><br><br>
+    <div class="container">
         <h1> Services</h1>
         <div class="row">
             <div class="col">
@@ -230,8 +249,9 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                     <img src="assets/image.jpeg" class="card-img-top" alt="Back">
                     <div class="card-body">
                         <h5 class="card-title"> Musculoskeletal Physiotherapy <br> ($95/hour session) </h5>
-                        <p class="card-text"> Also known as the Orthopaedic Physiotherapy, this treatment deals with the 
-                            restoration of complete and unbarred function to the musculoskeletal system: consists of bones, muscles,
+                        <p class="card-text"> Also known as the Orthopaedic Physiotherapy, this treatment deals with the
+                            restoration of complete and unbarred function to the musculoskeletal system: consists of
+                            bones, muscles,
                             tendons, ligaments, and joints. </p>
                         <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
                             onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
@@ -244,8 +264,8 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                     <img src="assets/image2.jpeg" class="card-img-top" alt="RehabPain">
                     <div class="card-body">
                         <h5 class="card-title">Rehabilitation and Pain Management <br> ($100/hour session) </h5>
-                        <p class="card-text"> Customized treatments to remove pain in the body. Focuses on exercises 
-                            that strengthen the body to reduce damages and increase recovery period for better mobility; 
+                        <p class="card-text"> Customized treatments to remove pain in the body. Focuses on exercises
+                            that strengthen the body to reduce damages and increase recovery period for better mobility;
                             helpful for post-surgery pain. </p>
                         <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
                             onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
@@ -258,8 +278,10 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                     <img src="assets/image3.jpeg" class="card-img-top" alt="sports">
                     <div class="card-body">
                         <h5 class="card-title"> Sports Physiotherapy <br> ($110/hour session)</h5>
-                        <p class="card-text"> This treatment helps decrease the tension on the muscles of athletes and sports
-                            professionals; however, anyone can benefit from this treatment. These sessions are reccomended before 
+                        <p class="card-text"> This treatment helps decrease the tension on the muscles of athletes and
+                            sports
+                            professionals; however, anyone can benefit from this treatment. These sessions are
+                            reccomended before
                             and after each particular game for best results. </p>
                         <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
                             onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
@@ -294,8 +316,8 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                             session) </h5>
                         <p class="card-text"> Reccomended for individuals that suffer from diseases of conditions
                             related to the heart, chest, and lungs, this treatment helps in the rehabilitation of
-                            individuals suffering from cardiac arrest or various chronic pulmonary disorders; 
-                            this is a special ultimate bundle. 
+                            individuals suffering from cardiac arrest or various chronic pulmonary disorders;
+                            this is a special ultimate bundle.
                         </p>
                         <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
                             onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
@@ -310,7 +332,7 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                         <h5 class="card-title"> Neurological Physiotherapy <br> ($125/hour session) </h5>
                         <p class="card-text"> This treatment helps tackle any conditions related to the nervous
                             system: from head injuries to strokes, to dealing with chronic diseases such as Parkinson’s
-                            diseases or sciatica. It also helps regain ALL mobility, avoiding any 
+                            diseases or sciatica. It also helps regain ALL mobility, avoiding any
                             diseases originating from the neurological or neuromuscular systems. </p>
                         <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
                             onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
@@ -322,13 +344,10 @@ https://getbootstrap.com/docs/5.0/components/alerts/
     </div>
 
 
-    <br><br>
-    <button style="position: relative; left:45%;"> Book an Appointment </button>
-
-
     <!-- OUR TEAM  [Fictional Experts] -->
-    <br> <br> <br>
-    <div class="container" id="ourteam">
+    <div id="ourteam"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
+    <br><br><br>
+    <div class="container">
         <h1>Our Team</h1>
         <div class="row">
 
@@ -382,39 +401,40 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
 
     <!-- FOOTER COMPANY TAG (CONTACT US) -->
-    <br> <br> <br> <br>
-    <div class="bg-light p-3 my-1" id="findus">
+    <div id="findus"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="bg-light p-3 my-1">
         <div class="row">
 
             <!-- LEFT SIDE -->
             <div class="col align-self-center">
-                    <img src="assets/hoursIcon.png" alt="hoursIcon" style="position: relative; left:35%;" > </img>
-            
+                <img src="assets/hoursIcon.png" alt="hoursIcon" style="position: relative; left:35%;"> </img>
+
                 <div class="row justify-content-between">
                     <div class="col">
                         <h4> Weekday:</h4>
                         <b> MONDAY </b>
                         <p> &nbsp; 7:00 AM - 6:00 PM </p>
-            
+
                         <b> TUESDAY </b> <br>
                         <p> &nbsp; 7:00 AM - 6:00 PM </p>
-            
+
                         <b> WEDNESDAY </b> <br>
                         <p> &nbsp; 8:00 AM - 6:00 PM </p>
-            
+
                         <b> THURSDAY </b> <br>
                         <p> &nbsp; 8:00 AM - 6:00 PM </p>
-            
+
                         <b> FRIDAY </b> <br>
                         <p> &nbsp; 9:00 AM - 6:00 PM </p>
                     </div>
-            
+
                     <div class="col">
                         <div class="row">
                             <h4> Weekend:</h4>
                             <b> SATURDAY </b> <br>
                             <p> &nbsp; 9:00 AM - 6:00 PM </p>
-            
+
                             <b> SUNDAY </b> <br>
                             <p> &nbsp; CLOSED </p>
                         </div>
@@ -445,18 +465,19 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                         <img src="assets/phoneIcon.png" alt="phoneIcon"> </img>:
                         <a href="tel:6479373188"> (647) 937-3188 </a>
                     </p>
-                
+
                     <p class="m-0">
                         <img src="assets/mailIcon.png" alt="emailIcon"> </img>:
                         <a href="mailto: marco.c3n@gmail.com"> support@medicalth.ca </a>
                     </p>
-                
+
                     <p class="m-0" style="position:relative; left:-0.5%;">
                         <img src="assets/locationIcon.png" alt="locationIcon" style="width:5%;"> </img>:
-                        <a href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
+                        <a
+                            href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
                             75 Laurier Ave. E, Ottawa, Ontario K1N 6N5, Canada
                         </a>
-                    </p>               
+                    </p>
                 </div>
 
 
