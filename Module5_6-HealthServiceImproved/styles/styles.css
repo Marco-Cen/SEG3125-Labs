@@ -118,6 +118,11 @@ header {
 
 }
 
+
+.bkg-video{
+  width: 100%;
+}
+
 /* Entry Labels */
 label{
   color: #3D2DB7;
@@ -133,7 +138,6 @@ label{
 
   height: 100%;
   background-color: #A79FFF;
-  /* max-height: 1500px;  Not working? Expands everytime click previous */
 }
 
 #appointmentForm fieldset {
@@ -269,15 +273,13 @@ label{
 /*progressbar connectors  */
 #progressbar li:after {
   content: '';
-  width: 100%; /* Progress bar connector */
   height: 2px;
   background: white;
   position: absolute;
   left: -50%;
   top: 9px;
+  width: 100%; /* Progress bar connector */
   z-index: -1; /*put it behind the numbers (NOT WORKING) [if take out works] */
-
-  transition: 0.5s
 }
 
 #progressbar li:first-child:after {
@@ -293,13 +295,6 @@ label{
   border:  1px solid black;
 }
 
-
-
-
-
-  .bkg-video{
-    width: 100%;
-  }
 
 
 

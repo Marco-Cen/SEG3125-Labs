@@ -60,18 +60,21 @@
                 <ul class="navOptions navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/aboutus.png" alt="finduslogo">
-                            About Us </a>
+                        <a class="nav-link text-white" href="#aboutus">
+                            <img src="assets/aboutus.png" alt="finduslogo"> About Us 
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#appointment"> <img src="assets/appointmentSmall.png"
-                                alt="appointmentlogo"> Book Appointment </a>
+                        <a class="nav-link text-white" href="#appointment"> 
+                            <img src="assets/appointmentSmall.png" alt="appointmentlogo"> Book Appointment
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#services"> <img src="assets/service.png"
-                                alt="serviceslogo"> Services</a>
+                        <a class="nav-link text-white" href="#services"> 
+                            <img src="assets/service.png" alt="serviceslogo"> Services
+                        </a>
                     </li>
 
                     <!-- <li class="nav-item">
@@ -80,8 +83,9 @@
                         </li> -->
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#ourteam"> <img src="assets/OurTeam.png" alt="OurTeamlogo">
-                            Our Team </a>
+                        <a class="nav-link text-white" href="#ourteam">
+                            <img src="assets/OurTeam.png" alt="OurTeamlogo"> Our Team 
+                        </a>
                     </li>
 
                 </ul>
@@ -108,11 +112,11 @@
                 </video>
 
                 <!-- ABOUT US text BEFORE overlay -->
-                <h2 style="top: 3%;">   
-                     <img src="assets/aboutus.png" alt="aboutusLogo" style="width: 48px;"> </img> 
+                <h2 style="top: 3%;">
+                    <img src="assets/aboutus.png" alt="aboutusLogo" style="width: 48px;"> </img>
                     <span style="position: relative; top:-80%;"> ABOUT US </span>
                 </h2>
-                
+
                 <!-- Style determines position of banner before hover overlay (TOP)-->
                 <div class="overlay" style="top:0;">
                     <!-- Style determines direction of overlay on hover (UpDown Direction)-->
@@ -136,8 +140,8 @@
     <div id="appointment"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
     <br><br><br>
     <div class="container">
-        <h1 style="border: black; color: #3D2DB7;">  
-            <img src="assets/appointmentMedium.png" alt="appointmentlogo"> Book an Appointment Online </img> 
+        <h1 style="border: black; color: #3D2DB7;">
+            <img src="assets/appointmentMedium.png" alt="appointmentlogo"> Book an Appointment Online </img>
         </h1>
 
         <div class="row justify-content-center">
@@ -147,15 +151,23 @@
 
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active"> 
-                             Book Appointment 
+
+                        <li class="active"
+                        style="cursor: help;" data-toggle="tooltip" data-placement="top" 
+                        title="SELECT the service you wish to book and FILL your information for us to contact you">
+                            Book Appointment
                         </li>
-                        <li>
-                             Secure Appointment 
+
+                        <li style="cursor: help;" data-toggle="tooltip" data-placement="top" 
+                        title="GUARENTEE the booking of your appointment if payment information is provided. This information is required in case of a no-show: $200 will be charged if there is no prior notice.">
+                            Secure Appointment
                         </li>
-                        <li>
-                            Confirmation 
+
+                        <li  style="cursor: help;" data-toggle="tooltip" data-placement="top" 
+                        title="REVIEW and SUBMIT the details you have inputted in the previous steps">
+                            Confirmation
                         </li>
+
                     </ul>
 
 
@@ -164,7 +176,9 @@
                     <!-- Appointment Booking Details and how we can contact you -->
                     <fieldset id="apptPage1">
                         <h2 class="fs-title"> Booking Details</h2>
-                        <h3 class="fs-subtitle"> <i> Fill Your Personal Information Below </i> </h3>
+                        <h3 class="fs-subtitle" style="cursor: help;" data-toggle="tooltip" data-placement="bottom" 
+                        title="SELECT the service you wish to book and FILL your information for us to contact you"> 
+                            <i> Fill Your Personal Information Below </i> </h3>
 
                         <!-- UserInfo Entry -->
                         <div class="row">
@@ -181,17 +195,6 @@
                             </div>
                         </div>
 
-                        <!-- Phone Entry -->
-                        <div class="row">
-                            <div class="col-1 align-self-center">
-                                <img src="assets/phoneIcon.png" alt="phoneIcon">
-                            </div>
-
-                            <div class="col">
-                                <input type="text" name="phone" placeholder="(###) ###-####"/>
-                            </div>
-                        </div>
-
                         <!-- Email Entry -->
                         <div class="row">
                             <div class="col-1 align-self-center">
@@ -199,25 +202,36 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" name="email" placeholder="name@example.com"/>
+                                <input type="text" name="email" placeholder="name@example.com" />
+                            </div>
+                        </div>
+
+                        <!-- Phone Entry -->
+                        <div class="row">
+                            <div class="col-1 align-self-center">
+                                <img src="assets/phoneIcon.png" alt="phoneIcon">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="phone" placeholder="(###) ###-####" />
                             </div>
                         </div>
 
                         <!-- Select Desired Service -->
                         <br>
                         <div class="row">
-                                <label class="form-label"> Select Desired Services: </label>
-                                <select class="select form-control" style="text-align: center;" multiple>
-                                    <option value="1">Musculoskeletal Physiotherapy</option>
-                                    <option value="2">Rehabilitation and Pain Management</option>
-                                    <option value="3">Sports Physiotherapy</option>
-                                    <option value="4">Pelvic Floor Rehabilitation</option>
-                                    <option value="5">Neurological Physiotherapy</option>
-                                    <option value="6">Cardiorespiratory/pulmonary/vascular Physiotherapy</option>
-                                </select>
-                            
-                                <!-- Multi-select CheckBoxes -->
-                                <!-- <input type="checkbox" name="feature" value="musculo"> &nbsp; Musculoskeletal Physiotherapy<br>
+                            <label class="form-label"> Select Desired Services: </label>
+                            <select class="select form-control" style="text-align: center;" multiple>
+                                <option value="1">Musculoskeletal Physiotherapy</option>
+                                <option value="2">Rehabilitation and Pain Management</option>
+                                <option value="3">Sports Physiotherapy</option>
+                                <option value="4">Pelvic Floor Rehabilitation</option>
+                                <option value="5">Neurological Physiotherapy</option>
+                                <option value="6">Cardiorespiratory/pulmonary/vascular Physiotherapy</option>
+                            </select>
+
+                            <!-- Multi-select CheckBoxes -->
+                            <!-- <input type="checkbox" name="feature" value="musculo"> &nbsp; Musculoskeletal Physiotherapy<br>
                                                     <input type="checkbox" name="feature" value="rehabPain"> &nbsp; Rehabilitation and Pain
                                                     Management<br>
                                                     <input type="checkbox" name="feature" value="sports"> &nbsp; Sports Physiotherapy<br>
@@ -248,7 +262,8 @@
                             <label for="appointmentDate">Set Appointment Date:</label>
 
                             <div class="col">
-                                <input type="date" id="bookedDate" name="bookDate">                            </div>
+                                <input type="date" id="bookedDate" name="bookDate">
+                            </div>
 
                             <div class="col">
                                 <input type="time" id="bookedTime" name="bookTime">
@@ -272,27 +287,75 @@
                     <!-- Credit Card Payment Information to Secure Appointment (To Secure and Guarentee This Appointment Time Slot) -->
                     <fieldset id="apptPage2">
                         <h2 class="fs-title">Secure Appointment</h2>
-                        <h3 class="fs-subtitle"> <i> Credit Card Payment Information </i> </h3>
-                        <input type="text" name="twitter" placeholder="Twitter" />
-                        <input type="text" name="facebook" placeholder="Facebook" />
-                        <input type="text" name="gplus" placeholder="Google Plus" />
-                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <h3 class="fs-subtitle" style="cursor: help;" data-toggle="tooltip" data-placement="bottom" 
+                        title="GUARENTEE the booking of your appointment if payment information is provided. This information is required in case of a no-show: $200 will be charged if there is no prior notice."> 
+                            <i> Credit Card Payment Information </i> </h3>
 
-                        <div class="form-group">
-                            <label for="creditCard">Credit Card: </label>
-                            <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
+                        <!-- CC Name Entry -->
+                        <div class="row">
+                            <div class="col-1 align-self-center"
+                            style="cursor: help;" data-toggle="tooltip" data-placement="bottom" title="The Credit Card NAME on the front of the card">
+                                <img src="assets/userInfoIcon.png" alt="userInfoIcon">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="ccName" placeholder="Card Holder's Name"/>
+                            </div>
                         </div>
 
+                        <!-- CC Number Entry -->
+                        <div class="row">
+                            <div class="col-1 align-self-center"
+                            style="cursor: help;" data-toggle="tooltip" data-placement="bottom" title="The Credit Card NUMBER on the front of the card">
+                                <img src="assets/ccIcon.png" alt="ccCardLogo">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="ccNumber" placeholder="1234 5678 9123 4567" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <!-- CC Expire -->
+                            <div class="col-1 align-self-center"
+                            style="cursor: help;" data-toggle="tooltip" data-placement="bottom" title="The MONTH and YEAR Date on the front of the card">
+                                <img src="assets/ccExpire.png" alt="ccExpireLogo">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="ccExpire" placeholder="MM / YY" />
+                            </div>
+
+                            <!-- CC CVV -->
+                            <div class="col-1 align-self-center" 
+                            style="cursor: help;" data-toggle="tooltip" data-placement="bottom" title="The 3 DIGITS on the back of the card">
+                                <img src="assets/ccCVV.png" alt="ccVVLogo">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="ccCVV" placeholder="123" />
+                            </div>
+
+                        </div>
+
+
+
+
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
 
                     </fieldset>
 
 
 
                     <!-- Confirmation of details -->
-                    <fieldset id="apptPage3">
+                    <fieldset id="apptPage3"
+                    >
                         <h2 class="fs-title">Confirmation</h2>
-                        <h3 class="fs-subtitle"> <i> Review the Inputted Information </i> </h3>
+                        <h3 class="fs-subtitle" style="cursor: help;" data-toggle="tooltip" data-placement="top" 
+                        title="REVIEW and SUBMIT the details you have inputted in the previous steps"> 
+                            <i> Review the Inputted Information </i> </h3>
                         <input type="text" name="email" placeholder="Email" />
                         <input type="password" name="pass" placeholder="Password" />
                         <input type="password" name="cpass" placeholder="Confirm Password" />
@@ -333,8 +396,8 @@ https://getbootstrap.com/docs/5.0/components/alerts/
     <div id="services"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
     <br><br><br>
     <div class="container">
-        <h1 style="color: #3D2DB7"> 
-            <img src="assets/servicesMedium.png" alt="servicesLogo"> Our Services </img> 
+        <h1 style="color: #3D2DB7">
+            <img src="assets/servicesMedium.png" alt="servicesLogo"> Our Services </img>
         </h1>
         <div class="row">
             <div class="col">
@@ -442,7 +505,7 @@ https://getbootstrap.com/docs/5.0/components/alerts/
     <br><br><br>
     <div class="container">
         <h1 style="color: #3D2DB7">
-            <img src="assets/OurTeamMedium.png" alt="ourteamLogo"> Our Team </img> 
+            <img src="assets/OurTeamMedium.png" alt="ourteamLogo"> Our Team </img>
         </h1>
         <div class="row">
 
