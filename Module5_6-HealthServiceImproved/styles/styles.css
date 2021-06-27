@@ -29,12 +29,11 @@ header {
 .navbar{
   position: fixed;
   transition: 0.5s;
-  height: 5.9vh; 
+  height: 6.73vh; 
 }
   .navOptions{
   		color: #fff;
-  		padding: 10px 20px;
-      
+  		/* padding: 10px 20px; */
       /* transition: 0.5s;  */ /* Doesnt work?! */
   }
 
@@ -91,39 +90,47 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black; /* text colour */
+    color: black; 
     text-align: center;
 
     border: 1px solid black;
     background-color: #ffffff;
     opacity: 0.8;
   }
-  h1 {
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 3rem;
-    white-space: nowrap;
-  }
-  .aboutUsText {
-    max-width: 500px;
-    margin: 20px auto;
-  }
-/*  */
 
-
-/* Company Title */
+  /* Company Title */
 .MedicalthText{
-    font-size: 3em;
-    background: -webkit-linear-gradient(wheat,navy); /* navy looks like #7E69DD, #6720FF, #6E70B0 */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+  font-size: 4em;
+  background: -webkit-linear-gradient(wheat,navy); /* navy looks like #7E69DD, #6720FF, #6E70B0 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin: 0;
+
 }
 
+/* SubHeadings */
+  /* h2 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2rem;
+    white-space: nowrap;
+  } */
 
 
 
-/* (Meet the team) Referenced from: https://codepen.io/woojin-choi/pen/QzEvQY */
+  .bkg-video{
+    width: 100%;
+  }
+
+
+
+
+
+/* (Meet the TEAM and ABOUT US layout) -- Codepen inspired */
 .container content, .container aside {
     position: relative;
 }
@@ -140,7 +147,7 @@ figure img {
 }	
 figure h2 {
     position: absolute;
-    top: calc(100% - 50px);
+    top: calc(100% - 56px);
     left: 0;
     width: 100%;
     height: 50px;
@@ -148,9 +155,9 @@ figure h2 {
     background: rgba(0, 0, 0, 0.6);
     margin: 0;
 }	
+
 figure .overlay {
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
     overflow: hidden;
@@ -161,6 +168,7 @@ figure .overlay {
     -webkit-transition: .6s ease;
     transition: .6s ease;
 }
+
 figure .overlay .description {
     font-size: 20px;
     position: absolute;

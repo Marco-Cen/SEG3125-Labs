@@ -3,12 +3,10 @@
 
 
 //-- Menu Nav Bar scrolling --
-
 	var entireNavBarTag = document.querySelector('nav');
 	var navMenuOptions = document.querySelector('.navOptions');
 
 	window.addEventListener('scroll', function () {
-	
 	//-- Base Case --
 	if (window.pageYOffset < 250) {
 		// entireNavBarTag.classList.remove('bg-dark', 'shadow');

@@ -67,6 +67,9 @@ Sources Used to Help Create:
 - https://codepen.io/Pratish-Dasavate/pen/MWJqGva (Menu Nav Bar)
 - https://github.com/skcals/bootstrap-transparent-navbar (Menu Nav Bar)
 - https://icons8.com/icons (Icons)
+- https://codepen.io/casuru/pen/RPMyyp (Video Layout Inspiration)
+- https://pixabay.com/videos/exercise-stretching-senior-elder-32937/ (Bkg Video)
+- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon (FavIcon)
 
 
 
@@ -74,7 +77,7 @@ Sources Used to Help Create:
 - https://github.com/RyanMatte/Website (Referenced TA's Starter Code: Ryan Matte as a foundation)
 - https://stock.adobe.com/ca/search?k=physiotherapy+logo (Company logo design)
 - https://css-tricks.com/design-considerations-text-images/ (Title page layout)
-- https://codepen.io/woojin-choi/pen/QzEvQY (Meet the team Layout)
+- https://codepen.io/woojin-choi/pen/QzEvQY (Meet the TEAM Layout And ABOUT US Layout)
 - https://mdbootstrap.com/snippets/jquery/piotr-glejzer/156009 (Maps)
 - https://mjphysio.ca/types-of-physiotherapy (Types of Physiotherapy Info)
 - https://getbootstrap.com/docs/5.0/components/card/ (Service Tile Cards)
