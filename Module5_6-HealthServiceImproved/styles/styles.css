@@ -11,6 +11,8 @@ body, html{
 
 /* (Home Page) Referenced from: https://css-tricks.com/design-considerations-text-images/ */
 header {
+
+  /* Dull bkg image */
     background: 
       linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -27,13 +29,12 @@ header {
 .navbar{
   position: fixed;
   transition: 0.5s;
-  height: 10vh;
+  height: 10vh; 
+  /* background: rgba(0, 0, 0, 0.5) !important; */
 }
   .navOptions{
   		color: #fff;
   		padding: 10px 20px;
-      /* background: rgba(0,0,0,0.5); */
-
   }
 
   	.navOptions li{
@@ -53,8 +54,7 @@ header {
   	   transform: scaleX(1);
   	}
     .navbar-collapse{
-      /* background: #501e27; */
-      /* background: rgba(0,0,0,0.5); */
+      /* bkg colour moved to main.js */
     }
     .navbar-brand{
   		color: #fff;

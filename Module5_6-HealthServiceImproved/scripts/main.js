@@ -3,19 +3,29 @@
 
 
 //-- Menu Nav Bar scrolling --
-	var entireNavBar = document.querySelector('nav');
+
+	var entireNavBarTag = document.querySelector('nav');
 	var navMenuOptions = document.querySelector('.navOptions');
 
 	window.addEventListener('scroll', function () {
-	  if (window.pageYOffset > 680) {
-		entireNavBar.classList.add('bg-dark', 'shadow'); //Show colour block on scroll on entire nav bar
-		navMenuOptions.style.background = 'rgba(0,0,0,0.5)'; //Show transparent colour 
+	  if (window.pageYOffset > 250) {
+		// entireNavBarTag.classList.add('bg-dark', 'shadow'); //Show colour block on scroll on entire nav bar
+		navMenuOptions.style.background = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )'; //Show transparent colour 
+		
+		// navMenuOptions.classList.add('bg-dark', 'shadow'); 
+		entireNavBarTag.style.background = 'rgba(0,0,0,0.5)'; 
 
-	  } else {
-		entireNavBar.classList.remove('bg-dark', 'shadow');
+	} else {
+		entireNavBarTag.classList.remove('bg-dark', 'shadow');
 		navMenuOptions.style.background = '';
 
-	  }
+		// navMenuOptions.classList.remove('bg-dark', 'shadow'); 
+		entireNavBarTag.style.background = ''; 
+
+
+	 
+	
+	}
 	});
 	
 
