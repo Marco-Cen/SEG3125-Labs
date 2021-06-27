@@ -24,6 +24,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+
+
     <!-- Tab Title -->
     <title> Medicalth </title>
 
@@ -58,13 +60,13 @@
                 <ul class="navOptions navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#appointment"> <img src="assets/appointment3.png"
-                                alt="appointmentlogo"> Book Appointment </a>
+                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/FindUs.png" alt="aboutLogo">
+                            About Us </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#aboutus"> <img src="assets/FindUs.png" alt="aboutLogo">
-                            About Us </a>
+                        <a class="nav-link text-white" href="#appointment"> <img src="assets/appointment3.png"
+                                alt="appointmentlogo"> Book Appointment </a>
                     </li>
 
                     <li class="nav-item">
@@ -80,11 +82,6 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#ourteam"> <img src="assets/OurTeam.png" alt="OurTeamlogo">
                             Our Team </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#findus"> <img src="assets/.png" alt="FindUslogo">Contact
-                            Us</a>
                     </li>
 
                 </ul>
@@ -107,7 +104,7 @@
         <content class="col">
             <figure>
                 <video autoplay muted loop class="bkg-video">
-                    <source src="../Module5_6-HealthServiceImproved/assets/medicalthVideobkg.mp4" type="video/mp4">
+                    <source src="../Module5_6-HealthServiceImproved/assets/.mp4" type="video/mp4">
                 </video>
 
                 <h2 style="top: 3%;"> ABOUT US </h2>
@@ -115,11 +112,11 @@
                 <div class="overlay" style="top:0;">
                     <!-- Style determines direction of overlay on hover (UpDown Direction)-->
                     <div class="description">
-                        <p> Based in <a
-                                href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
-                                Ottawa, Ontario, </a>
-                            we highly value and take pride of the services we provide to our customers. <br>
-                            Visit us. Meet our physicians. Book an online appointment. <br> <br>
+                        <p> Based in Ottawa, Ontario, we highly value and take pride of the services
+                            we provide to our customers.
+                            <br>
+                            <a href="#findus"> Visit us. </a> Meet our physicians. Book an online appointment.
+                            <br> <br>
                             Get back to doing the things you love.
                         </p>
                     </div>
@@ -136,92 +133,173 @@
     <div class="container">
         <h1 style="border: black; color: #3D2DB7;">Book an Appointment Online </h1>
 
-        <form>
-            <div class="form-group">
-                <label for="firstName">First Name: </label>
-                <input type="fn" class="form-control" id="firstName" placeholder="ie: John">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-md-offset-3">
+
+                <form id="appointmentForm">
+
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active"> Book Appointment</li>
+                        <li> Secure Appointment </li>
+                        <li> Confirmation </li>
+                    </ul>
+
+
+                    <!-- fieldsets -->
+
+                    <!-- Appointment Booking Details and how we can contact you -->
+                    <fieldset>
+                        <h2 class="fs-title"> Booking Details</h2>
+                        <h3 class="fs-subtitle"> <i> Fill Your Personal Information Below </i> </h3>
+
+                        <!-- UserInfo Entry -->
+                        <div class="row">
+                            <div class="col-1 align-self-center">
+                                <img src="assets/FindUs.png" alt="userLogo">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="fname" placeholder="First Name" />
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="lname" placeholder="Last Name" />
+                            </div>
+                        </div>
+
+                        <!-- Phone Entry -->
+                        <div class="row">
+                            <div class="col-1 align-self-center">
+                                <img src="assets/phoneIcon.png" alt="phoneIcon">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="phone" placeholder="(###) ###-####"/>
+                            </div>
+                        </div>
+
+                        <!-- Email Entry -->
+                        <div class="row">
+                            <div class="col-1 align-self-center">
+                                <img src="assets/mailIcon.png" alt="mailIcon">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" name="email" placeholder="name@example.com"/>
+                            </div>
+                        </div>
+
+                        <!-- Select Desired Service -->
+                        <br>
+                        <div class="row">
+                                <label class="form-label"> Select Desired Services: </label>
+                                <select class="select form-control" style="text-align: center;" multiple>
+                                    <option value="1">Musculoskeletal Physiotherapy</option>
+                                    <option value="2">Rehabilitation and Pain Management</option>
+                                    <option value="3">Sports Physiotherapy</option>
+                                    <option value="4">Pelvic Floor Rehabilitation</option>
+                                    <option value="5">Neurological Physiotherapy</option>
+                                    <option value="6">Cardiorespiratory/pulmonary/vascular Physiotherapy</option>
+                                </select>
+                            
+                                <!-- Multi-select CheckBoxes -->
+                                <!-- <input type="checkbox" name="feature" value="musculo"> &nbsp; Musculoskeletal Physiotherapy<br>
+                                                    <input type="checkbox" name="feature" value="rehabPain"> &nbsp; Rehabilitation and Pain
+                                                    Management<br>
+                                                    <input type="checkbox" name="feature" value="sports"> &nbsp; Sports Physiotherapy<br>
+                                                    <input type="checkbox" name="feature" value="pelvic"> &nbsp; Pelvic Floor Rehabilitation<br>
+                                                    <input type="checkbox" name="feature" value="neuro"> &nbsp; Neurological Physiotherapy<br>
+                                                    <input type="checkbox" name="feature" value="cardio"> &nbsp;
+                                                    Cardiorespiratory/pulmonary/vascular
+                                                    Physiotherapy<br> -->
+                        </div>
+
+
+                        <!-- Physiotherapist Entry -->
+                        <br>
+                        <div class="row">
+                            <label for="chooseExpert">Select Desired Physiotherapist: </label>
+                            <select id="expertSelect" class="form-control" style="text-indent: 35%;">
+                                <option selected> No Preference </option>
+                                <option> Jackson Lee </option>
+                                <option> Alyssa Wang </option>
+                                <option> James Wilson </option>
+                            </select>
+                        </div>
+
+
+                        <!-- Appointment Date Entry -->
+                        <br>
+                        <div class="row">
+                            <label for="appointmentDate">Set Appointment Date:</label>
+
+                            <div class="col">
+                                <input type="date" id="bookedDate" name="bookDate">                            </div>
+
+                            <div class="col">
+                                <input type="time" id="bookedTime" name="bookTime">
+                            </div>
+
+                        </div>
+
+
+                        <!-- Additional Info Entry -->
+                        <br>
+                        <div class="row">
+                            <label for="descriptionPain"> Describe Your Pain or Other Information: </label>
+                            <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
+                        </div>
+
+                        <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+
+
+
+                    <!-- Credit Card Payment Information to Secure Appointment (To Secure and Guarentee This Appointment Time Slot) -->
+                    <fieldset>
+                        <h2 class="fs-title">Secure Appointment</h2>
+                        <h3 class="fs-subtitle"> <i> Credit Card Payment Information </i> </h3>
+                        <input type="text" name="twitter" placeholder="Twitter" />
+                        <input type="text" name="facebook" placeholder="Facebook" />
+                        <input type="text" name="gplus" placeholder="Google Plus" />
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Next" />
+
+                        <div class="form-group">
+                            <label for="creditCard">Credit Card: </label>
+                            <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
+                        </div>
+
+
+                    </fieldset>
+
+
+
+                    <!-- Confirmation of details -->
+                    <fieldset>
+                        <h2 class="fs-title">Confirmation</h2>
+                        <h3 class="fs-subtitle"> <i> Review the Inputted Information </i> </h3>
+                        <input type="text" name="email" placeholder="Email" />
+                        <input type="password" name="pass" placeholder="Password" />
+                        <input type="password" name="cpass" placeholder="Confirm Password" />
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        <input type="submit" name="submit" class="submit action-button " value="Submit"
+                            onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');" />
+
+                        <!-- class="btn btn-warning"
+                        onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');" -->
+
+
+                    </fieldset>
+
+
+
+
+                </form>
+
             </div>
-
-            <div class="form-group">
-                <label for="lastName">Last Name: </label>
-                <input type="ln" class="form-control" id="lastName" placeholder="ie: Smith">
-            </div>
-
-            <div class="form-group">
-                <label for="emailAddress">Email address: </label>
-                <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
-            </div>
-
-            <div class="form-group">
-                <label for="phoneNumber">Telephone: </label>
-                <input type="phone" class="form-control" id="phoneNumber" placeholder="123-456-7890">
-            </div>
-
-            <br>
-
-            <p>Select Desired Service:</p>
-            <input type="checkbox" name="feature" value="musculo"> &nbsp; Musculoskeletal Physiotherapy<br>
-            <input type="checkbox" name="feature" value="rehabPain"> &nbsp; Rehabilitation and Pain
-            Management<br>
-            <input type="checkbox" name="feature" value="sports"> &nbsp; Sports Physiotherapy<br>
-            <input type="checkbox" name="feature" value="pelvic"> &nbsp; Pelvic Floor Rehabilitation<br>
-            <input type="checkbox" name="feature" value="neuro"> &nbsp; Neurological Physiotherapy<br>
-            <input type="checkbox" name="feature" value="cardio"> &nbsp; Cardiorespiratory/pulmonary/vascular
-            Physiotherapy<br>
-            <!-- 
-                    <label class="form-label select-label">Select Services</label>
-                    <select class="select" multiple>
-                        <option value="1">Musculoskeletal Physiotherapy</option>
-                        <option value="2">Rehabilitation and Pain Management</option>
-                        <option value="3">Sports Physiotherapy</option>
-                        <option value="4">Pelvic Floor Rehabilitation</option>
-                        <option value="5">Neurological Physiotherapy</option>
-                        <option value="6">Cardiorespiratory/pulmonary/vascular Physiotherapy</option>
-                    </select> -->
-
-            <br>
-
-            <div class="form-group">
-                <label for="chooseExpert">Select Desired Physiotherapist: </label>
-                <select id="expertSelect" class="form-control">
-                    <option selected> No Preference </option>
-                    <option> Jackson Lee </option>
-                    <option> Alyssa Wang </option>
-                    <option> James Wilson </option>
-                </select>
-            </div>
-
-
-            <br>
-
-            <div class="form-group">
-                <label for="appointmentDate">Set Appointment Date:</label>
-                <input type="date" id="appointmentDate" name="appointmentDate">
-                <br>
-                <label for="appt">Select a time:</label>
-                <input type="time" id="appt" name="appt">
-            </div>
-
-            <br>
-
-            <div class="form-group">
-                <label for="descriptionPain">Describe Your Pain: </label>
-                <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
-            </div>
-
-            <br>
-
-            <div class="form-group">
-                To Secure and Guarentee This Appointment Time Slot:
-                <label for="creditCard">Credit Card: </label>
-                <textarea class="form-control" id="descriptionPain" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-warning"
-                onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');"
-                style="background-color: #6858FF; border: black; color: white;">Submit</button>
-
-        </form>
+        </div>
 
 
         <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
@@ -384,7 +462,7 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
             <content class="col">
                 <figure>
-                    <img src="assets/Expert31.png" class="img-responsive img-rounded" valign="absmiddle"
+                    <img src="assets/Expert3.png" class="img-responsive img-rounded" valign="absmiddle"
                         style="width:100.3%;" />
                     <h2> James Wilson </h2>
                     <div class="overlay" style="bottom:0;">
@@ -402,7 +480,10 @@ https://getbootstrap.com/docs/5.0/components/alerts/
 
     <!-- FOOTER COMPANY TAG (CONTACT US) -->
     <div id="findus"></div> <!-- Need to have id separate bc transparent menu nav bar covers subheading-->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br>
     <div class="bg-light p-3 my-1">
         <div class="row">
 
@@ -472,7 +553,7 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                     </p>
 
                     <p class="m-0" style="position:relative; left:-0.5%;">
-                        <img src="assets/locationIcon.png" alt="locationIcon" style="width:5%;"> </img>:
+                        <img src="assets/locationIcon.png" alt="locationIcon"> </img>:
                         <a
                             href="https://www.google.com/maps?ll=45.423106,-75.683133&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=1768324499397139374">
                             75 Laurier Ave. E, Ottawa, Ontario K1N 6N5, Canada

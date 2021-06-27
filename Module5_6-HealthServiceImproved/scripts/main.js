@@ -24,156 +24,94 @@
 		//-- Show bkg colour on menu OPTIONS --
 		navMenuOptions.style.background = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) )'; //Show transparent colour 
 		// navMenuOptions.classList.add('bg-dark', 'shadow'); 
-	} 
-
-	 
+	}  
 
 	});
+
+
+
+
 	
+// -- Book Appointment Form (Inspired by Codepen) --
+//jQuery time 
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
 
-	    // window.onscroll = function() {scrollFunction()};
+$(".next").click(function(){
+	if(animating) return false;
+	animating = true;
 	
-	// function scrollFunction() {
-	//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		
-	// 	document.getElementById("navbar").style.background = "#501e27";
-	//   } else {
-	   
-	// 	document.getElementById("navbar").style.background = "none";
-	//   }
-	// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // This function is called when any of the tab is clicked
-// // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
-
-// function openInfo(evt, tabName) {
-// 	document.getElementById(tabName).style.display = "none";
-
-// 	// Get all elements with class="tabcontent" and hide them
-// 	tabcontent = document.getElementsByClassName("tabcontent");
-// 	for (i = 0; i < tabcontent.length; i++) {
-// 		tabcontent[i].style.display = "none";
-// 	}
-
-// 	// Get all elements with class="tablinks" and remove the class "active"
-// 	tablinks = document.getElementsByClassName("tablinks");
-// 	for (i = 0; i < tablinks.length; i++) {
-// 		tablinks[i].className = tablinks[i].className.replace(" active", "");
-// 	}
-
-// 	// Show the current tab, and add an "active" class to the button that opened the tab
-// 	document.getElementById(tabName).style.display = "block";
-// 	evt.currentTarget.className += " active";
-
-// }
-
-
-
-// // generate a checkbox list from a list of products
-// // it makes each product name as the label for the checkbos
-
-// function populateListProductChoices(slct1, slct2) {
-// 	var s1 = document.getElementById(slct1);
-// 	var s2 = document.getElementById(slct2);
-
-// 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
-// 	s2.innerHTML = "";
-
-// 	// obtain a reduced list of products based on restrictions
-// 	var optionArray = restrictListProducts(products, s1.value);
-
-// 	//To sort list of products (Referenced: http://www.javascriptkit.com/javatutors/arraysort2.shtml)
-// 	optionArray.sort(function (a, b) {
-// 		return a.price - b.price
-// 	});
-
-// 	// for each item in the array, create a checkbox element, each containing information such as:
-// 	// <input type="checkbox" name="product" value="Bread">
-// 	// <label for="Bread">Bread/label><br>
-
-// 	for (i = 0; i < optionArray.length; i++) {
-
-// 		var productName = optionArray[i].name;
-// 		var productPrice = optionArray[i].price;
-
-// 		// create the checkbox and add in HTML DOM  [Makes Boxes]
-// 		var checkbox = document.createElement("input"); //Creates HTML: <input> </input>
-// 		checkbox.type = "checkbox";
-// 		checkbox.name = "product";
-// 		checkbox.value = productName;
-// 		s2.appendChild(checkbox);
-
-// 		// create a label for the checkbox, and also add in HTML DOM  [Title for each Box]
-// 		var label = document.createElement('label')
-// 		label.htmlFor = productName;
-// 		label.htmlFor = productPrice;
-// 		label.appendChild(document.createTextNode(productName)); //Creates HTML: text
-// 		label.appendChild(document.createElement("br")); //Creates: </br>
-// 		label.appendChild(document.createTextNode("$" + productPrice.toFixed(2) + " CAD"));
-// 		s2.appendChild(label);
-
-// 		// create a breakline node and add in HTML DOM  [Line Break to separate boxes]
-// 		s2.appendChild(document.createElement("br"));
-// 		s2.appendChild(document.createElement("br"));
-// 	}
-// }
-
-// // This function is called when the "Add selected items to cart" button in clicked
-// // The purpose is to build the HTML to be displayed (a Paragraph) 
-// // We build a paragraph to contain the list of selected items, and the total price
-
-// function selectedItems() {
-
-// 	var ele = document.getElementsByName("product"); //All Products shown on PRODUCTS selection screen
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
 	
-// 	//If want to UPDATE cart user confirmation
-// 	var updateCart = confirm("Are you sure you want to UPDATE your CART?");
-// 	if (!updateCart){ //False: no update cart, exit function w/o modifying
-// 		return 0;
-// 	}
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 	
-// 	var chosenProducts = []; //Resets list shown in cart
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
 
-// 	var c = document.getElementById('displayCart'); 
-// 	c.innerHTML = "";
+$(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.parent() // current_fs.hide();  //To fix elements from shift up when press prev button
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
 
-// 	// Populate list with CHECKED items selected
-// 	var para = document.createElement("P"); //<p>
-// 	para.innerHTML = "Purchasing: ";
-// 	para.appendChild(document.createElement("br")); //<br>
-// 	for (i = 0; i < ele.length; i++) {
-// 		if (ele[i].checked) {
-// 			para.appendChild(document.createTextNode("- " + ele[i].value));
-// 			para.appendChild(document.createElement("br"));
-// 			chosenProducts.push(ele[i].value);
-// 		}
-// 	}
-// 	para.appendChild(document.createElement("br"));
-// 	para.appendChild(document.createTextNode("-------------------------------------"));
-
-// 	// add paragraph and total price
-// 	c.appendChild(para);
-// 	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts).toFixed(2) + " CAD"));
-
-// 	// //Confirmation to let user know (Probably excessive)
-// 	// if (chosenProducts.length != 0) {
-// 	// 	alert("Success! Your CART has been updated.");
-// 	// }
-
-// 	openInfo(event, 'Cart');
-// }
-
+$(".submit").click(function(){
+	return false;
+})
+	
