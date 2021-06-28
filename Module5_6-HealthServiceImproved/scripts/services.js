@@ -113,13 +113,13 @@ function submittedAppointmentInfo() {
 
 //-- Final Submit --
 function finalSubmitToBook(){
-	var isComplete = confirm('Confirm the information was reviewed and will be submitted to book an Appointment');
+	var isComplete = confirm('Confirm the information was reviewed and will be submitted to book an appointment');
 	
 	if (!isComplete){
 		return false;
 	}
 	else if (isComplete){
-	 	alert("Nice. Information was Successfully submitted.");
+	 	alert("Nice. Information was successfully submitted. See you soon!");
 		 location.reload();
 		 return true;
 	} 
