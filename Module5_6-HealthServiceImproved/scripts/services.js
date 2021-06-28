@@ -3,8 +3,9 @@
 //-- TO TEST IF JS BEING HIT (View Browser's Console) --
 // console.log('script.js says "I\'m here at services.js"');
 
-//Note: DATE fails for 1 day after?! After error input, as long as filled will pass and go thru
-
+//Note: 
+//- DATE fails for 1 day after. After error input, as long as filled will pass and go thru
+//- ccNum always fails for first attempt?
 
 //-- Confirmation Tab (Review contents of what user submitted) --
 function submittedAppointmentInfo() {
@@ -18,7 +19,11 @@ function submittedAppointmentInfo() {
 		// The purpose is to build the HTML to be displayed (a Paragraph) 
 		// We build a paragraph to contain the list of submitted info in appointment by user
 
-		var finalResults = document.getElementById('displaySubmittedResult');
+
+		console.log("start");
+
+
+		var finalResults = document.getElementById("displaySubmittedResult");
 		finalResults.innerHTML = "";
 
 		var para = document.createElement("P"); //<p>
@@ -26,25 +31,25 @@ function submittedAppointmentInfo() {
 		para.appendChild(document.createElement("br")); //<br>
 	
 		//user info
-			var name = document.getElementById('fn').value + " " + document.getElementById('ln').value;
-			var email = document.getElementById('emailInput').value;
-			var phone = document.getElementById('phoneInput').value;
-			var service = document.getElementById('selectedService').value;
+			// var name = document.getElementById("fname").value + " " + document.getElementById("lname").value;
+			var email = document.getElementById("emailInput").value;
+			var phone = document.getElementById("phoneInput").value;
+			var service = document.getElementById("selectedService").value;
 			if(service == "1" ) return service = "Musculoskeletal Physiotherapy"
 			if(service == "2" ) return service = "Rehabilitation and Pain Management"
 			if(service == "3" ) return service = "Sports Physiotherapy"
 			if(service == "4" ) return service = "Pelvic Floor Rehabilitation"
 			if(service == "5" ) return service = "Neurological Physiotherapy"
 			if(service == "6" ) return service = "Cardiorespiratory/pulmonary/vascular Physiotherapy"
-			var physio = document.getElementById('expertSelect').value;
-			var date = document.getElementById('bookedDate').value + " " + document.getElementById('bookedTime').value;
-			var description = document.getElementById('descriptionPain').value;
-			var ccName = document.getElementById('ccName').value;
-			var ccNumber = document.getElementById('ccNumber').value;
-			var ccExpire = document.getElementById('ccExpire').value;
+			var physio = document.getElementById("expertSelect").value;
+			var date = document.getElementById("bookedDate").value + " " + document.getElementById("bookedTime").value;
+			var description = document.getElementById("descriptionPain").value;
+			var ccName = document.getElementById("ccName").value;
+			var ccNumber = document.getElementById("ccNumber").value;
+			var ccExpire = document.getElementById("ccExpire").value;
 
 		//convert to HTML to display
-			para.appendChild(document.createTextNode("Name: " + name));
+			// para.appendChild(document.createTextNode("Name: " + name));
 			para.appendChild(document.createElement("br"));
 			para.appendChild(document.createTextNode("Contact: " + email + "\n" + phone));
 			para.appendChild(document.createElement("br"));
@@ -69,6 +74,15 @@ function submittedAppointmentInfo() {
 		para.appendChild(document.createTextNode("-------------------------------------"));
 
 		finalResults.appendChild(para);
+
+
+		console.log("end");
+
+
+		//Show results:
+		document.getElementById("apptPage3").style.display = "none";	
+		document.getElementById("apptPage3").style.display = "block";
+
 
 
 
@@ -97,6 +111,22 @@ function submittedAppointmentInfo() {
 }
 
 
+//-- Final Submit --
+function finalSubmitToBook(){
+	var isComplete = confirm('Confirm the information was reviewed and will be submitted to book an Appointment');
+	
+	if (!isComplete){
+		return false;
+	}
+	else if (isComplete){
+	 	alert("Nice. Information was Successfully submitted.");
+		 location.reload();
+		 return true;
+	} 
+
+
+}
+
 
 
 
@@ -106,13 +136,15 @@ function dateValidation() {
 	var dateSelected = document.getElementById("bookedDate").value; //value = "2021-06-14"
 	var currentDate = new Date();
 
-	if ( (new Date(dateSelected).getMonth() == currentDate.getMonth()) 
-	&& (new Date(dateSelected).getFullYear() == currentDate.getFullYear()) 
-	){ //special case: input is always at midnight, BUT there is error where the next day doesnt change to day number even when its midnight so have to manually do here
-		return true;
-	}
-	else if (new Date(dateSelected).getTime() < currentDate.getTime() ) {
-		alert("That date has already PAST or! Please select another date");
+	// //special case: input is always at midnight, BUT there is error where the next day doesnt change to day number even when its midnight so have to manually do here
+	// if ( (new Date(dateSelected).getMonth() == currentDate.getMonth()) 
+	// && (new Date(dateSelected).getFullYear() == currentDate.getFullYear())
+	// && (new Date(dateSelected).getDay() == currentDate.getDay()) ) 
+	// { 
+	// 	return true;
+	// }
+	if (new Date(dateSelected).getTime() < currentDate.getTime() ) {
+		alert("That date has already PAST or is already FULLY BOOKED! Please select another date");
 		return false;
 	}
 	else if (new Date(dateSelected).getDay() == 6){ //6 == sunday, 5 == saturday

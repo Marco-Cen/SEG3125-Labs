@@ -51,6 +51,11 @@ $(".next").click(function(){
 	} 
 
 
+	console.log("hellow");
+	// submittedAppointmentInfo();
+	console.log("world");
+
+
 	if(animating) return false;
 	animating = true;
 	

@@ -191,11 +191,11 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" id="fn" name="fname" placeholder="First Name" required />
+                                <input type="text" id="fname" name="fname" placeholder="First Name" required />
                             </div>
 
                             <div class="col">
-                                <input type="text" if= "ln" name="lname" placeholder="Last Name" required />
+                                <input type="text" if= "fname" name="lname" placeholder="Last Name" required />
                             </div>
                         </div>
 
@@ -367,8 +367,7 @@
                             <div id="displaySubmittedResult"></div>
 
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="submit" name="submit" class="submit action-button " value="Submit"
-                            onclick="confirm('Confirm the following information was reviewed and will be submitted to book an Appointment');" />
+                        <input type="submit" name="submit" class="submit action-button " value="Submit" onclick="finalSubmitToBook()" />
 
                     </fieldset>
 
