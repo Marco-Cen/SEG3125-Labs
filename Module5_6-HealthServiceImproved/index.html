@@ -126,11 +126,10 @@
                 <div class="overlay" style="top:0;">
                     <!-- Style determines direction of overlay on hover (UpDown Direction)-->
                     <div class="description">
-                        <p> Based in Ottawa, Ontario, we highly value and take pride of the services
-                            we provide to our customers.
-                            <br>
-                            <a href="#findus"> Visit us. </a> Meet our physicians. Book an online appointment.
-                            <br> <br>
+                        <p> Based in Ottawa, Ontario and open 24/7 EXCEPT on Sundays, we HIGHLY value and take PRIDE of the services
+                            we provide to our customers. We care. <br> <br>
+                            Expect nothing but the utmost quality service from our <a class="text-white" href="#ourteam"> hand selected experts. </a>  <br> <br>
+                            <a class="text-white" href="#findus"> Visit us. </a> Meet our physicians. <a class="text-white" href="#appointment"> Book an online appointment. </a> <br> <br>
                             Get back to doing the things you love.
                         </p>
                     </div>
@@ -192,11 +191,11 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" name="fname" placeholder="First Name" required />
+                                <input type="text" id="fn" name="fname" placeholder="First Name" required />
                             </div>
 
                             <div class="col">
-                                <input type="text" name="lname" placeholder="Last Name" required />
+                                <input type="text" if= "ln" name="lname" placeholder="Last Name" required />
                             </div>
                         </div>
 
@@ -230,7 +229,7 @@
                         <br>
                         <div class="row">
                             <label class="form-label"> Select Desired Services: </label>
-                            <select class="select form-control" style="text-align: center;" multiple required >
+                            <select class="select form-control" style="text-align: center;" multiple required  id="selectedService">
                                 <option value="1">Musculoskeletal Physiotherapy</option>
                                 <option value="2">Rehabilitation and Pain Management</option>
                                 <option value="3">Sports Physiotherapy</option>
@@ -308,7 +307,7 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" name="ccName" placeholder="Card Holder's Name"/>
+                                <input type="text" id="ccName" name="ccName" placeholder="Card Holder's Name"/>
                             </div>
                         </div>
 
@@ -351,30 +350,25 @@
 
 
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" 
-                        onclick="confirm('Confirm You Want to Continue. If the payment information entered is invalid, your appointment can be subject to be cancelled without refund');"/>
+                        <input type="button" name="next" class="next action-button" value="Next" onclick="submittedAppointmentInfo()"/>
 
                     </fieldset>
 
 
 
                     <!-- Confirmation of details -->
-                    <fieldset id="apptPage3"
-                    >
+                    <fieldset id="apptPage3">
                         <h2 class="fs-title">Confirmation</h2>
                         <h3 class="fs-subtitle" style="cursor: help;" data-toggle="tooltip" data-placement="top" 
                         title="REVIEW and SUBMIT the details you have inputted in the previous steps"> 
                             <i> Review the Inputted Information </i> </h3>
-                        <input type="text" name="email" placeholder="Email" />
-                        <input type="password" name="pass" placeholder="Password" />
-                        <input type="password" name="cpass" placeholder="Confirm Password" />
+   
+                            <!-- Format and dynamic entry of user inputs in services.js (submittedAppointmentInfo()) -->
+                            <div id="displaySubmittedResult"></div>
+
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         <input type="submit" name="submit" class="submit action-button " value="Submit"
-                            onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');" />
-
-                        <!-- class="btn btn-warning"
-                        onclick="confirm('Confirm You Want to Request An Appointment with the Information Submitted');" -->
-
+                            onclick="confirm('Confirm the following information was reviewed and will be submitted to book an Appointment');" />
 
                     </fieldset>
 
@@ -572,26 +566,26 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                     <div class="col">
                         <h4> Weekday:</h4>
                         <b> MONDAY </b>
-                        <p> &nbsp; 7:00 AM - 6:00 PM </p>
+                        <p> &nbsp; ALL DAY </p>
 
                         <b> TUESDAY </b> <br>
-                        <p> &nbsp; 7:00 AM - 6:00 PM </p>
+                        <p> &nbsp; ALL DAY </p>
 
                         <b> WEDNESDAY </b> <br>
-                        <p> &nbsp; 8:00 AM - 6:00 PM </p>
+                        <p> &nbsp; ALL DAY </p>
 
                         <b> THURSDAY </b> <br>
-                        <p> &nbsp; 8:00 AM - 6:00 PM </p>
+                        <p> &nbsp; ALL DAY </p>
 
                         <b> FRIDAY </b> <br>
-                        <p> &nbsp; 9:00 AM - 6:00 PM </p>
+                        <p> &nbsp; ALL DAY </p>
                     </div>
 
                     <div class="col">
                         <div class="row">
                             <h4> Weekend:</h4>
                             <b> SATURDAY </b> <br>
-                            <p> &nbsp; 9:00 AM - 6:00 PM </p>
+                            <p> &nbsp; ALL DAY </p>
 
                             <b> SUNDAY </b> <br>
                             <p> &nbsp; CLOSED </p>
