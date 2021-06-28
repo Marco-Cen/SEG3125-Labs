@@ -1,138 +1,128 @@
+// -- THIS FILE CONTAINS ALL RELATED TO SERVICES and USER VALIDATION -- 
 	
-// // Array of products, each product is an object with different fieldset
-// // A set of ingredients should be added to products		 
+	//-- TO TEST IF JS BEING HIT (View Browser's Console) --
+	// console.log('script.js says "I\'m here at services.js"');
 
-// //-- At least 10 total products in list [Array of Objects] --
-// var products = [
-// 	//Lactose Free
-// 	{
-// 		name: "Almond Granola Bar (230g)",
-// 		lactoseFree: true,
-// 		nutFree: false,
-// 		organic: true, 
-// 		price: 3.99
-// 	},
-// 	{
-// 		name: "Almond Milk",
-// 		lactoseFree: true,
-// 		nutFree: false,
-// 		organic: true,
-// 		price: 3.79
-// 	},
-// 	{
-// 		name: "Peanut Butter (1Kg)",
-// 		lactoseFree: true,
-// 		nutFree: false,
-// 		organic: false,
-// 		price: 9.99
-// 	},
-// 	{
-// 		name: "Unsalted Mixed Nuts (1.13Kg)",
-// 		lactoseFree: true,
-// 		nutFree: false,
-// 		organic: true,
-// 		price: 14.95
-// 	},
+//Note: DATE fails for 1 day after?! After error input, as long as filled will pass and go thru
 
-// 	//Nut Free
-// 	{
-// 		name: "Yogurt",
-// 		lactoseFree: false,
-// 		nutFree: true,
-// 		organic: false,
-// 		price: 1.99
-// 	},
-// 	{
-// 		name: "2% Milk (1L)",
-// 		lactoseFree: false,
-// 		nutFree: true,
-// 		organic: true,
-// 		price: 3.45
-// 	},
-// 	{
-// 		name: "Croissant (12 pcs)",
-// 		lactoseFree: false,
-// 		nutFree: true,
-// 		organic: true,
-// 		price: 7.95
-// 	},
-// 	{
-// 		name: "Sliced Brioche (500g)",
-// 		lactoseFree: false,
-// 		nutFree: true,
-// 		organic: true,
-// 		price: 5.99
-// 	},
 
-// 	//Lactose and Nut Free
-// 	{
-// 		name: "Smoked Salmon (100g)",
-// 		lactoseFree: true,
-// 		nutFree: true,
-// 		organic: true,
-// 		price: 22.64
-// 	},
-// 	{
-// 		name: "Apple (1pc)",
-// 		lactoseFree: true,
-// 		nutFree: true,
-// 		organic: true,
-// 		price: 0.20
-// 	},
-// 	{
-// 		name: "Eggs (12 pcs)",
-// 		lactoseFree: true,
-// 		nutFree: true,
-// 		organic: true,
-// 		price: 4.99
-// 	},
-// 	{
-// 		name: "Heinz Ketchup (1L)",
-// 		lactoseFree: true,
-// 		nutFree: true,
-// 		organic: false,
-// 		price:3.99
-// 	}
+//-- Appointment Booking USER VALIDATION --
+//DATE
+function dateValidation() {
+	var dateSelected = document.getElementById("bookedDate").value; //value = "2021-06-14"
+	var currentDate = new Date();
+	  
+	//DATE PAST (NOT ALLOWED) 
+	if (new Date(dateSelected).getTime() < currentDate.getTime()) {
+		alert("That date has already PAST! Please select another date");
+		return false;
+	}
+	return true;
+}
 
-// ];
+//TIME
+function dateTimeValidation() {
+	var dateSelected = document.getElementById("bookedDate").value;
+
+	var timeSelected = document.getElementById("bookedTime").value; //value = "20:27"
+	var hourSelected = timeSelected.split(":")[0];
+	var minutesSelected = timeSelected.split(":")[1];
+
+	var currently = new Date();
+	var currentHour = currently.getHours();
+	var currentMinute = currently.getMinutes();
+
+	//TIME PAST (NOT ALLOWED)
+	if ( (new Date(dateSelected).getTime() < currently.getTime()   
+	&& hourSelected <= currentHour
+	&& minutesSelected <= currentMinute) ) {
+		alert("That time has already PAST or is too close to the current time! Please select another time slot");
+		return false;
+	}
+	return true;
+}
+
+//PHONE number validation
+/* NOTE:
+- Regex considers these VALID cases:
+	(123) 456-7890
+	(123)456-7890
+	123-456-7890
+	1234567890
+*/
+function validatePhoneNumber() {
+    var phoneSelected = document.getElementById('phoneInput').value;
+
+	var isValid;
+	var telephoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+	isValid = telephoneRegex.test(phoneSelected)
 	
+	if (!isValid) alert("NOT a VALID PHONE number format. Please follow proper convention.") 
+	return false;
+}
+
+//EMAIL format validation
+/* NOTE:
+- Regex considers these VALID cases:
+	mysite@ourearth.com
+	my.ownsite@ourearth.org
+	mysite@you.me.net
+*/
+function validateEmail() 
+{
+	var emailSelected = document.getElementById('emailInput').value;
+
+	var isValid;
+	var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	isValid = emailRegex.test(emailSelected)
+	
+	if (!isValid) alert("NOT a VALID EMAIL format. Please follow proper convention.") 
+	return false;
+}
+
+//CC NUMBER
+function validateCCNum() 
+{
+	var ccNumSelected = document.getElementById("ccNumber").value; 
+	
+	var trimInput = ccNumSelected.split(/\s+/).join('') //removes all white spaces in string
+	trimInput = trimInput.replace(/[^0-9]/g, ''); //removes all else EXCEPT numbers in string
+
+	//DATE PAST (NOT ALLOWED) 
+	if (trimInput.length != 12) {
+		alert("INCORRECT credit card number length");
+		return false;
+	}
+	return true;
+}
+
+//CC Expire (mm/yy)
+function validateCCExpire()
+{
+	// var ccExpireSelected = document.getElementById('ccExpire').value;
+
+	// var isValid;
+	// var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+	// isValid = date_regex.test(ccExpireSelected)
+	
+	// if (!isValid) alert("NOT a VALID Expiry Date format. Please follow proper convention.") 
+	// return false;
+}
 
 
-// // given restrictions provided, make a reduced list of products
-// // prices should be included in this list, as well as a sort based on price
+//CC CVV 
+function validateCCCVV()
+{
+	var ccCVVSelected = document.getElementById("ccCvv").value; 
+	let isNum = /^\d+$/.test(ccCVVSelected); //check if string contains only digits
 
-// function restrictListProducts(prods, restriction) {
-// 	let filteredProducts = [];
-// 	for (let i=0; i<prods.length; i+=1) {
-// 		if ((restriction == "Organic") && (prods[i].organic == true)){
-// 			filteredProducts.push(prods[i]);
-// 		}
-// 		else if ((restriction == "LactoseFree") && (prods[i].lactoseFree == true)){
-// 			filteredProducts.push(prods[i]);
-// 		}
-// 		else if ((restriction == "NutFree") && (prods[i].nutFree == true)){
-// 			filteredProducts.push(prods[i]);
-// 		}
-// 		else if ((restriction == "LactoseNutFree") && (prods[i].lactoseFree == true && prods[i].nutFree == true)){
-// 			filteredProducts.push(prods[i]);
-// 		}
-// 		else if ((restriction == "NotOrganic") && (prods[i].organic == false)){
-// 			filteredProducts.push(prods[i]);
-// 		}
-// 		else if (restriction == "None"){
-// 			filteredProducts.push(prods[i]);
-// 		}
-// 	}
-// 	return filteredProducts;
-// }
+	if (ccCVVSelected.length != 3 || !isNum) {
+		alert("INCORRECT CVV length and format. Try again with proper convention");
+		return false;
+	}
+	return true;
+}
 
-// // Calculate the total price of items, with received parameter being a list of products
-// function getTotalPrice(chosenProducts) {
-// 	totalPrice = 0;
-// 	for (let i=0; i<products.length; i+=1) {
-// 		if (chosenProducts.indexOf(products[i].name) > -1){
-// 			totalPrice += products[i].price;
-// 		}
-// 	}
-// 	return totalPrice;
-// }
+
+
+

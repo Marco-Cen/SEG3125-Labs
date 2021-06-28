@@ -71,8 +71,19 @@ Sources Used to Help Create:
 - https://pixabay.com/videos/exercise-stretching-senior-elder-32937/ (Bkg Video)
 - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon (FavIcon)
 - https://codepen.io/designify-me/pen/qrJWpG (Booking Appointment form)
+- https://stackoverflow.com/questions/3340802/add-line-break-within-tooltips (Line break within data tooltip on hover description)
 
-
+User Input Validation:
+- https://stackoverflow.com/questions/33783637/javascript-function-input-date-bigger-than-today-date (Date Input)
+- https://stackoverflow.com/questions/10459207/how-can-i-exit-from-a-javascript-function (JS knowledge)
+- https://www.codegrepper.com/code-examples/javascript/javascript+get+current+hours+and+minutes (JS current H/M)
+- https://stackoverflow.com/questions/32135073/how-do-i-pass-the-value-of-an-input-type-time-to-a-date-object (JS splitting string)
+- https://www.javascript-coder.com/form-validation/javascript-form-validation-phone-number/ (Telephone validation)
+- https://www.w3resource.com/javascript/form/email-validation.php (Email Validation)
+- https://www.codegrepper.com/code-examples/javascript/validate+mm%2Fyy+in+javascript (ccExpire)
+- https://www.techiedelight.com/remove-whitespaces-string-javascript/ (JS remove white space in string)
+- https://stackoverflow.com/questions/18099653/removing-everything-except-numbers-in-a-string/18099759 (JS remove everything EXCEPT digits in string)
+- https://stackoverflow.com/questions/1779013/check-if-string-contains-only-digits (JS string only contains digits)
 
 (From Lab 4)
 - https://github.com/RyanMatte/Website (Referenced TA's Starter Code: Ryan Matte as a foundation)

@@ -1,6 +1,7 @@
-	//-- TO TEST IF JS BEING HIT --
-	// console.log('script.js says "I\'m here"');
+// -- THIS FILE CONTAINS ALL RELATED TO COSMETIC USER INTERACTIONS --
 
+	//-- TO TEST IF JS BEING HIT (View Browser's Console) --
+	// console.log('script.js says "I\'m here at main.js"');
 
 //-- Menu Nav Bar scrolling --
 	var entireNavBarTag = document.querySelector('nav');
@@ -30,15 +31,26 @@
 
 
 
-
-	
 // -- Book Appointment Form (Inspired by Codepen) --
-//jQuery time 
+//jQuery time  
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
+//Going to NEXT page after next button clicked with animation
 $(".next").click(function(){
+
+	//Check if ALL set REQUIRED field inputs filled before proceed
+	let allAreFilled = true;
+	document.getElementById("appointmentForm").querySelectorAll("[required]").forEach(function(i) {
+	  if (!i.value) allAreFilled = false;
+	})
+	if (!allAreFilled){
+		alert('Fill all the fields first! Cant proceed until then');
+		return;
+	} 
+
+
 	if(animating) return false;
 	animating = true;
 	
@@ -76,6 +88,7 @@ $(".next").click(function(){
 	});
 });
 
+//Going to PREVIOUS page after next button clicked with animation
 $(".previous").click(function(){
 	if(animating) return false;
 	animating = true;
@@ -112,7 +125,11 @@ $(".previous").click(function(){
 	});
 });
 
+//SUBMIT button function
 $(".submit").click(function(){
+
+
 	return false;
+
 })
 	

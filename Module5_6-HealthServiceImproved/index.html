@@ -1,3 +1,8 @@
+<!-- NOTES:
+    - Data-placement (For tooltip on hover) direction is not working?!
+
+ -->
+
 <!doctype html>
 <html lang="en">
 
@@ -25,13 +30,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
-
     <!-- Tab Title -->
     <title> Medicalth </title>
 
     <!-- FavIcon (Icon in tab) -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/MedicalthTransparent.png" />
 </head>
+
 
 
 <body>
@@ -173,7 +178,7 @@
 
                     <!-- fieldsets -->
 
-                    <!-- Appointment Booking Details and how we can contact you -->
+                    <!-- Appointment Booking Details and how we can contact you  (Optional: Physiotherapist, Describe pain box)-->
                     <fieldset id="apptPage1">
                         <h2 class="fs-title"> Booking Details</h2>
                         <h3 class="fs-subtitle" style="cursor: help;" data-toggle="tooltip" data-placement="bottom" 
@@ -187,33 +192,37 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" name="fname" placeholder="First Name" />
+                                <input type="text" name="fname" placeholder="First Name" required />
                             </div>
 
                             <div class="col">
-                                <input type="text" name="lname" placeholder="Last Name" />
+                                <input type="text" name="lname" placeholder="Last Name" required />
                             </div>
                         </div>
 
                         <!-- Email Entry -->
-                        <div class="row">
+                        <div class="row"
+                        style="cursor: help;" data-toggle="tooltip" data-placement="left"  
+                        title="Format Accepted: &#013   mysite@ourearth.com   &#013   my.ownsite@ourearth.org  &#013   mysite@you.me.net">
                             <div class="col-1 align-self-center">
                                 <img src="assets/mailIcon.png" alt="mailIcon">
                             </div>
 
                             <div class="col">
-                                <input type="text" name="email" placeholder="name@example.com" />
+                                <input type="text" id="emailInput" name="email" placeholder="name@example.com" onchange="validateEmail()" required />
                             </div>
                         </div>
 
                         <!-- Phone Entry -->
-                        <div class="row">
+                        <div class="row"
+                        style="cursor: help;" data-toggle="tooltip" data-placement="left"  
+                        title="Format Accepted: &#013 (123) 456-7890 &#013 (123)456-7890 &#013 123-456-7890 &#013 1234567890 ">
                             <div class="col-1 align-self-center">
                                 <img src="assets/phoneIcon.png" alt="phoneIcon">
                             </div>
 
                             <div class="col">
-                                <input type="text" name="phone" placeholder="(###) ###-####" />
+                                <input type="number" id="phoneInput" name="phone" placeholder="(###) ###-####" onchange="validatePhoneNumber()" required />
                             </div>
                         </div>
 
@@ -221,7 +230,7 @@
                         <br>
                         <div class="row">
                             <label class="form-label"> Select Desired Services: </label>
-                            <select class="select form-control" style="text-align: center;" multiple>
+                            <select class="select form-control" style="text-align: center;" multiple required >
                                 <option value="1">Musculoskeletal Physiotherapy</option>
                                 <option value="2">Rehabilitation and Pain Management</option>
                                 <option value="3">Sports Physiotherapy</option>
@@ -262,11 +271,11 @@
                             <label for="appointmentDate">Set Appointment Date:</label>
 
                             <div class="col">
-                                <input type="date" id="bookedDate" name="bookDate">
+                                <input type="date" id="bookedDate" name="bookDate" onchange="dateValidation()" required >
                             </div>
 
                             <div class="col">
-                                <input type="time" id="bookedTime" name="bookTime">
+                                <input type="time" id="bookedTime" name="bookTime" onchange="dateTimeValidation()" required >
                             </div>
 
                         </div>
@@ -294,7 +303,7 @@
                         <!-- CC Name Entry -->
                         <div class="row">
                             <div class="col-1 align-self-center"
-                            style="cursor: help;" data-toggle="tooltip" data-placement="bottom" title="The Credit Card NAME on the front of the card">
+                            style="cursor: help;" data-toggle="tooltip" data-placement="left" title="The Credit Card NAME on the front of the card">
                                 <img src="assets/userInfoIcon.png" alt="userInfoIcon">
                             </div>
 
@@ -306,12 +315,12 @@
                         <!-- CC Number Entry -->
                         <div class="row">
                             <div class="col-1 align-self-center"
-                            style="cursor: help;" data-toggle="tooltip" data-placement="bottom" title="The Credit Card NUMBER on the front of the card">
+                            style="cursor: help;" data-toggle="tooltip" data-placement="left" title="The Credit Card NUMBER on the front of the card">
                                 <img src="assets/ccIcon.png" alt="ccCardLogo">
                             </div>
 
                             <div class="col">
-                                <input type="text" name="ccNumber" placeholder="1234 5678 9123 4567" />
+                                <input type="number" id="ccNumber" name="ccNumber" placeholder="1234 5678 9123 4567"  onchange="validateCCNum()" />
                             </div>
                         </div>
 
@@ -324,7 +333,7 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" name="ccExpire" placeholder="MM / YY" />
+                                <input type="text" id="ccExpire" name="ccExpire" placeholder="MM / YY" onchange="validateCCExpire()"/>
                             </div>
 
                             <!-- CC CVV -->
@@ -334,16 +343,15 @@
                             </div>
 
                             <div class="col">
-                                <input type="text" name="ccCVV" placeholder="123" />
+                                <input type="password" id="ccCvv" class="form-control" name="ccCVV" placeholder="123" onchange="validateCCCVV()"/>
                             </div>
 
                         </div>
 
 
-
-
                         <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                        <input type="button" name="next" class="next action-button" value="Next" />
+                        <input type="button" name="next" class="next action-button" value="Next" 
+                        onclick="confirm('Confirm You Want to Continue; if the payment information entered is invalid your appointment can be subject to be cancelled without refund');"/>
 
                     </fieldset>
 
@@ -409,8 +417,6 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                             restoration of complete and unbarred function to the musculoskeletal system: consists of
                             bones, muscles,
                             tendons, ligaments, and joints. </p>
-                        <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
-                            onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
                     </div>
                 </div>
             </div>
@@ -423,8 +429,6 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                         <p class="card-text"> Customized treatments to remove pain in the body. Focuses on exercises
                             that strengthen the body to reduce damages and increase recovery period for better mobility;
                             helpful for post-surgery pain. </p>
-                        <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
-                            onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
                     </div>
                 </div>
             </div>
@@ -439,8 +443,6 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                             professionals; however, anyone can benefit from this treatment. These sessions are
                             reccomended before
                             and after each particular game for best results. </p>
-                        <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
-                            onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
                     </div>
                 </div>
             </div>
@@ -458,8 +460,6 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                             with pelvic dysfunction. Using a mixure of hands-on interventions and evidence-based
                             practices, a customized assessment will be conducted. These sessions are ONLY available
                             with our certified pelvic physician.</p>
-                        <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
-                            onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
                     </div>
                 </div>
             </div>
@@ -475,8 +475,6 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                             individuals suffering from cardiac arrest or various chronic pulmonary disorders;
                             this is a special ultimate bundle.
                         </p>
-                        <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
-                            onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
                     </div>
                 </div>
             </div>
@@ -490,8 +488,6 @@ https://getbootstrap.com/docs/5.0/components/alerts/
                             system: from head injuries to strokes, to dealing with chronic diseases such as Parkinson’s
                             diseases or sciatica. It also helps regain ALL mobility, avoiding any
                             diseases originating from the neurological or neuromuscular systems. </p>
-                        <a href="#" class="btn btn-primary" style="background-color: tan; border: black;"
-                            onclick="alert('No Further Information Yet. Functionality coming soon.');"> Select</a>
                     </div>
                 </div>
             </div>
