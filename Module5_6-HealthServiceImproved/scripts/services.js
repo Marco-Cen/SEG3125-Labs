@@ -11,7 +11,7 @@
 function submittedAppointmentInfo() {
 
 	//User has change to proceed or not
-	var confirmContinue = confirm('Confirm You Want to Continue. If the payment information entered is invalid, your appointment can be subject to be cancelled without refund');
+	var confirmContinue = confirm('If the payment information entered is invalid, your appointment can be subject to a cancellation without refund');
 	if (!confirmContinue) {
 		return false;
 	}
