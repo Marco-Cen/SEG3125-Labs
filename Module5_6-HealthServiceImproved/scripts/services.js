@@ -148,7 +148,7 @@ function dateValidation() {
 		return false;
 	}
 	else if (new Date(dateSelected).getDay() == 6){ //6 == sunday, 5 == saturday
-		alert("That date is a SUNDAY! That's the ONLY day we close. Please select another date");
+		alert("That date is a SUNDAY! That's the ONLY day we close and have a chance to rest! Please select another date and let us serve you another day.");
 		return false;
 	}
 	return true;
