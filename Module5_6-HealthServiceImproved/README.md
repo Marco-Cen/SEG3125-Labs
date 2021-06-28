@@ -80,7 +80,7 @@ User Input Validation:
 - https://stackoverflow.com/questions/32135073/how-do-i-pass-the-value-of-an-input-type-time-to-a-date-object (JS splitting string)
 - https://www.javascript-coder.com/form-validation/javascript-form-validation-phone-number/ (Telephone validation)
 - https://www.w3resource.com/javascript/form/email-validation.php (Email Validation)
-- https://www.codegrepper.com/code-examples/javascript/validate+mm%2Fyy+in+javascript (ccExpire)
+- https://stackoverflow.com/questions/20430391/regular-expression-to-match-credit-card-expiration-date(ccExpire validation)
 - https://www.techiedelight.com/remove-whitespaces-string-javascript/ (JS remove white space in string)
 - https://stackoverflow.com/questions/18099653/removing-everything-except-numbers-in-a-string/18099759 (JS remove everything EXCEPT digits in string)
 - https://stackoverflow.com/questions/1779013/check-if-string-contains-only-digits (JS string only contains digits)

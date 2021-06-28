@@ -99,14 +99,14 @@ function validateCCNum()
 //CC Expire (mm/yy)
 function validateCCExpire()
 {
-	// var ccExpireSelected = document.getElementById('ccExpire').value;
+	var ccExpireSelected = document.getElementById('ccExpire').value;
 
-	// var isValid;
-	// var date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
-	// isValid = date_regex.test(ccExpireSelected)
+	var isValid;
+	var ccExpireRegex = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
+	isValid = ccExpireRegex.test(ccExpireSelected)
 	
-	// if (!isValid) alert("NOT a VALID Expiry Date format. Please follow proper convention.") 
-	// return false;
+	if (!isValid) alert("NOT a VALID Expiry Date format. Please follow proper convention.") 
+	return false;
 }
 
 
