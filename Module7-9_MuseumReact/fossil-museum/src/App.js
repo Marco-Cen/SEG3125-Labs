@@ -1,7 +1,7 @@
 // import logo from './logo.svg'; //was used in starting on create code
 // import './App.css'; //styles ALL unless use styled components
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import Navbar from './Navbar';
+import Navbar from './NavMenu';
 import Home from './Home';
 
 /* NOTE:

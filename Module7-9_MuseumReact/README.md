@@ -32,8 +32,9 @@ Site: <br> "Fossilized": Fossil/Dinosaur Museum Built using REACT, Bootstrap.
 =============================================
 Sources Used to Help Create:
 (Lab 7 - 9)
-- https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d 
-
+- https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d  (Foundation & Setup of React)
+- https://react-bootstrap.github.io/getting-started/introduction/ (React Docs)
+- https://app.logopony.com/en/create/ (Logo)
 
 
 
