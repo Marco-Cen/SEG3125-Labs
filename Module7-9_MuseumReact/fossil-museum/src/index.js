@@ -2,7 +2,7 @@ import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css'; //styling file
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'; //So bootstrap 5 included
 // import reportWebVitals from './reportWebVitals';
 
 /* Notes

@@ -3,7 +3,7 @@ import {Nav, NavDropdown, Container } from 'react-bootstrap';
 import { render } from 'react-dom';
 import {Link} from 'react-router-dom';
 
-import logo from './assets/FossilizedTransparent.png';
+import logo from './assets/FossilizedEngTrans.png';
 
 
 const Navbar = () => {

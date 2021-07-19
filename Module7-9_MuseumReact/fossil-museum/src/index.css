@@ -4,7 +4,7 @@
 * {
   margin: 0;
   font-family: 'Otomanopee One', sans-serif;
-  background-color: black;
+  /* background-color: black; */  /* Importing bootstrap changed bkg colour: edited in 'index.html' */
   color: whitesmoke; /* #333 */
 }
 
@@ -15,7 +15,7 @@ body, html{
 
 /* Nav Bar */
 .navbar {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   /* max-width: 600px; */
@@ -30,6 +30,7 @@ body, html{
   text-decoration: none;
   padding: 6px;
   cursor: pointer;
+  color: white; /* To override bootstrap 5 default colour of links of blue */
 }
 .navbar a:hover {
   color: wheat;
@@ -67,7 +68,7 @@ body, html{
   bottom: 0;  
 }
 .parallax__cover {
-  background: #0f0f0f;
+  /* background: #0f0f0f; */
   background-image: url("./assets/dirtBkg.jpeg");
   display: block;
   position: absolute;
@@ -125,8 +126,25 @@ body, html{
   
 }
 
-.dirtBkgImg{
-  background-image: url("./assets/fossil1Background.jpeg");
+.fossilInfoCard{
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  width: 35%;
+  z-index: 10;
+  background-color: black;
+  text-align: center;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+
+.fossilInfoCard h1{
+text-align: center;
+color: wheat;
+}
+
+.carnivoreFossilBkg{
+  background-image: url("./assets/carnivoreFossilBkg2.png");
   width: 100vw;
   height: 100vh;
   /* Create the parallax scrolling effect */
@@ -137,35 +155,43 @@ body, html{
   z-index: 1;
   position: relative;
   top: 0;
-  left: 0;
+  left: 2%;
+  filter:blur(0.6px);
 }
 
-.fossil1Bkg{
-  background-image: url("./assets/dirtBkg.jpeg");
+.herbivoreBkg{
+  background-image: url("./assets/bkg.jpeg");
   width: 100vw;
   height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   
-  z-index: 10;
-  position: absolute;
+  z-index: 2;
+  position: relative;
   margin: 0 auto;
+  filter:blur(0.6px);
 }
 
-.fossilInfoCard{
-  height: 100%;
-  position: absolute;
+.omnivoreBkg{
+  background-image: url("./assets/omnivoreBkg.jpeg");
+  width: 100vw;
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  z-index: 2;
+  position: relative;
   margin: 0 auto;
-  width: 30%;
-  z-index: 10;
+  filter:blur(0.6px);
 }
 
-h1{
-text-align: center;
-}
+
 
 
 

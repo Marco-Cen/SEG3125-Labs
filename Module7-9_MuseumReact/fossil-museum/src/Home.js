@@ -1,10 +1,10 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import bkgImage from './assets/titlePagebackground.jpeg';
-import bkgImage2 from './assets/titlePagebackground2.jpeg';
+// import bkgImage from './assets/titlePagebackground.jpeg';
+// import bkgImage2 from './assets/titlePagebackground2.jpeg';
 import image3 from './assets/backdrop.jpeg';
-import image4 from './assets/fossil1Background.jpeg';
+// import image4 from './assets/carnivoreFossilBkg1.jpeg';
 import foregroundImg from './assets/titlePageForeground.png';
-import logo from './assets/FossilizedTransparent.png';
+import logo from './assets/FossilizedEngTrans.png';
 
 // <div style={{
 //   // backgroundImage: `url(${bkgImage})`,
