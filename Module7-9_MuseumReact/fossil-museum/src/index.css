@@ -8,6 +8,11 @@
   color: whitesmoke; /* #333 */
 }
 
+body, html{
+  height: 100%;
+  margin: 0;
+}
+
 /* Nav Bar */
 .navbar {
   padding: 20px;
@@ -17,28 +22,154 @@
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
-.navbar h1 {
-  color: wheat; /* #f1356d */
-}
 .navbar .links {
-  margin-left: auto;
+  margin: auto;
 }
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  cursor: pointer;
 }
 .navbar a:hover {
   color: wheat;
 }
 
+ 
+
 
 /* Content */
 .content {
-  max-width: 1000px;
+  /* max-width: 1000px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 20px; */
 }
+
+
+
+
+/* Parallax 3 */
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.parallax__layer {
+  position: absolute;
+}
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;  
+}
+.parallax__cover {
+  background: #0f0f0f;
+  display: block;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+}
+.parallax__layer__0 {
+  transform: translateY(150vh) translateZ(-300px) scale(4);
+  filter:blur(1px);
+  opacity: 0.4;
+}
+.parallax__layer__1 {
+  transform: translateZ(-250px) scale(3.5);
+  filter:blur(1px);
+  opacity: 0.6;
+}
+.parallax__layer__2 {
+  transform: translateY(150vh) translateZ(-200px) scale(3);
+  opacity: 0.4;
+  filter:blur(1px);
+  width: 50%;
+}
+.parallax__layer__3 {
+  transform: translateY(50vh) translateZ(-150px) scale(2.5);
+  opacity: 0.7;
+  filter:blur(1px);
+  width: 50%;
+}
+.parallax__layer__4 {
+  transform: translateY(40vh) translateZ(-100px) scale(2);
+  position: absolute;
+  left: 27%;
+}
+.parallax__layer__5 {
+  transform: translateY(97vh) translateZ(-100px) scale(1.5);
+  background-position: center;
+  filter:blur(1px);
+  opacity: 0.7;
+  left:-22%;
+
+}
+.parallax__layer__6 {
+  transform: translateY(90vh) translateZ(10px) scale(1);
+}
+
+
+
+
+.exhibition{
+  
+}
+
+.dirtBkgImg{
+  background-image: url("./assets/dirtBkg.jpeg");
+  width: 100vw;
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.fossil1Bkg{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/fossil1Background.jpeg");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  z-index: 10;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.companyLogo{
+  height: 30%;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
 
 
 

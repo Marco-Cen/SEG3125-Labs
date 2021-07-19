@@ -1,7 +1,7 @@
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css'; //styling file
 // import reportWebVitals from './reportWebVitals';
 
 /* Notes
@@ -19,9 +19,10 @@ import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 
 //Takes all UI component and render to DOM to 'root' (To browser)
 ReactDOM.render(
-// React does additional checks during dev and gives warnings to display in console
-<React.StrictMode> 
+  <React.StrictMode> {/* // React does additional checks during dev and gives warnings to display in console */}
+
     <App />
+
   </React.StrictMode>,
   document.getElementById('root')
 );

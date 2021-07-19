@@ -1,22 +1,31 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 import {Nav, NavDropdown, Container } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+
 import logo from './assets/FossilizedTransparent.png';
+
 
 const Navbar = () => {
     return (  
-         <nav className="navbar">
-            
-            {/* width="200" height="200" */}
-            <img src= {logo} alt="Fossilized" />
 
+         <nav className="navbar">
             <div className="links">
-                <a href="/Exhibition"> Exhibition </a> 
-                <a href="/FossilLocation"> Find Them </a>
-                <a href="/"> Fossilized </a>
-                <a href="/Tickets"> Buy Tickets </a>
-                <a href="/AboutUs"> Find Us </a>
+
+                {/* Use 'Link to=' instead of a 'href=' because React much quicker with 'Link to' and 'Routing' (Doenst have to send request for everything every single time: speeds up load time) */}
+                <Link to="/Exhibition"> Exhibition </Link> 
+                <Link to="/FossilLocations"> Find Them </Link>
+
+                <Link to="/"> 
+                <img src= {logo} alt="Fossilized" />
+                </Link>
+
+                {/* <a href="/"> Fossilized </a> */}
+
+                <Link to="/PurchaseTickets"> Buy Tickets </Link>
+                <Link to="/AboutUs"> Find Us </Link>
             </div>
         </nav>  
+
     );
 }
  
