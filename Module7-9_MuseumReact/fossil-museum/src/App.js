@@ -33,9 +33,9 @@ function App() {
             {/* Need to specify 'exact' match because React looks for ANY match if string contains it */}
             <Route exact path="/" >   <Home />   </Route> 
             <Route exact path="/Exhibition" >  <Exhibition />   </Route>
-            <Route exact path="/FossilLocations">       </Route>
-            <Route exact path="/PurchaseTickets" >     </Route>
-            <Route exact path="/AboutUs" >    </Route>
+            <Route path="/FossilLocations">       </Route>
+            <Route path="/PurchaseTickets" >     </Route>
+            <Route path="/AboutUs" >    </Route>
 
 
   

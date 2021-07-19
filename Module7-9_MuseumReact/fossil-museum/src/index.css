@@ -68,13 +68,15 @@ body, html{
 }
 .parallax__cover {
   background: #0f0f0f;
+  background-image: url("./assets/dirtBkg.jpeg");
   display: block;
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 0;
   right: 0;
-  height: 2000px;
+  height: 960px;
   z-index: 2;
+  filter:blur(0.5px);
 }
 .parallax__layer__0 {
   transform: translateY(150vh) translateZ(-300px) scale(4);
@@ -91,6 +93,8 @@ body, html{
   opacity: 0.4;
   filter:blur(1px);
   width: 50%;
+  position: absolute;
+  left: 25%;
 }
 .parallax__layer__3 {
   transform: translateY(50vh) translateZ(-150px) scale(2.5);
@@ -101,7 +105,7 @@ body, html{
 .parallax__layer__4 {
   transform: translateY(40vh) translateZ(-100px) scale(2);
   position: absolute;
-  left: 27%;
+  left: 22%;
 }
 .parallax__layer__5 {
   transform: translateY(97vh) translateZ(-100px) scale(1.5);
@@ -112,9 +116,8 @@ body, html{
 
 }
 .parallax__layer__6 {
-  transform: translateY(90vh) translateZ(10px) scale(1);
+  transform: translateY(85vh) scale(1);
 }
-
 
 
 
@@ -123,12 +126,12 @@ body, html{
 }
 
 .dirtBkgImg{
-  background-image: url("./assets/dirtBkg.jpeg");
+  background-image: url("./assets/fossil1Background.jpeg");
   width: 100vw;
   height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
@@ -138,9 +141,9 @@ body, html{
 }
 
 .fossil1Bkg{
+  background-image: url("./assets/dirtBkg.jpeg");
   width: 100vw;
   height: 100vh;
-  background-image: url("./assets/fossil1Background.jpeg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -152,18 +155,17 @@ body, html{
   margin: 0 auto;
 }
 
-.companyLogo{
-  height: 30%;
+.fossilInfoCard{
+  height: 100%;
   position: absolute;
   margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
+  width: 30%;
   z-index: 10;
 }
 
-
+h1{
+text-align: center;
+}
 
 
 

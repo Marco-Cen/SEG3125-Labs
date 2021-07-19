@@ -22,10 +22,12 @@ const Home = () => {
 
       <div class="parallax">
 
+        {/* Trees */}
         <div class="parallax__layer parallax__layer__6">
           <img src={foregroundImg} alt="foregroundImage" />
         </div>
 
+        {/* BackDrop Green Jurassic Leaves */}
         <div class="parallax__layer parallax__layer__2">
           <img src={image3} alt="image3" />
         </div>
@@ -34,22 +36,30 @@ const Home = () => {
           <img src={bkgImage} alt="bkgImage" />
         </div> */}
         
-        <div class="parallax__layer parallax__layer__3">
+        {/* <div class="parallax__layer parallax__layer__3">
           <img src={bkgImage2} alt="bkgImage2" />
-        </div>
+        </div> */}
 
-
-        <div class="parallax__layer parallax__layer__5">
+        {/* <div class="parallax__layer parallax__layer__5">
           <img src={image4} alt="bkgImage4" />
-        </div>
+        </div> */}
 
+        {/* Company Logo */}
         <div class="parallax__layer parallax__layer__4">
           <img src={logo} alt="Fossilized" style={{ 
             width:'500px'
             }} />
         </div>
+        
 
-        <div class="parallax__cover"></div>
+        
+        <div class="parallax__cover"> 
+        
+        About Us
+        
+        </div>
+
+        
       </div>
 
 
