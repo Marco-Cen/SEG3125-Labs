@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
+import React, { useState } from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 import { Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -10,8 +10,8 @@ import YTIcon from './assets/youtubeIcon.png';
 
 const FindUsSection = () => {
 
-        //For Toggle Language
-        const [langButton, setLangButton] = useState(true);
+    //For Toggle Language
+    const [langButton, setLangButton] = useState(true);
 
 
     return (
@@ -31,7 +31,7 @@ const FindUsSection = () => {
                     }}>
                         {langButton ? "HOURS" : "LES HEURES"}
 
-                        </h2>
+                    </h2>
 
                     {/* <img src="assets/hoursIcon.png" alt="hoursIcon" style="position: relative; left:35%;"> </img> */}
 
@@ -125,7 +125,7 @@ const FindUsSection = () => {
 
                         <p>
                             <Image src={YTIcon} alt="YTIcon" rounded /> :
-                            <Link to={{ pathname:"https://youtu.be/dQw4w9WgXcQ"}} target="_blank" style={{ color: 'white', fontSize: '125%' }}> {langButton ? "YouTube Channel" : "Chaîne YouTube"} </Link>
+                            <Link to={{ pathname: "https://youtu.be/dQw4w9WgXcQ" }} target="_blank" style={{ color: 'white', fontSize: '125%' }}> {langButton ? "YouTube Channel" : "Chaîne YouTube"} </Link>
                         </p>
                     </Row>
 
@@ -134,15 +134,14 @@ const FindUsSection = () => {
             </Row>
 
 
-        {/* Toggle language on FIND US page */}
-        <br />
-        <button onClick={() => setLangButton(!langButton)} style={{ 
-            color: 'black',
-            backgroundColor:'wheat',
-            borderColor:'white',
+            {/* Toggle language on FIND US page */}
+            <br />
+            <button onClick={() => setLangButton(!langButton)} style={{
+                color: 'black',
+                backgroundColor: 'wheat',
+                borderColor: 'white',
             }}>
-                 {langButton ? "English" : "French"} </button>
-
+                {langButton ? "Français" : "English"} </button>
         </div>
     );
 }

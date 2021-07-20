@@ -68,10 +68,10 @@ const Navbar = () => {
 
             {/* Switch Implementation */}
             {/* <TranslateSwitch />  (wasnt able to get working in SEPARATE CLASS) */}
-            <button onClick={() => setLangButton(!langButton)} style={{ 
-                color: 'black', borderColor:'wheat' 
-                }}> 
-                {langButton ? "English" : "French"} </button>
+            <button onClick={() => setLangButton(!langButton)} style={{
+                color: 'black', borderColor: 'wheat'
+            }}>
+                {langButton ? "Français" : "English"} </button>
 
 
         </nav>

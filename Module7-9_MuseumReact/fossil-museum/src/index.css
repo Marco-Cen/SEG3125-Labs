@@ -234,7 +234,7 @@ color: wheat;
   position: absolute;
   margin: 0 auto;
   z-index: 10;
-  height: 65%;
+  height: 68%;
   width: 50%;
   top: 10%;
   left: 25%;
@@ -306,6 +306,7 @@ color: wheat;
   top: 0;
   filter:blur(0.6px);
   
+  left: 1%; /* To provide that slight broken L/R scroll effect of parallax image */
   /* transform: scale(0.9); */
 }
 .middleTeethBkg{
@@ -322,7 +323,7 @@ color: wheat;
   margin: 0 auto;
   /* filter:blur(1px); */
 
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 .bottomTeethBkg{
   background-image: url("./assets/teethBottomBkg.png");
@@ -337,6 +338,7 @@ color: wheat;
   position: relative;
   margin: 0 auto;
 
+  left: 1%; /* To provide that slight broken L/R scroll effect of parallax image */
   filter:blur(1px);
     /* transform: scale(0.9); */
 }

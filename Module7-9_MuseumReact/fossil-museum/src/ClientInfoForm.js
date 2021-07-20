@@ -12,18 +12,18 @@ const ClientInfo = () => {
             {/* Padding gives space for FLOAT LABEL */}
             <Row style={{ paddingTop: '4%' }}>
 
-                <Image src={accountIcon} alt="accountIcon" style={{height:'40px', width:'70px'}}/>
+                <Image src={accountIcon} alt="accountIcon" style={{ height: '40px', width: '70px' }} />
 
                 <Col>
                     <Form.Group>
                         {/* Equivalent to <Input> */}
-                        <Form.Control type="text" required > 
+                        <Form.Control type="text" required >
                         </Form.Control>
 
                         {/* BREAKS Floating Label So removed */}
                         {/* <Form.Control.Feedback>Looks good! </Form.Control.Feedback> */}
-                        
-                        <Form.Label className="form-control-placeholder" style={{ color: 'black'}}>
+
+                        <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
                             First Name
                         </Form.Label>
                     </Form.Group>
@@ -31,10 +31,10 @@ const ClientInfo = () => {
 
                 <Col>
                     <Form.Group>
-                        <Form.Control type="text" required > 
+                        <Form.Control type="text" required >
                         </Form.Control>
 
-                        <Form.Label className="form-control-placeholder" style={{ color: 'black'}}>
+                        <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
                             Last Name
                         </Form.Label>
                     </Form.Group>
@@ -44,33 +44,33 @@ const ClientInfo = () => {
 
             <Row style={{ paddingTop: '4%' }}>
 
-            <Image src={mailIcon} alt="mailIcon" style={{height:'40px', width:'70px'}}/>
-               
+                <Image src={mailIcon} alt="mailIcon" style={{ height: '40px', width: '70px' }} />
+
                 <Col>
-                <OverlayTrigger
+                    <OverlayTrigger
                         key='right'
                         placement='right'
                         trigger='hover'
                         overlay={ //Tool Tip MESSAGE
                             <Tooltip id='tooltip-right'>
-                                <p>  <i style={{ opacity: '0.7', fontSize:'80%' }}> 
-                                    Accepted Email Address Formats: <br/>
-                                    john@ourearth.com 
+                                <p>  <i style={{ opacity: '0.7', fontSize: '80%' }}>
+                                    Accepted Email Address Formats: <br />
+                                    john@ourearth.com
                                     john.cena@ourearth.org
                                     johncena@you.me.net
                                 </i> </p>
                             </Tooltip>
                         }>
-                    <Form.Group>
-                        {/* Equivalent to <Input> */}
-                        <Form.Control type="text" required > 
-                        </Form.Control>
+                        <Form.Group>
+                            {/* Equivalent to <Input> */}
+                            <Form.Control type="text" required >
+                            </Form.Control>
 
-                        <Form.Label className="form-control-placeholder" style={{ color: 'black'}}>
-                            Email Address
-                        </Form.Label>
-                    </Form.Group>
-                </OverlayTrigger>
+                            <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
+                                Email Address
+                            </Form.Label>
+                        </Form.Group>
+                    </OverlayTrigger>
                 </Col>
             </Row>
 
@@ -108,7 +108,7 @@ const ClientInfo = () => {
 
         </div>
 
-      );
+    );
 }
- 
+
 export default ClientInfo;

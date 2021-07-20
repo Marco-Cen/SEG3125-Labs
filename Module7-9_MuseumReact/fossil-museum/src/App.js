@@ -1,7 +1,7 @@
 // import logo from './logo.svg'; //was used in starting on create code
 // import './App.css'; //styles ALL unless use styled components
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'; //For nav bar linkage
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; //For nav bar linkage
 
 import Navbar from './NavMenu'; //Imported navbar content from Navbar.js component
 import Home from './Home';
@@ -33,22 +33,22 @@ function App() {
 
             {/* Need to specify 'exact' match because React looks for ANY match if string contains it */}
             {/* 'path' does not have to equal class title. It is whatever is set in navbar menu path menu' */}
-            <Route exact path="/" >   <Home />   </Route> 
+            <Route exact path="/" >   <Home />   </Route>
             <Route path="/Exhibition" >  <Exhibition />    </Route>
             {/* <Route path="/FossilLocations">       </Route> */}
             <Route path="/TicketPurchase" >  <TicketPurchaseForm />   </Route>
             {/* <Route path="/AboutUs" >    </Route> */}
-  
 
-          </Switch>    
+
+          </Switch>
         </div>
 
-        <footer style={{textAlign:'right'}}>
-                Designed by: MC
+        <footer style={{ textAlign: 'right' }}>
+          MC
         </footer>
 
-    </div>
-    </Router>    
+      </div>
+    </Router>
   );
 }
 

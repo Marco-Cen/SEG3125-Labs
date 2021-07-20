@@ -82,7 +82,7 @@ const ClientPayInfo = () => {
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="text" maxlength="19"  required>
+                            <Form.Control type="text" maxlength="19" required>
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
@@ -114,7 +114,7 @@ const ClientPayInfo = () => {
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="text" maxlength="5"  required >
+                            <Form.Control type="text" maxlength="5" required >
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
@@ -139,7 +139,7 @@ const ClientPayInfo = () => {
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="text" maxlength="3"  required>
+                            <Form.Control type="text" maxlength="3" required>
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>

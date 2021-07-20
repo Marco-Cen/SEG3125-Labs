@@ -76,16 +76,16 @@ const Home = () => {
         <FindUsContent />
 
 
-      {/* Experimentatl: With 'react-scroll' lib and Nav.Link nav bar, able to redirect to specific point of page */}
+        {/* Experimentatl: With 'react-scroll' lib and Nav.Link nav bar, able to redirect to specific point of page */}
         {/* <Element id='findusRedirect' name='example-destination'>
           // wrap your content in the Element from react-scroll so when click from nav bar goes to this part of page 
           <FindUsContent />
         </Element> */}
 
 
-{/* Need to put own footer again, because THIS PAGE footer doesnt show up due to formatting */}
-<footer style={{textAlign:'right', marginTop:'1%'}}>
-                Designed by: MC
+        {/* Need to put own footer again, because THIS PAGE footer doesnt show up due to formatting */}
+        <footer style={{ textAlign: 'right', marginTop: '1%' }}>
+          MC
         </footer>
 
       </div>
