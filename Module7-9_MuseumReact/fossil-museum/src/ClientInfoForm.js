@@ -94,7 +94,7 @@ const ClientInfo = () => {
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="number" maxlength="12" required >
+                            <Form.Control type="text" maxlength="12" required >
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>

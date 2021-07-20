@@ -34,12 +34,10 @@ function App() {
             {/* Need to specify 'exact' match because React looks for ANY match if string contains it */}
             {/* 'path' does not have to equal class title. It is whatever is set in navbar menu path menu' */}
             <Route exact path="/" >   <Home />   </Route> 
-            <Route exact path="/Exhibition" >  <Exhibition />    </Route>
+            <Route path="/Exhibition" >  <Exhibition />    </Route>
             {/* <Route path="/FossilLocations">       </Route> */}
             <Route path="/TicketPurchase" >  <TicketPurchaseForm />   </Route>
             {/* <Route path="/AboutUs" >    </Route> */}
-
-
   
 
           </Switch>    

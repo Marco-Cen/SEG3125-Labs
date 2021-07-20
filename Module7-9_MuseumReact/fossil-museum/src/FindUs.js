@@ -135,7 +135,13 @@ const FindUsSection = () => {
 
 
         {/* Toggle language on FIND US page */}
-        <button onClick={() => setLangButton(!langButton)} style={{ color: 'black' }}> {langButton ? "English" : "French"} </button>
+        <br />
+        <button onClick={() => setLangButton(!langButton)} style={{ 
+            color: 'black',
+            backgroundColor:'wheat',
+            borderColor:'white',
+            }}>
+                 {langButton ? "English" : "French"} </button>
 
         </div>
     );

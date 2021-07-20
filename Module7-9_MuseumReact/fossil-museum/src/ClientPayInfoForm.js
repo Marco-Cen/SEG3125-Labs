@@ -77,12 +77,12 @@ const ClientPayInfo = () => {
                                 <p>  <i style={{ opacity: '0.7', fontSize: '80%' }}>
                                     NUMBER on the FRONT of the card <br />
                                     Accepted Format: <br />
-                                    #### #### #### ####
+                                    1234 5678 9123 4567
                                 </i> </p>
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="number" maxlength="19"  required>
+                            <Form.Control type="text" maxlength="19"  required>
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
@@ -114,7 +114,7 @@ const ClientPayInfo = () => {
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="number" maxlength="5"  required >
+                            <Form.Control type="text" maxlength="5"  required >
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
@@ -139,7 +139,7 @@ const ClientPayInfo = () => {
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="number" maxlength="3"  required>
+                            <Form.Control type="text" maxlength="3"  required>
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>

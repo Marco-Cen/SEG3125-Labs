@@ -98,7 +98,7 @@ const TicketPurchaseForm = () => {
 
                             <br />
                             
-                            <Button type="submit"> SUBMIT</Button>
+                            <Button type="submit" style={{backgroundColor:'olive', borderColor:'wheat'}}> SUBMIT</Button>
 
                         </Accordion>
                     </Form>
