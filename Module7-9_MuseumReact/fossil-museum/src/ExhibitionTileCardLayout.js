@@ -1,4 +1,4 @@
-const ExhibitionTileCard = ({ fossils, title }) => {
+const ExhibitionTileCardLayout = ({ fossils, title }) => {
     return (
       <div className="fossilTileCardLayout">
         <h2>{ title }</h2>
@@ -13,4 +13,4 @@ const ExhibitionTileCard = ({ fossils, title }) => {
     );
   }
    
-  export default ExhibitionTileCard;
+  export default ExhibitionTileCardLayout;

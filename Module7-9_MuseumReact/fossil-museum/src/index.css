@@ -127,11 +127,11 @@ body, html{
 }
 
 .fossilInfoCard{
-  height: 100%;
   position: absolute;
   margin: 0 auto;
-  width: 35%;
   z-index: 10;
+  height: 100%;
+  width: 30%;
   background-color: black;
   text-align: center;
   padding-left: 1.5%;
@@ -155,7 +155,7 @@ color: wheat;
   z-index: 1;
   position: relative;
   top: 0;
-  left: 2%;
+  left: 2%; /* To provide that slight broken L/R scroll effect of parallax image */
   filter:blur(0.6px);
 }
 
