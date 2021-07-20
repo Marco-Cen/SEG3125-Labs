@@ -48,12 +48,12 @@ const ClientInfo = () => {
                
                 <Col>
                 <OverlayTrigger
-                        key='bottom'
-                        placement='bottom'
+                        key='right'
+                        placement='right'
                         trigger='hover'
                         overlay={ //Tool Tip MESSAGE
-                            <Tooltip id='tooltip-bottom'>
-                                <p>  <i style={{ opacity: '0.5', fontSize:'80%' }}> 
+                            <Tooltip id='tooltip-right'>
+                                <p>  <i style={{ opacity: '0.7', fontSize:'80%' }}> 
                                     Accepted Email Address Formats: <br/>
                                     john@ourearth.com 
                                     john.cena@ourearth.org
@@ -81,22 +81,20 @@ const ClientInfo = () => {
 
                 <Col>
                     <OverlayTrigger
-                        key='bottom'
-                        placement='bottom'
+                        key='right'
+                        placement='right'
                         trigger='hover'
                         overlay={ //Tool Tip MESSAGE
-                            <Tooltip id='tooltip-bottom'>
-                                <p>  <i style={{ opacity: '0.5', fontSize: '80%' }}>
+                            <Tooltip id='tooltip-right'>
+                                <p>  <i style={{ opacity: '0.7', fontSize: '80%' }}>
                                     Accepted Phone Number Format: <br />
-                                    (123) 456-7890
-                                    (123)456-7890
-                                    123-456-7890
+                                    123-456-7890 <br />
                                     1234567890
                                 </i> </p>
                             </Tooltip>
                         }>
                         <Form.Group>
-                            <Form.Control type="text" required >
+                            <Form.Control type="number" maxlength="12" required >
                             </Form.Control>
 
                             <Form.Label className="form-control-placeholder" style={{ color: 'black' }}>
