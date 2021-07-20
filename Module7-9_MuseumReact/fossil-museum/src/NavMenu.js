@@ -1,6 +1,14 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 import {Link} from 'react-router-dom';
 import logo from './assets/FossilizedEngTrans.png';
+
+import { Image } from 'react-bootstrap';
+import locationIconNav from './assets/locationIconNavBar.png';
+import exhibitionIconNav from './assets/exhibitionIconNavBar.png';
+
+// import Scroll from 'react-scroll'
+// const ScrollLink = Scroll.ScrollLink
+
 // import {Nav, NavDropdown, Container } from 'react-bootstrap';
 // import { render } from 'react-dom';
 
@@ -11,7 +19,11 @@ const Navbar = () => {
                 <div className="links">
 
                     {/* Use 'Link to=' instead of a 'href=' because React much quicker with 'Link to' and 'Routing' (Doenst have to send request for everything every single time: speeds up load time) */}
-                    <Link to="/Exhibition"> Exhibition </Link>
+                    <Link to="/Exhibition"> 
+                    <Image src={exhibitionIconNav} alt="exhibitionIcon" rounded />
+                    Exhibition 
+                    </Link>
+
                     <Link to="/FossilLocations"> Find Them </Link>
 
                     <Link to="/">
@@ -21,7 +33,26 @@ const Navbar = () => {
                     {/* <a href="/"> Fossilized </a> */}
 
                     <Link to="/PurchaseTickets"> Buy Tickets </Link>
-                    <Link to="/AboutUs"> Find Us </Link>
+
+                    <Link to="/">
+                        <Image src={locationIconNav} alt="locationIcon" rounded />
+                        Find Us
+                    </Link>
+
+
+                    {/* If changed to Nav.Links to redirect on click to that section of page: https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n  */}
+                    {/* <ScrollLink
+                        to="findusRedirect"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className='homeParallax'
+                        activeClass='some-active-class'
+                    >
+                     <Image src={locationIconNav} alt="locationIcon" rounded />
+                        Find Us 
+                    </ScrollLink> */}
+
                 </div>
             </nav>
         );

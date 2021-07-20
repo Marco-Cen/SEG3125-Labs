@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/Exhibition" >  <Exhibition />   </Route>
             <Route path="/FossilLocations">       </Route>
             <Route path="/PurchaseTickets" >     </Route>
-            <Route path="/AboutUs" >    </Route>
+            {/* <Route path="/AboutUs" >    </Route> */}
 
 
   

@@ -1,8 +1,11 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-// import ListGroup from 'react-bootstrap/ListGroup';
 import CarnivoreList from './ListOfCarnivores';
 import HerbivoreList from './ListOfHerbivores';
 import OmnivoreList from './ListOfOmnivores';
+
+import { Image } from 'react-bootstrap';
+import exhibitionIcon from './assets/exhibitionIcon.png';
+
 
 const Exhibition  = () => {
 
@@ -13,7 +16,8 @@ const Exhibition  = () => {
             <div className="carnivoreFossilBkg">
 
                 <div className="subTitles">
-                    <h1> EXHIBITION </h1>
+                    <Image src={exhibitionIcon} alt="exhibitionIcon" rounded  style={{height:'100%'}} />
+                    <h1 style={{fontSize:'400%'}}> EXHIBITION </h1>
                 </div>
 
                 <div className="fossilInfoCard" style={{right:'0%'}}>
