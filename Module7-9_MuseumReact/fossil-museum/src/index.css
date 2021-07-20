@@ -99,7 +99,7 @@ body, html{
   transform: translateY(105vh) translateZ(-100px) scale(1.5);
   background-position: center;
   filter:blur(1px);
-  opacity: 0.5;
+  opacity: 0.8;
   left:-25%;
 
 }
@@ -155,14 +155,17 @@ body, html{
 }
 
 
+/* INCLUDES subtitles for 'EXHIBITION' and 'TICKET PURHCASE' */
+.subTitles{ 
+  padding: 3%;
+  display: inline-flex; /* Takes up only the REQUIRED Amount of Space */
+  position: absolute;
+  bottom: 10%;
+  }
 
-/* Exhibition */
-.subTitles{
-padding: 3%;
-display: inline-flex; /* Takes up only the REQUIRED Amount of Space */
-position: absolute;
-}
 
+
+/* Exhibition */ 
 .fossilInfoCard{
   position: absolute;
   margin: 0 auto;
@@ -231,17 +234,63 @@ color: wheat;
   position: absolute;
   margin: 0 auto;
   z-index: 10;
-  height: 100%;
-  width: 27%;
+  height: 80%;
+  width: 50%;
+  top: 10%;
+  left: 25%;
   background-color: black;
   text-align: center;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding: 2%;
+  display: flex;
+
+  /* opacity: 0.9; */
 }
-.ticketForm h1{
-text-align: center;
-color: wheat;
+.ticketForm h2{ /* Accordion menu SubTitle */
+  text-align: center;
+  color: black;
+  display: inline-flex;
+  }
+  .ticketForm h3{ /* Accordion menu CONTENT */
+    text-align: center;
+    color: black;
+    display: inline-flex;
+    }
+
+
+
+/* STILL RECOGNIZES with <Form.Group> tag!!  */
+  .card-body{
+    /* background-color:gray; */
+  }
+    .form-group {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    
+    .form-control-placeholder {
+      position: absolute;
+      top: 0;
+      padding: 7px 0 0 13px;
+      transition: all 200ms;
+      opacity: 0.5;
+      left: 0;
+      pointer-events: none; /* Able to click through text */
+    }
+    
+    .form-control:focus + .form-control-placeholder,
+    .form-control:valid + .form-control-placeholder {
+      font-size: 75%;
+      transform: translate3d(0, -100%, 0);
+      opacity: 1;
+    }
+    
+.ClientInfoSection{
+  /* color: black; */
+  /* background-color: yellow; */
 }
+
+    
+
 
 .topTeethBkg{
   background-image: url("./assets/teethTopBkg.png");
@@ -271,7 +320,9 @@ color: wheat;
   z-index: 2;
   position: relative;
   margin: 0 auto;
-  filter:blur(0.6px);
+  /* filter:blur(1px); */
+
+    transform: scale(0.9);
 }
 .bottomTeethBkg{
   background-image: url("./assets/teethBottomBkg.png");
@@ -285,6 +336,9 @@ color: wheat;
   z-index: 2;
   position: relative;
   margin: 0 auto;
+
+  filter:blur(1px);
+    /* transform: scale(0.9); */
 }
 
 

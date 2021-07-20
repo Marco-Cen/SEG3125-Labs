@@ -1,9 +1,9 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import CarnivoreList from './ListOfCarnivores';
+import CarnivoreList from './ListOfCarnivores'; //Import names MUST be captial or wont read content!
 import HerbivoreList from './ListOfHerbivores';
 import OmnivoreList from './ListOfOmnivores';
 
-import { Image } from 'react-bootstrap';
+import { Image, Tooltip, OverlayTrigger, Button } from 'react-bootstrap';
 import exhibitionIcon from './assets/exhibitionIcon.png';
 
 
@@ -16,9 +16,34 @@ const Exhibition  = () => {
             <div className="carnivoreFossilBkg">
 
                 <div className="subTitles">
-                    <Image src={exhibitionIcon} alt="exhibitionIcon" rounded  style={{height:'100%'}} />
-                    <h1 style={{fontSize:'400%'}}> EXHIBITION </h1>
+
+                    {/* Icon + SubTitle */}
+                    <Image src={exhibitionIcon} alt="exhibitionIcon" rounded style={{ height: '100%' }} />
+                    <h1 style={{ fontSize: '400%' }}> EXHIBITION </h1>
+
+
+                    {/* ToolTip On Hover: Defintion */}
+                    <OverlayTrigger
+                        key='top'
+                        placement='top'
+                        trigger='hover'
+                        overlay={ //Tool Tip MESSAGE
+                            <Tooltip id='tooltip-top'>
+
+                                <p
+                                    style={{ opacity: '0.7' }}>  ex·​hi·bi·tion
+                                    <br />
+                                    <i style={{ opacity: '0.6' }}> (noun) </i>
+                                    a collection of special objects that can be viewed by the public
+                                </p>
+
+                                {/* Tooltip on <strong> 'top' </strong> */}
+                            </Tooltip>
+                        }>
+                        <Button style={{ height: '0%', backgroundColor: 'black', borderColor: 'wheat' }} > &#9432; </Button>
+                    </OverlayTrigger>
                 </div>
+
 
                 <div className="fossilInfoCard" style={{right:'0%'}}>
 

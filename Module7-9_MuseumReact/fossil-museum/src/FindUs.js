@@ -105,9 +105,7 @@ const FindUsSection = () => {
 
                     <h2 style={{ right: '6%' }}>CONTACT US </h2>
 
-                    <Row style={{
-                        textAlign: 'left'
-                    }}>
+                    <Row>
                         <p>
                             <Image src={phoneIcon} alt="phoneIcon" rounded /> :
                             <Link to="tel:6479373188" style={{ color: 'white', fontSize: '125%' }}> (647) 937-3188 </Link>
