@@ -15,7 +15,9 @@ body, html{
   margin: 0;
 }
 
-/* Nav Bar */
+
+
+/* NAV BAR MENU */
 .navbar {
   padding: 10px;
   display: flex;
@@ -39,6 +41,8 @@ body, html{
 }
 
 
+
+/* HOME page and FIND US page  */
 
 /* Parallax 3 */
 .homeParallax {
@@ -152,10 +156,6 @@ body, html{
 
 
 
-
-
-
-
 /* Exhibition */
 .subTitles{
 padding: 3%;
@@ -226,6 +226,66 @@ color: wheat;
 
 
 
+/* TICKETS PURCHASE page */
+.ticketForm{
+  position: absolute;
+  margin: 0 auto;
+  z-index: 10;
+  height: 100%;
+  width: 27%;
+  background-color: black;
+  text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.ticketForm h1{
+text-align: center;
+color: wheat;
+}
+
+.topTeethBkg{
+  background-image: url("./assets/teethTopBkg.png");
+  width: 100vw;
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  filter:blur(0.6px);
+  
+  /* transform: scale(0.9); */
+}
+.middleTeethBkg{
+  background-image: url("./assets/trexHead.jpeg");
+  width: 100vw;
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+  filter:blur(0.6px);
+}
+.bottomTeethBkg{
+  background-image: url("./assets/teethBottomBkg.png");
+  width: 100vw;
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+}
 
 
 

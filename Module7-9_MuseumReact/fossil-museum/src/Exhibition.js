@@ -42,6 +42,7 @@ const Exhibition  = () => {
 
             <br/>
 
+            {/* Parallax Scroll 2 */}
             <div className="herbivoreBkg">
                 <div className="fossilInfoCard">
 
@@ -68,6 +69,7 @@ const Exhibition  = () => {
 
             <br/>
 
+            {/* Parallax Scroll 3 */}
             <div className="omnivoreBkg">
                 <div className="fossilInfoCard" style={{right:'0%'}}>
                     <h1> OMNIVORE </h1>

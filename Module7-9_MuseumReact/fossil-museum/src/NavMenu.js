@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 import logo from './assets/FossilizedEngTrans.png';
 
 import { Image } from 'react-bootstrap';
-import locationIconNav from './assets/locationIconNavBar.png';
 import exhibitionIconNav from './assets/exhibitionIconNavBar.png';
+import ticketIconNav from './assets/newTicketIconNavBar.png';
+// import locationIconNav from './assets/locationIconNavBar.png';
 
 // import Scroll from 'react-scroll'
 // const ScrollLink = Scroll.ScrollLink
@@ -19,12 +20,13 @@ const Navbar = () => {
                 <div className="links">
 
                     {/* Use 'Link to=' instead of a 'href=' because React much quicker with 'Link to' and 'Routing' (Doenst have to send request for everything every single time: speeds up load time) */}
-                    <Link to="/Exhibition"> 
+                    <Link to="/Exhibition" style={{fontSize:'125%'}}> 
                     <Image src={exhibitionIconNav} alt="exhibitionIcon" rounded />
                     Exhibition 
                     </Link>
 
-                    <Link to="/FossilLocations"> Find Them </Link>
+                    {/* TODO: Not enough time to Implement */}
+                    {/* <Link to="/FossilLocations"> Find Them </Link> */}
 
                     <Link to="/">
                         <img src={logo} alt="Fossilized" />
@@ -32,12 +34,16 @@ const Navbar = () => {
 
                     {/* <a href="/"> Fossilized </a> */}
 
-                    <Link to="/PurchaseTickets"> Buy Tickets </Link>
+                    <Link to="/TicketPurchase" style={{fontSize:'125%'}}>
+                    <Image src={ticketIconNav} alt="ticketIcon" rounded />
+                     Ticket Purchase 
+                     </Link>
 
-                    <Link to="/">
+                    {/* TODO: Not enough time to Implement */}
+                    {/* <Link to="/">
                         <Image src={locationIconNav} alt="locationIcon" rounded />
                         Find Us
-                    </Link>
+                    </Link> */}
 
 
                     {/* If changed to Nav.Links to redirect on click to that section of page: https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n  */}

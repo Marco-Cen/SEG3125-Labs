@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'; //For 
 import Navbar from './NavMenu'; //Imported navbar content from Navbar.js component
 import Home from './Home';
 import Exhibition from './Exhibition';
+import TicketPurchaseForm from './TicketPurchase';
 
 
 
@@ -31,22 +32,23 @@ function App() {
           <Switch>
 
             {/* Need to specify 'exact' match because React looks for ANY match if string contains it */}
+            {/* 'path' does not have to equal class title. It is whatever is set in navbar menu path menu' */}
             <Route exact path="/" >   <Home />   </Route> 
-            <Route exact path="/Exhibition" >  <Exhibition />   </Route>
-            <Route path="/FossilLocations">       </Route>
-            <Route path="/PurchaseTickets" >     </Route>
+            <Route exact path="/Exhibition" >  <Exhibition />    </Route>
+            {/* <Route path="/FossilLocations">       </Route> */}
+            <Route path="/TicketPurchase" >  <TicketPurchaseForm />   </Route>
             {/* <Route path="/AboutUs" >    </Route> */}
 
 
   
 
-          </Switch>
-
-            <footer style={{textAlign:'right'}}>
-                Designed by: MC
-            </footer>
-    
+          </Switch>    
         </div>
+
+        <footer style={{textAlign:'right'}}>
+                Designed by: MC
+        </footer>
+
     </div>
     </Router>    
   );
