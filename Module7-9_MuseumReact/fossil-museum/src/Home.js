@@ -13,6 +13,7 @@ import FindUsContent from './FindUs';
 
 
 const Home = () => {
+
   return (
 
     // {/* BackDrop Faded Green Jurassic Leaves within 'parallax' styling class */}

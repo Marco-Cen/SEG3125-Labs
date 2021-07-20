@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 import ClientInfoSection from './ClientInfoForm';
 import ClientPaySection from './ClientPayInfoForm';
-import { Image, Accordion, Card, Row, Col, Button, Form } from 'react-bootstrap';
+import { Image, Accordion, Card, Button, Form } from 'react-bootstrap';
 import ticketIcon from './assets/newTicketIcon.png';
 
 

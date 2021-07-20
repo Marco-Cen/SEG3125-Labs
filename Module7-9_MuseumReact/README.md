@@ -34,8 +34,24 @@ Sources Used to Help Create:
 (Lab 7 - 9)
 - https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d  (Foundation & Setup of React)
 - https://react-bootstrap.github.io/getting-started/introduction/ (React Docs)
-- https://app.logopony.com/en/create/ (Logo)
+- https://www.youtube.com/watch?v=-8u43gle_wE (Parallax scrolls)
+- https://www.wccc.wellesley.edu/ecp/dinosaurs-the-carnivores/ (Carnivore Video)
+- https://www.youtube.com/watch?v=gr2ZL70nCjs (Herbivore Video)
+- https://stackoverflow.com/questions/33878539/is-there-an-html-entity-for-an-info-icon/33878646 (Help icon unicode)
+- https://www.pluralsight.com/guides/use-bootstrap-accordion-with-react (Accordion ticket purchase)
+- https://codepen.io/peiche/pen/xOVpPo (Floating Label)
 
+Asset Pictures:
+- https://app.logopony.com/en/create/ (Logo)
+- https://dlpng.com/png/799029 (Home Page Foreground)
+- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperflare.com%2Fgreen-leafed-plant-in-black-background-close-up-photo-of-green-fern-plant-wallpaper-wjnby&psig=AOvVaw2u_aHCUXax-XvfpTgvpcZo&ust=1626739886486000&source=images&cd=vfe&ved=0CAwQjhxqFwoTCODw47rs7fECFQAAAAAdAAAAABBm (Jurassic Leaves)
+- http://www.freepngclipart.com/free-png/54112-leaf-euclidean-tree-arecaceae-vector-palm (Palm Tree Leaves)
+- https://www.istockphoto.com/search/2/image?phrase=garden+soil (Dirt)
+- https://wallpaperaccess.com/fossil (Fossils)
+- https://www.istockphoto.com/search/2/image?phrase=fossil (Fossils)
+- https://www.thevintagenews.com/2020/06/25/dinosaur-fossils/ (Herbivore Fossil)
+- https://icons8.com/icons (Icons)
+- https://carnegiemnh.org/tyrannosaurs-rex/ (Trex mouth)
 
 
 

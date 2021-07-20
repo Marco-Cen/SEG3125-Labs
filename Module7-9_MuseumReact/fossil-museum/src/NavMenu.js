@@ -1,10 +1,12 @@
-import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import {Link} from 'react-router-dom';
-import logo from './assets/FossilizedEngTrans.png';
+import React, { useState } from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
+import { Link } from 'react-router-dom';
+import logoEnglish from './assets/FossilizedEngTrans.png';
+import logoFrench from './assets/FossilizedFrenchTransparent.png';
 
 import { Image } from 'react-bootstrap';
 import exhibitionIconNav from './assets/exhibitionIconNavBar.png';
 import ticketIconNav from './assets/newTicketIconNavBar.png';
+// import TranslateSwitch from './TranslateSwitch';
 // import locationIconNav from './assets/locationIconNavBar.png';
 
 // import Scroll from 'react-scroll'
@@ -15,39 +17,40 @@ import ticketIconNav from './assets/newTicketIconNavBar.png';
 
 
 const Navbar = () => {
-        return (
-            <nav className="navbar">
-                <div className="links">
 
-                    {/* Use 'Link to=' instead of a 'href=' because React much quicker with 'Link to' and 'Routing' (Doenst have to send request for everything every single time: speeds up load time) */}
-                    <Link to="/Exhibition" style={{fontSize:'125%'}}> 
+    //For Toggle Language
+    const [langButton, setLangButton] = useState(true);
+
+    return (
+        <nav className="navbar">
+            <div className="links">
+
+                {/* Use 'Link to=' instead of a 'href=' because React much quicker with 'Link to' and 'Routing' (Doenst have to send request for everything every single time: speeds up load time) */}
+                <Link to="/Exhibition" style={{ fontSize: '125%' }}>
                     <Image src={exhibitionIconNav} alt="exhibitionIcon" rounded />
-                    Exhibition 
-                    </Link>
+                    {langButton ? "Exhibition" : "Exposition"}
+                </Link>
 
-                    {/* TODO: Not enough time to Implement */}
-                    {/* <Link to="/FossilLocations"> Find Them </Link> */}
+                {/* <Link to="/FossilLocations"> Find Them </Link> */}
 
-                    <Link to="/">
-                        <img src={logo} alt="Fossilized" />
-                    </Link>
+                <Link to="/">
+                    <img src={langButton ? logoEnglish : logoFrench} alt="Fossilized" />
+                </Link>
 
-                    {/* <a href="/"> Fossilized </a> */}
 
-                    <Link to="/TicketPurchase" style={{fontSize:'125%'}}>
+                <Link to="/TicketPurchase" style={{ fontSize: '125%' }}>
                     <Image src={ticketIconNav} alt="ticketIcon" rounded />
-                     Ticket Purchase 
-                     </Link>
+                    {langButton ? "Ticket Purchase" : "Achat de Billets"}
+                </Link>
 
-                    {/* TODO: Not enough time to Implement */}
-                    {/* <Link to="/">
+                {/* <Link to="/">
                         <Image src={locationIconNav} alt="locationIcon" rounded />
                         Find Us
                     </Link> */}
 
 
-                    {/* If changed to Nav.Links to redirect on click to that section of page: https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n  */}
-                    {/* <ScrollLink
+                {/* If changed to Nav.Links to redirect on click to that section of page: https://stackoverflow.com/questions/54715462/react-scroll-how-to-scroll-to-a-specific-targeted-component-when-clicking-on-n  */}
+                {/* <ScrollLink
                         to="findusRedirect"
                         spy={true}
                         smooth={true}
@@ -59,11 +62,21 @@ const Navbar = () => {
                         Find Us 
                     </ScrollLink> */}
 
-                </div>
-            </nav>
-        );
+            </div>
+
+
+
+            {/* Switch Implementation */}
+            {/* <TranslateSwitch />  (wasnt able to get working in SEPARATE CLASS) */}
+            <button onClick={() => setLangButton(!langButton)} style={{ color: 'black' }}> {langButton ? "English" : "French"} </button>
+
+
+        </nav>
+    );
 }
- 
+
+// export const (blahblah);
+
 export default Navbar;
 
 

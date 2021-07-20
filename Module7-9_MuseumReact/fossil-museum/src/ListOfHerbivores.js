@@ -48,5 +48,4 @@ function HerbivoreDinoList() {
       </div>
     );
   }
-  
   export default HerbivoreDinoList;

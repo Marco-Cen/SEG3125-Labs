@@ -1,4 +1,4 @@
-import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
+import React, {useState} from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 import { Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -9,6 +9,11 @@ import YTIcon from './assets/youtubeIcon.png';
 
 
 const FindUsSection = () => {
+
+        //For Toggle Language
+        const [langButton, setLangButton] = useState(true);
+
+
     return (
         <div className="findUs">
             <Row>
@@ -24,37 +29,39 @@ const FindUsSection = () => {
                         left: '8%',
                         top: '8%',
                     }}>
-                        HOURS </h2>
+                        {langButton ? "HOURS" : "LES HEURES"}
+
+                        </h2>
 
                     {/* <img src="assets/hoursIcon.png" alt="hoursIcon" style="position: relative; left:35%;"> </img> */}
 
                     <Row>
                         <Col>
-                            <h3> Weekday:</h3>
-                            <b> MONDAY </b>
-                            <p> &nbsp; OPEN 24 Hours </p>
+                            <h3> {langButton ? "Weekday:" : "Jour de la Semaine"} </h3>
+                            <b> {langButton ? "MONDAY" : "LUNDI"} </b>
+                            <p> &nbsp; {langButton ? "OPEN 24 Hours" : "Ouvert 24 Heures"} </p>
 
-                            <b> TUESDAY </b> <br />
-                            <p> &nbsp; OPEN 24 Hours </p>
+                            <b> {langButton ? "TUESDAY" : "MARDI"} </b> <br />
+                            <p> &nbsp; {langButton ? "OPEN 24 Hours" : "Ouvert 24 Heures"} </p>
 
-                            <b> WEDNESDAY </b> <br />
-                            <p> &nbsp; OPEN 24 Hours </p>
+                            <b> {langButton ? "WEDNESDAY" : "MERCREDI"} </b> <br />
+                            <p> &nbsp; {langButton ? "OPEN 24 Hours" : "Ouvert 24 Heures"} </p>
 
-                            <b> THURSDAY </b> <br />
-                            <p> &nbsp; OPEN 24 Hours </p>
+                            <b> {langButton ? "THURSDAY" : "JEUDI"} </b> <br />
+                            <p> &nbsp; {langButton ? "OPEN 24 Hours" : "Ouvert 24 Heures"} </p>
 
-                            <b> FRIDAY </b> <br />
-                            <p> &nbsp; OPEN 24 Hours </p>
+                            <b> {langButton ? "FRIDAY" : "VENDREDI"} </b> <br />
+                            <p> &nbsp; {langButton ? "OPEN 24 Hours" : "Ouvert 24 Heures"} </p>
                         </Col>
 
                         <Col>
                             <Row>
-                                <h3> Weekend:</h3>
-                                <b> SATURDAY </b> <br />
-                                <p> &nbsp; OPEN 24 Hours </p>
+                                <h3> {langButton ? "Weekend:" : "Fin de Semaine"}</h3>
+                                <b> {langButton ? "SATURDAY" : "SAMEDI"} </b> <br />
+                                <p> &nbsp; {langButton ? "OPEN 24 Hours" : "Ouvert 24 Heures"} </p>
 
-                                <b> SUNDAY </b> <br />
-                                <p> &nbsp; CLOSED </p>
+                                <b> {langButton ? "SUNDAY" : "DIMANCHE"} </b> <br />
+                                <p> &nbsp; {langButton ? "CLOSED" : "Fermé"} </p>
                             </Row>
                         </Col>
                     </Row>
@@ -67,7 +74,7 @@ const FindUsSection = () => {
 
                     <br />
 
-                    <h1> FIND US </h1>
+                    <h1> {langButton ? "FIND US" : "TROUVE NOUS"} </h1>
 
                     <br />
                     <Image src={locationIcon} alt="locationIcon" rounded />
@@ -103,7 +110,7 @@ const FindUsSection = () => {
                     alignItems: 'center',
                 }}>
 
-                    <h2 style={{ right: '6%' }}>CONTACT US </h2>
+                    <h2 style={{ right: '6%' }}> {langButton ? "CONTACT US" : "NOUS CONTACTER"} </h2>
 
                     <Row>
                         <p>
@@ -118,13 +125,18 @@ const FindUsSection = () => {
 
                         <p>
                             <Image src={YTIcon} alt="YTIcon" rounded /> :
-                            <Link to={{ pathname:"https://youtu.be/dQw4w9WgXcQ"}} target="_blank" style={{ color: 'white', fontSize: '125%' }}> YouTube Channel </Link>
+                            <Link to={{ pathname:"https://youtu.be/dQw4w9WgXcQ"}} target="_blank" style={{ color: 'white', fontSize: '125%' }}> {langButton ? "YouTube Channel" : "Chaîne YouTube"} </Link>
                         </p>
                     </Row>
 
                 </Col>
 
             </Row>
+
+
+        {/* Toggle language on FIND US page */}
+        <button onClick={() => setLangButton(!langButton)} style={{ color: 'black' }}> {langButton ? "English" : "French"} </button>
+
         </div>
     );
 }

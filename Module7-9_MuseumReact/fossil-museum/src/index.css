@@ -114,7 +114,7 @@ body, html{
   top: 80%;
   left: 0;
   right: 0;
-  height: 990px; /* Length of Last Parallax Picture (DIRT) */
+  height: 1025px; /* Length of Last Parallax Picture (DIRT) */
   z-index: 2;
   filter:blur(0.5px);
 
@@ -234,7 +234,7 @@ color: wheat;
   position: absolute;
   margin: 0 auto;
   z-index: 10;
-  height: 55%;
+  height: 65%;
   width: 50%;
   top: 10%;
   left: 25%;
