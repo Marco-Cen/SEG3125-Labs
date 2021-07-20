@@ -1,7 +1,8 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
 // import bkgImage from './assets/titlePagebackground.jpeg';
 // import bkgImage2 from './assets/titlePagebackground2.jpeg';
-import image3 from './assets/homeBkgImage.jpeg';
+import rightForeBackImg from './assets/RightForebackground.png';
+import leftForeBackImg from './assets/LeftForebackground.png';
 // import image4 from './assets/carnivoreFossilBkg1.jpeg';
 import foregroundImg from './assets/titlePageForeground.png';
 import logo from './assets/FossilizedEngTrans.png';
@@ -20,6 +21,7 @@ import logo from './assets/FossilizedEngTrans.png';
 const Home = () => {
     return ( 
 
+      // {/* BackDrop Faded Green Jurassic Leaves within 'parallax' styling class */}
       <div class="parallax">
 
         {/* Company Logo */}
@@ -28,22 +30,22 @@ const Home = () => {
             width:'500px'
             }} />
         </div>
-        
-        {/* Trees */}
-        <div class="parallax__layer parallax__layer__6">
-          <img src={foregroundImg} alt="foregroundImage" style={{ 
-            height:'890px',
-            width: '2257px',
+
+        {/* Tropical Palm Tree (RIGHT long leaf in front) */}
+        <div class="parallax__layer parallax__layer__2">
+          <img src={rightForeBackImg} alt="image3" style={{ 
+            height:'100vh',
+            width: '1150px',
             }}/>
         </div>
 
-        {/* BackDrop Green Jurassic Leaves */}
-        {/* <div class="parallax__layer parallax__layer__2">
-          <img src={image3} alt="image3" style={{ 
+        {/* Tropical Palm Tree (LEFT long leaf in front) */}
+        <div class="parallax__layer parallax__layer__5">
+          <img src={leftForeBackImg} alt="image3" style={{ 
             height:'100vh',
-            width: '900px',
+            width: '1900px',
             }}/>
-        </div> */}
+        </div>
 
         {/* <div class="parallax__layer parallax__layer__0">
           <img src={bkgImage} alt="bkgImage" />
@@ -57,9 +59,21 @@ const Home = () => {
           <img src={image4} alt="bkgImage4" />
         </div> */}
 
+
+
+        {/* Trees */}
+        <div class="parallax__layer parallax__layer__6">
+          <img src={foregroundImg} alt="foregroundImage" style={{ 
+            height:'890px',
+            width: '2257px',
+            }}/>
+        </div>
+        
         
 
-        
+
+
+        {/* After Home Page (DIRT) */}
         <div class="parallax__cover"> 
         
         About Us
