@@ -1,5 +1,5 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import ListGroup from 'react-bootstrap/ListGroup';
+// import ListGroup from 'react-bootstrap/ListGroup';
 import CarnivoreList from './ListOfCarnivores';
 import HerbivoreList from './ListOfHerbivores';
 import OmnivoreList from './ListOfOmnivores';
@@ -11,18 +11,21 @@ const Exhibition  = () => {
 
             {/* Parallax Scroll 1 */}
             <div className="carnivoreFossilBkg">
+
+                <div className="subTitles">
+                    <h1> EXHIBITION </h1>
+                </div>
+
                 <div className="fossilInfoCard" style={{right:'0%'}}>
 
                     {/*  Title and Definition */}
+                    <br />
                     <h1>  CARNIVORE   </h1> 
                     <p  
                     style={{opacity:'0.7'}}>  car·​ni·​vore 
                     <br/>
                     <i style={{opacity:'0.6'}}> (noun) </i> Animal that feeds on meat
                     </p>
-
-                    {/* Empty Space */}
-                    <div> &nbsp; </div> 
                     
                     {/* Video */}
                     <iframe width="400" height="345" src="https://www.youtube.com/embed/jIjIoAuNFNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
@@ -92,23 +95,3 @@ const Exhibition  = () => {
 }
  
 export default Exhibition;
-
-
-
-                    {/* <h5 style={{ textAlign: 'left' }}> Dinosaures in our Museum: </h5>
-                    <ListGroup>
-                        <ListGroup.Item variant="dark">Allosaurus</ListGroup.Item>
-                        <ListGroup.Item variant="secondary">Deinonychus</ListGroup.Item>
-
-                        <ListGroup.Item variant="dark">Dilophosaurus</ListGroup.Item>
-                        <ListGroup.Item variant="secondary">Giganotosaurus</ListGroup.Item>
-
-                        <ListGroup.Item variant="dark">Megalosaurus</ListGroup.Item>
-                        <ListGroup.Item variant="secondary">Spinosaurus</ListGroup.Item>
-
-                        <ListGroup.Item variant="dark">Spinosaurus</ListGroup.Item>
-                        <ListGroup.Item variant="secondary">Tyrannosaurus Rex</ListGroup.Item>
-
-                        <ListGroup.Item variant="dark">Utahraptor</ListGroup.Item>
-                        <ListGroup.Item variant="secondary">Velociraptor</ListGroup.Item>
-                    </ListGroup> */}

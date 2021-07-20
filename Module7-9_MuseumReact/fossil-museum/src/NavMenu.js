@@ -1,9 +1,8 @@
 import React from 'react'; //Bc downloaded bootstrap? (React-bootstrap)
-import {Nav, NavDropdown, Container } from 'react-bootstrap';
-import { render } from 'react-dom';
 import {Link} from 'react-router-dom';
-
 import logo from './assets/FossilizedEngTrans.png';
+// import {Nav, NavDropdown, Container } from 'react-bootstrap';
+// import { render } from 'react-dom';
 
 
 const Navbar = () => {

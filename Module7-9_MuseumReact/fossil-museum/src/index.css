@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
 
 /* base styles */
 * {
+   /* font-family: 'Otomanopee One', sans-serif; */
+  font-family: 'Padauk', sans-serif;
   margin: 0;
-  font-family: 'Otomanopee One', sans-serif;
-  /* background-color: black; */  /* Importing bootstrap changed bkg colour: edited in 'index.html' */
   color: whitesmoke; /* #333 */
+    /* background-color: black; */  /* Importing bootstrap changed bkg colour: edited in 'index.html' */
 }
 
 body, html{
@@ -119,24 +121,61 @@ body, html{
   top: 80%;
   left: 0;
   right: 0;
-  height: 960px;
+  height: 950px;
   z-index: 2;
   filter:blur(0.5px);
+
+  text-align: center;
+  /* color: blueviolet; */
+}
+.parallax__cover h1{ /* Heading in DIRT */
+  text-align: center;
+  color: wheat;
+  font-size: 400%;
+ }
+.parallax__cover  h2{ /* subheadings in DIRT */
+  text-align: center;
+  color: wheat;
+}
+
+
+/* For GOOGLE MAPS Displays */
+.mapouter{ 
+  height: 700px;
+  width: 600px;
+  display: inline-flex;
+}
+.gmap_canvas{
+  overflow: hidden;
+  background: none !important;
+  height: 700px;
+  width: 600px;
 }
 
 
 
+
+
+
+
 /* Exhibition */
+.subTitles{
+margin: 0;
+padding: 0;
+display: inline-flex; /* Takes up only the REQUIRED Amount of Space */
+position: absolute;
+}
+
 .fossilInfoCard{
   position: absolute;
   margin: 0 auto;
   z-index: 10;
   height: 100%;
-  width: 30%;
+  width: 27%;
   background-color: black;
   text-align: center;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 .fossilInfoCard h1{
 text-align: center;
@@ -186,7 +225,6 @@ color: wheat;
   z-index: 2;
   position: relative;
   margin: 0 auto;
-  filter:blur(0.6px);
 }
 
 

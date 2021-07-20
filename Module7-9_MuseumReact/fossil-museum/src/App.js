@@ -11,9 +11,9 @@ import Exhibition from './Exhibition';
 
 function App() {
 
-  //TEST
-  const dynamicTitle = 'Fossilized (Dynamic Title Test)';
-  const likes = 50; //React converts whatever datatype we use to STRING auto to browser and output (Cant output Boolean or objects)
+  //Experimenting (TEST)
+  // const dynamicTitle = 'Fossilized (Dynamic Title Test)';
+  // const likes = 50; //React converts whatever datatype we use to STRING auto to browser and output (Cant output Boolean or objects)
 
   return (
 
@@ -41,6 +41,11 @@ function App() {
   
 
           </Switch>
+
+            <footer style={{textAlign:'right'}}>
+                Designed by: MC
+            </footer>
+    
         </div>
     </div>
     </Router>    
