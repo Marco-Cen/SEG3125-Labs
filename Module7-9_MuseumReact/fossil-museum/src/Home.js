@@ -35,7 +35,7 @@ const Home = () => {
         <div class="parallax__layer parallax__layer__2">
           <img src={rightForeBackImg} alt="image3" style={{ 
             height:'100vh',
-            width: '1150px',
+            width: '1180px',
             }}/>
         </div>
 

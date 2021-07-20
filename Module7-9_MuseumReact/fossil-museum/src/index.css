@@ -101,7 +101,7 @@ body, html{
   left: 24%;
 }
 .parallax__layer__5 {
-  transform: translateY(110vh) translateZ(-100px) scale(1.5);
+  transform: translateY(105vh) translateZ(-100px) scale(1.5);
   background-position: center;
   filter:blur(1px);
   opacity: 0.5;
