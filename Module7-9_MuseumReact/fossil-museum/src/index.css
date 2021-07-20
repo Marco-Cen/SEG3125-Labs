@@ -58,6 +58,7 @@ body, html{
   position: absolute;
   left: 0;
   right: 0;
+  background-image: url("./assets/homeBkgImage.jpeg");
 }
 .parallax__layer {
   position: absolute;
@@ -66,18 +67,6 @@ body, html{
   display: block;
   position: absolute;
   bottom: 0;  
-}
-.parallax__cover {
-  /* background: #0f0f0f; */
-  background-image: url("./assets/dirtBkg.jpeg");
-  display: block;
-  position: absolute;
-  top: 80%;
-  left: 0;
-  right: 0;
-  height: 960px;
-  z-index: 2;
-  filter:blur(0.5px);
 }
 .parallax__layer__0 {
   transform: translateY(150vh) translateZ(-300px) scale(4);
@@ -106,7 +95,7 @@ body, html{
 .parallax__layer__4 {
   transform: translateY(40vh) translateZ(-100px) scale(2);
   position: absolute;
-  left: 22%;
+  left: 24%;
 }
 .parallax__layer__5 {
   transform: translateY(97vh) translateZ(-100px) scale(1.5);
@@ -117,15 +106,24 @@ body, html{
 
 }
 .parallax__layer__6 {
-  transform: translateY(85vh) scale(1);
+  transform: translateY(80vh)  scale(0.85);
+}
+.parallax__cover { /* For very last/bottom section of parallax section (To scroll so to show depth) */
+  /* background: #0f0f0f; */
+  background-image: url("./assets/dirtBkg.jpeg");
+  display: block;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  height: 960px;
+  z-index: 2;
+  filter:blur(0.5px);
 }
 
 
 
-.exhibition{
-  
-}
-
+/* Exhibition */
 .fossilInfoCard{
   position: absolute;
   margin: 0 auto;
@@ -137,7 +135,6 @@ body, html{
   padding-left: 1.5%;
   padding-right: 1.5%;
 }
-
 .fossilInfoCard h1{
 text-align: center;
 color: wheat;
@@ -158,9 +155,8 @@ color: wheat;
   left: 2%; /* To provide that slight broken L/R scroll effect of parallax image */
   filter:blur(0.6px);
 }
-
 .herbivoreBkg{
-  background-image: url("./assets/bkg.jpeg");
+  background-image: url("./assets/herbivoreBkg.png");
   width: 100vw;
   height: 100vh;
   /* Create the parallax scrolling effect */
@@ -174,7 +170,6 @@ color: wheat;
   margin: 0 auto;
   filter:blur(0.6px);
 }
-
 .omnivoreBkg{
   background-image: url("./assets/omnivoreBkg.jpeg");
   width: 100vw;
@@ -190,6 +185,8 @@ color: wheat;
   margin: 0 auto;
   filter:blur(0.6px);
 }
+
+
 
 
 
