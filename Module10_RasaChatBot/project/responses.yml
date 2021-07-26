@@ -1,0 +1,71 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+
+    #Newly Added
+       - text: |
+            Greetings! How may I assist you?
+       - text: |
+            Howdy Partner! Whatcha need?
+       - text: |
+             Hello there! What help do you need?
+       - text: |
+             Heya. Whaddya need?
+
+
+
+   utter_ask_email:
+       - text: |
+           What is your email address?
+
+
+   utter_subscribed:
+       - text: |
+           Check your inbox at {email} in order to finish subscribing to the newsletter!
+       - text: |
+           You're all set! Check your inbox at {email} to confirm your subscription.
+
+   #Newly added
+    utter_unsubscribe:
+       - text: |
+           Why are you unsubscribing?
+       - text: |
+           Why is that?
+       - text: |
+           Why should we remove you from our mailing list?
+       - text: |
+           Why do you not want to receive our newsletters anymore?
+
+    utter_empathy:
+       - text: |
+           Ok, we understand.
+       - text: |
+           Not a problem. Sad to see you go!
+       - text: |
+           No worries. Hope you subscribe again in the near future!
+       - text: |
+           We get it, see you around. 
+
+
+   utter_thanks:
+       - text: |
+           My pleasure!
+       - text: |
+           Glad I could help!
+       - text: |
+           Happy to help!
+       - text: |
+           Anytime! You know where to find me!
+
+    utter_byes:
+       - text: |
+           Hope to see you soon!
+       - text: |
+           See you around!
+       - text: |
+           Bye!
+       - text: |
+           Goodbye mate!

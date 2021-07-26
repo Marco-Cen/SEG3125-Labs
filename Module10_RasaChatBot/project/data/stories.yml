@@ -1,0 +1,30 @@
+stories:
+ - story: greet and subscribe
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: subscribe
+   - action: newsletter_form
+   - active_loop: newsletter_form
+   # Newly added
+   - intent: thanks
+   - action: utter_thanks
+   - intent: goodbyes
+   - action: utter_byes
+
+#Newly added
+ - story: greet and unsubscribe
+   steps:
+   - intent: greet
+   - action: utter_greet
+
+   - intent: unsubscribe #ask to unsubscribe
+   - action: utter_unsubscribe #why? 
+   - intent: unsubscribeReason #reason for unsubscribe
+   - action: utter_empathy #understanding
+
+   - intent: thanks
+   - action: utter_thanks
+   - intent: goodbyes
+   - action: utter_byes
+
