@@ -11,10 +11,12 @@ Quick Links to each Website Created:
   https://marco-cen.github.io/SEG3125-Labs/Module2-GrocerySite/ 
 - Lab 3: (Grocery Store 2.0)
   https://marco-cen.github.io/SEG3125-Labs/Module3-AltGrocerySite/
-- Lab 4: (Physiotherapy Business)
+- Lab 4: (Physiotherapy Business) [Bootstrap focused]
   https://marco-cen.github.io/SEG3125-Labs/Module4-HealthService/
-- Lab 5/6: (Physiotherapy Business with Functionality and further enhancements)
+- Lab 5/6: (Physiotherapy Business with Functionality and further enhancements) [JavaScript framework and jQuery focused]
   https://marco-cen.github.io/SEG3125-Labs/Module5_6-HealthServiceImproved/ 
-- Lab 7-9: (Museum Site using REACT, Bootstrap)
+- Lab 7-9: (Museum Site) [REACT and Bootstrap focused]
     1. Execute cmd 'npm run start': Runs script in 'package.json' and starts server application
     2. View Website Link: https://marco-cen.github.io/SEG3125-Labs/Module7-9_MuseumReact/
+ 
+ - Lab 10: (Simple chatbot) [Rasa]
